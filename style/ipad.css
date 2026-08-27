@@ -1,0 +1,122 @@
+.container--small {
+  max-width: 90vw !important; /* let it breathe, adapt to screen */
+  padding-top: 64px !important;
+  padding-bottom: 64px !important;
+}
+
+.process__grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+  --step: 80px; /* gentler stagger */
+}
+
+/* Reset desktop placements first */
+.process-card {
+  grid-column: auto;
+  margin-top: 0;
+}
+
+/* Simple alternating layout with a light stagger */
+.process-card:nth-child(odd) {
+  grid-column: 1;
+}
+.process-card:nth-child(even) {
+  grid-column: 2;
+  margin-top: 40px;
+}
+
+/* Tweak start offset so grid sits closer to the image band */
+.process {
+  --grid-start: 24px;
+}
+
+/* Slightly shorter crop on tablets so content stays on screen */
+.process__viewport {
+  height: 60dvh;
+}
+
+/* If you use the scroll-linked lift, make it milder on tablet */
+.process__inner {
+  transform: translateY(0);
+}
+@supports (animation-timeline: view()) {
+  .process__inner {
+    --inner-shift: clamp(-120px, -8vw, -180px);
+  }
+}
+
+.fidelity__head {
+  /* flex-direction: column; */
+  align-items: flex-start;
+  gap: 8px;
+}
+
+.process {
+  height: 1500px;
+}
+
+/* media centered and responsive */
+.media,
+.frame,
+figure,
+.facts img,
+.backgroundMVP2 {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin-inline: auto; /* center the element */
+}
+
+/* Index  */
+/* Force every project feature to span the full grid width */
+.project-feature,
+.project-feature.project-feature--half,
+.project-feature.span-6,
+.project-feature.md-span-8,
+.project-feature.sm-span-4 {
+  grid-column: 1 / -1 !important; /* spans all columns at every breakpoint */
+}
+
+/* Footer  */
+.footer-grid {
+  display: grid;
+  grid-template-columns: repeat(9, minmax(0, 1fr));
+  gap: var(--container-small-gap, 16px);
+}
+.footer-meta,
+.footer-actions {
+  grid-column: 1 / -1 !important; /* full width stack */
+}
+
+/* spacing + alignment */
+.footer-actions {
+  margin-top: 8px;
+}
+
+/* make the link list wrap nicely on small screens */
+.footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 16px;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+.footer-links li a {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+}
+
+.bento-container {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.about__card {
+  display: none;
+}
+
+.scene-controls {
+  display: none;
+}

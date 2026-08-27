@@ -1,0 +1,795 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="../style/designstyle.css">
+    <link rel="stylesheet" href="../style/racketStyle.css" />
+    <!-- Tablet / iPad specific styles -->
+    <link rel="stylesheet" href="../style/ipad.css" 
+      media="screen and (min-width: 744px) and (max-width: 1023px)">
+    <link
+    rel="stylesheet"
+    href="../style/phone.css"
+    media="screen and (max-width: 744px)"
+    />
+          <script src="https://kit.fontawesome.com/ed552a7faf.js" crossorigin="anonymous"></script>
+  </head>
+  <body>
+
+
+<!-- ===== NAVBAR ===== -->
+<header class="site-header" data-nav>
+  <div class="nav-wrap">
+    <a class="brand" href="/index.html" aria-label="Home">
+      <img style="height: 28px;"   src="/favicon-32x32.png" alt="">
+    </a>
+
+    <!-- Mobile toggle -->
+    <button class="nav-toggle" aria-expanded="false" aria-controls="site-menu" aria-label="Open menu">
+      <span class="nav-toggle__bar"></span>
+      <span class="nav-toggle__bar"></span>
+      <span class="nav-toggle__bar"></span>
+    </button>
+
+    <nav class="nav" id="site-menu" aria-label="Primary">
+      <ul class="nav__list">
+        <!-- add .is-active to the current page -->
+          <li><a class="nav__link " href="/">Home</a></li>
+        <li><a class="nav__link is-active" href="/index.html#mywork">Case Studies</a></li>
+        
+        <li><a class="nav__link" href="/index.html#about">About</a></li>
+                    <!-- Navbar actions -->
+            <li class="nav__actions">
+              <a
+                class="quick-case-study__button"
+                href="/assets/Melis_Konez_Resume.pdf"
+                target="_blank"
+                rel="noopener"
+                aria-label="Open Melis Konez's résumé"
+              >
+                Resume
+              </a>
+
+              <a
+                class="tertiary-button__control"
+                href="https://www.linkedin.com/in/meliskonez"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Open Melis Konez's LinkedIn profile"
+                title="LinkedIn"
+              >
+                <i class="fa-brands fa-linkedin" aria-hidden="true"></i>
+              </a>
+            </li>
+
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<!-- ==== PROCESS MENU (left) ==== -->
+<nav class="process-nav" aria-label="Case study process">
+  <ol class="process-list">
+    <li><a href="#overview">Overview</a></li>
+    <li><a href="#design-process">Design Process</a></li>
+    <li><a href="#discover">Discovery</a></li>
+    <li><a href="#research">Research</a></li>
+    <li><a href="#visualIdentity">Visual Identity</a></li>
+    <li><a href="#layout-fidelity">Design Layout</a></li>
+    <li><a href="#DesignUX">Design · UX</a></li>
+    <li><a href="#prototype">Prototype </a></li>
+    <li><a href="#poster">Poster </a></li>
+
+  </ol>
+</nav>
+
+    <section data-theme="dark" >
+     
+   <img  src="/assets/tennisRacket/section-1.jpg" alt="">
+     
+
+    </section>
+
+    <section id="overview" class="">
+      <div class="container--small grid-9">
+        <h3 class="span-9">
+          Product Storytelling in the Browser,<br />3D Interactive Experience
+        </h3>
+
+        <p class="span-9">
+          I designed and coded Velocity X1, an interactive product launch
+          experience for a performance tennis racket. The project blends UX
+          research, UI design, and front-end implementation using Three.js and
+          GSAP to tell the product story in real time—spin, vibration, and
+          precision visualized through clear, accessible UI. Built mobile-first,
+          optimized for performance, and ready to scale into e-commerce flows.
+        </p>
+        <!-- 3-up facts row: 3 × 3-col blocks -->
+        <div class="facts span-9 grid-9">
+          <div class="span-3">
+            <h4>My Role</h4>
+            <p class="">
+              Product Designer (UI/UX) & Front-End Developer — solo project
+            </p>
+          </div>
+          <div class="span-3">
+            <h4>Tools</h4>
+            <p class="">Figma, Three.js, GSAP ScrollTrigger, VS Code</p>
+          </div>
+          <div class="span-3">
+            <h4>Timeline</h4>
+            <p class="">2 months (concept → prototype)</p>
+          </div>
+        </div>
+
+        <h3 class="span-9">Challenges</h3>
+        <div class="wrapper span-9">
+          <!-- Card -->
+          <article class="card" role="group" aria-labelledby="card-title-1">
+            <header class="card__header">
+              <span class="chip chip--insight">Insight</span>
+              <h2 id="card-title-1" class="card__title">The 2D vs 3D Gap</h2>
+            </header>
+            <p class="card__body">
+              Bridging the gap between static 2D layouts and interactive 3D
+              experiences is key to making product exploration both clear and
+              engaging.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="design-process" class="process" data-theme="dark">
+      <!-- Layer 1: background image (parallaxed) -->
+      <div class="process__viewport" aria-hidden="true">
+        <picture class="process__media" aria-hidden="true">
+          <img
+            src="../assets/tennisRacket/section-progress-img.jpg"
+            alt=""
+            class="process__img"
+          />
+        </picture>
+      </div>
+
+      <!-- Content -->
+      <div class="process__inner">
+        <h2 class="process__title">Design Process</h2>
+
+        <div class="process__grid" data-parallax-grid>
+          <article class="process-card">
+            <span class="process-card__step">01</span>
+            <div class="process-card__body">
+              <h3 class="process-card-header">Discover &amp; Define</h3>
+              <p style="margin: 0">
+                Turn a static launch page into an
+                <strong>interactive 3D</strong> experience.
+              </p>
+            </div>
+          </article>
+
+          <article class="process-card">
+            <span class="process-card__step">02</span>
+            <div class="process-card__body">
+              <h3 class="process-card-header">Research</h3>
+
+              <p style="margin: 0">
+                Quick, credible proof-points that show why the product is
+                different.
+              </p>
+            </div>
+          </article>
+
+          <article class="process-card">
+            <span class="process-card__step">03</span>
+            <div class="process-card__body">
+              <h3 class="process-card-header" style="margin-bottom: 8px">Design Screens</h3>
+              <p style="margin: 0">
+                Clarity, flow, interaction, responsive, accessibility,
+                conversion.
+              </p>
+            </div>
+          </article>
+
+          <article class="process-card">
+            <span class="process-card__step">04</span>
+            <div class="process-card__body">
+              <h3 class="process-card-header">Prototype &amp; Interaction</h3>
+              <p style="margin: 0">
+                Three.js + GSAP micro-interactions validate
+                usability/performance.
+              </p>
+            </div>
+          </article>
+
+          <article class="process-card">
+            <span class="process-card__step">05</span>
+            <div class="process-card__body">
+              <h3 class="process-card-header">Motion Design</h3>
+              <p style="margin: 0">
+                Purposeful motion clarifies actions and maintains continuity.
+              </p>
+            </div>
+          </article>
+
+          <article class="process-card">
+            <span class="process-card__step">06</span>
+            <div class="process-card__body">
+              <h3 class="process-card-header">Test &amp; Iterate</h3>
+              <p style="margin: 0">
+                Measure task success, time-to-action, and performance budgets.
+              </p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="discover" class="">
+      <div class="container--small grid-9">
+        <h3 class="span-9">Discover & Define</h3>
+
+        <p class="span-9">
+          Tennis racket advertisements across websites, social media, video, and
+          interactive platforms use a harmonized approach: visually rich
+          presentations of the product (2D photography, video, and occasionally
+          3D/AR) combined with message consistency that emphasizes the racket’s
+          value to the player.
+        </p>
+
+        <div class="wrapper span-9">
+          <!-- Card -->
+          <article class="card" role="group" aria-labelledby="card-title-1">
+            <header class="card__header">
+              <span class="chip chip--insight">Insight</span>
+            </header>
+            <p class="card__body">
+              The common threads are aspirational imagery and language, clear
+              communication of performance benefits, and increasing
+              opportunities for the user to interact or personalize.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+    <section id="research" class="">
+      <div class="container--small grid-9">
+        <h3 class="span-9">Research Inputs</h3>
+
+        <p class="span-9">
+          I analyzed how leading tennis brands advertise and sell rackets
+          online. Most rely on static 2D photography, with only a few offering
+          360° spins or AR previews. Advertising campaigns consistently use
+          aspirational messaging (‘Play Legendary,’ ‘Play Fearless’) paired with
+          close-up visuals of pro athletes. From this review, I saw a gap: while
+          2D layouts are clear and familiar, they lack the depth and interaction
+          users expect when evaluating equipment. This input shaped the
+          challenge of embedding seamless 3D exploration into a 2D interface
+        </p>
+
+        <div class="wrapper span-9">
+          <!-- Card -->
+          <article class="card" role="group" aria-labelledby="card-title-1">
+            <header class="card__header">
+              <span class="chip chip--insight">Insight</span>
+            </header>
+            <p class="card__body">
+              By introducing 3D interaction into a 2D interface, users could
+              rotate, zoom, and inspect the racket without leaving the page.
+              This improved engagement, supported decision-making, and made the
+              digital experience closer to handling the product in-store.
+            </p>
+          </article>
+        </div>
+        <div class="wrapper span-9">
+          <!-- Card -->
+          <article class="card" role="group" aria-labelledby="card-title-1">
+            <header class="card__header">
+              <span class="chip chip--evidence">Evidence</span>
+            </header>
+            <p class="card__body">
+              Competitive scan revealed three recurring issues: spec-heavy
+              layouts, slow page performance, and unclear value communication.
+              These gaps pointed to the need for a clearer, faster narrative.
+            </p>
+          </article>
+        </div>
+        <div class="wrapper span-9">
+          <!-- Card -->
+          <article class="card" role="group" aria-labelledby="card-title-1">
+            <header class="card__header">
+              <span class="chip chip--decision">DECISION</span>
+            </header>
+            <p class="card__body">
+              Because pages were overloaded with specs and slow, I restructured
+              the flow into Discovery → Validation → Pre-order, delivering
+              proof-points at the right moment
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+    <section id="visualIdentity" class="">
+      <div class="container--small">
+        <h3 class="span-9">Visual Identity & UI System</h3>
+        <div>
+          <h4 class="">Color Pallette</h4>
+          <div>
+            <img
+              class="marginbottom"
+              src="../assets/tennisRacket/colorpallete-0.jpg"
+              alt=""
+            />
+          </div>
+        </div>
+        <div>
+          <h4 class="">Typography</h4>
+          <div>
+            <img
+              class="marginbottom"
+              src="../assets/tennisRacket/typography-0.png"
+              alt=""
+            />
+          </div>
+        </div>
+        <div>
+          <h4 class="">Accessibility & Contrast Preview</h4>
+          <div>
+            <img
+              class="marginbottom"
+              src="../assets/tennisRacket/contrast-preview-0.png"
+              alt=""
+            />
+          </div>
+          <div style="margin-top: 16px">
+            <img
+              class="marginbottom"
+              src="../assets/tennisRacket/text-color-0.png"
+              alt=""
+            />
+          </div>
+        </div>
+
+        <div>
+          <h4 class="">Component View on Background</h4>
+          <div style="margin-top: 16px">
+            <img
+              class="marginbottom"
+              src="../assets/tennisRacket/component-view-0.png"
+              alt=""
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="layout-fidelity" class="fidelity" data-state="low">
+      <div class="container--small">
+        <header class="fidelity__head">
+          <h2>Design · Layout</h2>
+
+          <!-- Segmented control -->
+          <div class="seg" role="group" aria-label="Fidelity">
+            <button
+              type="button"
+              class="seg__btn is-active"
+              data-set="low"
+              aria-pressed="true"
+            >
+              Low-Fi
+            </button>
+            <button
+              type="button"
+              class="seg__btn"
+              data-set="mid"
+              aria-pressed="false"
+            >
+              Mid-Fi
+            </button>
+          </div>
+        </header>
+
+        <div class="frames">
+          <figure class="frame">
+            <figcaption>Desktop · 1920×1080</figcaption>
+            <img
+              class="img img--low"
+              src="/assets/tennisRacket/tennisRacket-home 1920_1080-low-fi-00-01-c.png"
+              width="1920"
+              height="1080"
+              alt="Low-fi desktop layout"
+              loading="lazy"
+              decoding="async"
+            />
+            <img
+              class="img img--mid"
+              src="/assets/tennisRacket/tennisRacket-home 1920_1080-mid-fi-00.png"
+              width="1920"
+              height="1080"
+              alt="Mid-fi desktop layout"
+              loading="lazy"
+              decoding="async"
+            />
+          </figure>
+
+          <figure class="frame">
+            <figcaption>iPad mini · 744×1133</figcaption>
+            <img
+              class="img img--low"
+              src="/assets/tennisRacket/iPad mini 8.3 -w_744-h_1133.png"
+              width="744"
+              height="1133"
+              alt="Low-fi tablet layout"
+              loading="lazy"
+              decoding="async"
+            />
+            <img
+              class="img img--mid"
+              src="/assets/tennisRacket/iPad mini 8.3.png"
+              width="744"
+              height="1133"
+              alt="Mid-fi tablet layout"
+              loading="lazy"
+              decoding="async"
+            />
+          </figure>
+
+          <figure class="frame">
+            <figcaption>iPhone 13/14</figcaption>
+            <img
+              class="img img--low"
+              src="/assets/tennisRacket/iPhone 13 & 14.png"
+              width="390"
+              height="844"
+              alt="Low-fi mobile layout"
+              loading="lazy"
+              decoding="async"
+            />
+            <img
+              class="img img--mid"
+              src="/assets/tennisRacket/iPhone 13 & 15.png"
+              width="390"
+              height="844"
+              alt="Mid-fi mobile layout"
+              loading="lazy"
+              decoding="async"
+            />
+          </figure>
+        </div>
+      </div>
+    </section>
+    <section id="DesignUX" class="" data-state="">
+      <div class="container--small">
+        <header class="fidelity__head">
+          <h3>Design · UX</h3>
+        </header>
+        <h4>Card-Modal Iteration</h4>
+        <p>
+          Goal: Avoid misinterpretation caused by using the same green color for
+          two metrics with opposite desirability—Precision/Stability (higher is
+          better) vs. Vibration (lower is better)—and keep the card scannable on
+          mobile.
+        </p>
+      </div>
+      <div class="container--small">
+        <h4>Metric Card - Iteration</h4>
+        <div class="facts span-9 grid-9">
+          <div class="span-3">
+            <h5 style="padding-left: 12px">Iteration 1</h5>
+            <img src="/assets/tennisRacket/iteration-1.png" alt="" />
+            <h6 style="padding-left: 12px; padding-top: 16px">
+              Baseline exploration
+            </h6>
+            <p class="" style="padding-left: 12px">
+              Problem: users read all green bars as “more is better,” which
+              makes Vibration misleading.
+            </p>
+          </div>
+          <div class="span-3">
+            <h5 style="padding-left: 12px">Iteration 2</h5>
+            <img src="/assets/tennisRacket/iteration-2.png" alt="" />
+            <h6 style="padding-left: 12px; padding-top: 16px">
+              Semantics test
+            </h6>
+            <p class="" style="padding-left: 12px">
+              Separated Precision/Stability (high-is-good bars) from Vibration
+              (low-is-good).
+              <br />
+              Introduced an affirmative chip—Reduced vibration—with an icon, so
+              the message is positive without implying “more.”
+            </p>
+          </div>
+          <div class="span-3">
+            <h5 style="padding-left: 12px">Final (Current)</h5>
+            <img src="/assets/tennisRacket/iteration-3.png" alt="" />
+            <h6 style="padding-left: 12px; padding-top: 16px">
+              Context & clarity
+            </h6>
+            <p class="" style="padding-left: 12px">
+              Separated Precision/Stability (high-is-good bars) from Vibration
+              (low-is-good).
+              <br />
+              Introduced an affirmative chip—Reduced vibration—with an icon, so
+              the message is positive without implying “more.”
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="container--small span-9">
+        <h4>Mobile Modal — Section 2</h4>
+        <p>
+          Peek → Expand → Validate. Proof-points over specs; quick, scannable
+          decision path.
+        </p>
+        <div class="facts span-9">
+          <div class="">
+            <img src="/assets/tennisRacket/mobileModal-section2.png" alt="" />
+            <ol class="steps">
+              <li>
+                Trigger → When it matter most - Shot Feedback card sits in
+                content. Tap to When it matter most.
+              </li>
+              <li>
+                Peek / Mid state: Bottom-sheet modal (56% height) reveals
+                Precision & Stability bars + Reduced vibration chip. Background
+                dims, 3D controls pause.
+              </li>
+              <p>
+                <span>Full / Validate</span> Full-height modal adds ‘When it
+                matters most’ context and sticky CTA (‘Got it’). Swipe down, tap
+                scrim, or Esc to close.
+              </p>
+            </ol>
+          </div>
+        </div>
+      </div>
+      <div class="container--small span-9">
+        <h4>Mobile Modal — Section 3 (Tech Details)</h4>
+        <p>
+          Quick, scannable specs & materials in a tabbed modal; background dims
+          and 3D controls pause.
+        </p>
+        <div class="facts span-9">
+          <div class="">
+            <img src="/assets/tennisRacket/mobileModal-section3.png" alt="" />
+            <ol class="steps">
+              <li>Trigger: CTA opens a centered modal for Tech Details.</li>
+              <li>Taggle for Specs and Materials.</li>
+            </ol>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="prototype">
+      <div class="container--small">
+        <header class="fidelity__head">
+          <h3>Prototype in Action · MVP</h3>
+        </header>
+        <div>
+          <h4>Laptop - Section 2: Ball Interaction & Performance Feedback</h4>
+          <img class="backgroundMVP2" style="max-width: 90%; height: auto;" src="/assets/tennisRacket/Laptop-section-2-compressed.gif" alt="">
+                  <p style="padding-top: 1rem;">In this MVP section, tapping the tennis ball triggers animated bar graphs, revealing key performance metrics of the racket. This interaction was designed to keep the product evaluation playful yet informative, turning complex specs into instantly scannable visuals. By embedding interaction into the product story, users can explore details without leaving the flow of the page.</p>
+
+        </div>
+          <div>
+          <h4>Laptop - section 3: Technical View toggle</h4>
+          
+          <img class="backgroundMVP2" style="max-width: 90%; height: auto;" src="/assets/tennisRacket/Laptop-section3-compressed.gif" alt="">
+        
+                  <p style="padding-top: 1rem;">This section introduces a technical view toggle that changes the racket’s appearance and updates the specification tables. While hovering over each value, the corresponding part of the racket is highlighted in real time. This design connects technical data with the physical product, making specifications more tangible and supporting informed decision-making.</p>
+</div>
+          <div>
+          <h4>Multi-Device Experience</h4>
+          
+          <img class="backgroundMVP2" style="max-width: 90%; height: auto;" src="/assets/tennisRacket/ad-giff-compressed.gif" alt="">
+        
+                  <p style="padding-top: 1rem;"> To visualize how the MVP could be presented in real campaigns, I created a promotional mock-up featuring the responsive product page across iPad, laptop, and mobile devices. This highlights the consistency of the design system across breakpoints and demonstrates its potential as a market-ready digital ad.</p>
+</div>
+          <div>
+         
+        
+</div>
+    </section>
+    <section id="poster">
+      <div class="container--small">
+ <h4>Poster</h4>
+          
+          <img class="backgroundMVP2" style="max-width: 90%; height: auto;" src="/assets/tennisRacket/poster.jpg" alt="">
+      </div>
+
+    </section>
+    <!-- ==== FOOTER (grid-9) ==== -->
+    <footer class="site-footer">
+      <div class="grid-9 footer-grid">
+        <!-- Left: closing message -->
+        <div class="span-5 footer-content">
+          <p class="footer-eyebrow">LET’S WORK TOGETHER</p>
+
+          <h2 class="footer-heading">
+            Have a project or opportunity<br />
+            you’d like to discuss?
+          </h2>
+
+          <a
+            class="footer-email"
+            href="mailto:meliskonez@gmail.com"
+            aria-label="Email Melis Konez"
+          >
+            <span>Get in touch</span>
+
+            <svg
+              class="footer-email-icon"
+              aria-hidden="true"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M5 19 19 5M9 5h10v10"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.8"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </a>
+        </div>
+
+        <!-- Right: professional links -->
+        <nav class="span-4 footer-actions" aria-label="Professional links">
+          <p class="footer-eyebrow">FIND ME ONLINE</p>
+
+          <ul class="footer-links">
+            <li>
+              <a href="mailto:meliskonez@gmail.com">
+                <span class="footer-link-number">01</span>
+
+                <span class="footer-link-label">
+                  <i class="fa-solid fa-envelope" aria-hidden="true"></i>
+                  Email
+                </span>
+
+                <svg
+                  class="footer-link-arrow"
+                  aria-hidden="true"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M5 19 19 5M9 5h10v10"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.8"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </a>
+            </li>
+
+            <li>
+              <a
+                href="https://www.linkedin.com/in/meliskonez/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Visit Melis Konez on LinkedIn"
+              >
+                <span class="footer-link-number">02</span>
+
+                <span class="footer-link-label">
+                  <i class="fa-brands fa-linkedin-in" aria-hidden="true"></i>
+                  LinkedIn
+                </span>
+
+                <svg
+                  class="footer-link-arrow"
+                  aria-hidden="true"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M5 19 19 5M9 5h10v10"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.8"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </a>
+            </li>
+
+            <li>
+              <a
+                href="https://www.behance.net/meliskonez"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Visit Melis Konez on Behance"
+              >
+                <span class="footer-link-number">03</span>
+
+                <span class="footer-link-label">
+                  <i class="fa-brands fa-behance" aria-hidden="true"></i>
+                  Behance
+                </span>
+
+                <svg
+                  class="footer-link-arrow"
+                  aria-hidden="true"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M5 19 19 5M9 5h10v10"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.8"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </a>
+            </li>
+
+            <li>
+              <a
+                href="https://github.com/audralix/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Visit Melis Konez on GitHub"
+              >
+                <span class="footer-link-number">04</span>
+
+                <span class="footer-link-label">
+                  <i class="fa-brands fa-github" aria-hidden="true"></i>
+                  GitHub
+                </span>
+
+                <svg
+                  class="footer-link-arrow"
+                  aria-hidden="true"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M5 19 19 5M9 5h10v10"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.8"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </nav>
+
+        <!-- Bottom row -->
+        <div class="span-9 footer-bottom">
+          <p>
+            © <span id="current-year">2026</span> · Designed &amp; developed by
+            <strong>Melis Konez</strong>
+          </p>
+
+          <p class="footer-location">Dublin, Ireland</p>
+
+          <a class="footer-top-link" href="#home">
+            <span>Back to top</span>
+
+            <svg aria-hidden="true" viewBox="0 0 24 24">
+              <path
+                d="M12 19V5M6 11l6-6 6 6"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.8"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </a>
+        </div>
+      </div>
+    </footer>
+
+
+    <script src="/js/toggle.js"></script>
+    <script src="/js/designsytem.js"></script>
+  </body>
+</html>

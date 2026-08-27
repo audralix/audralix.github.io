@@ -1,0 +1,280 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+ /*    height: 100vh; */
+    margin: 0;
+}
+
+.main-container {
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    position: relative;
+}
+
+.image-wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh; /* Full viewport height */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: -1; /* Ensure it's behind other elements */
+    transition: background-image 1s ease-in-out; /* Smooth transition for background image */
+}
+
+.main-image-container {
+    position: absolute;
+    top: 75%;
+    left: 33%;
+    transform: translate(-50%, -50%);/* Center based on its own size */
+    
+    z-index: 2; /* Set z-index for stacking order */
+}
+
+.main-image {
+ 
+    position: relative; /* Ensure z-index works */
+    z-index: 2; /* Set z-index for stacking order */
+    width: auto; /* Maintain aspect ratio */
+    max-width: 100%; /* Scale with container */
+    height: auto; /* Maintain aspect ratio */
+}
+
+.tag-image-behind-container, .tag-image-front-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 1; /* Tag images can be positioned based on their individual z-index */
+    
+}
+
+.tag-image-behind-container {
+    z-index: 1; /* Behind the main image */
+}
+
+.tag-image-front-container {
+    z-index: 3; /* In front of the main image */
+}
+
+.tag-image {
+    position: absolute;
+    display: block;
+    max-width: 100%; /* Ensure tag images scale proportionally */
+    height: auto;
+    object-fit: cover; /* Ensure images fill the space without distortion */
+}
+
+.tag-image.front {
+    z-index: 4; /* Ensure front tag images are above the main image */
+}
+
+.tag-image.behind {
+    z-index: 1; /* Ensure behind tag images are below the main image */
+}
+
+/* Align the .about div to the right side */
+.col:last-child {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.about {
+    background-color: rgba(255, 108, 32, 0.7);  
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 400px;
+    height: 400px;
+}
+
+.aboutHeader h1 {
+    font-size: 70px;
+    font-family: 'ATC Arquette';
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+.slider-container {
+    max-width: 350px;
+    height: 50px;
+    overflow: hidden;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 100%;
+}
+
+.slider {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    overflow: hidden;
+}
+
+.slider-text {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    transition: transform 0.5s ease-in-out;
+}
+
+.text-item {
+    flex: 0 0 auto;
+    min-width: 100%;
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+    color: #333;
+    line-height: 50px;
+    font-style: italic;
+}
+
+button {
+    cursor: pointer;
+    padding: 10px 15px;
+    font-size: 18px;
+    background-color: #E8E9EB;
+    color: #333;
+    border: none;
+    border-radius: 50%;
+    z-index: 4; /* Ensure buttons are above the tag images */
+}
+
+button#prevBtn {
+    margin-right: 20px;
+}
+
+button#nextBtn {
+    margin-left: 20px;
+}
+
+.slider-controls-container {
+    text-align: center;
+}
+
+.header-about h1 {
+    margin-bottom: 10px;
+    font-size: 50px;
+    font-family: 'ATC Arquette';
+    color: #fff;
+    line-height: 1;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-20px);
+    }
+    60% {
+        transform: translateY(-15px);
+    }
+}
+
+.bounce {
+    animation: bounce 2s ease-in-out infinite;
+}
+
+@keyframes fade {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.fade {
+    animation: fade 2s ease-in-out forwards;
+}
+
+@keyframes slide {
+    from { transform: translateX(-100%); }
+    to { transform: translateX(0); }
+}
+
+.slide {
+    animation: slide 1s ease-in-out forwards;
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(10deg);
+    }
+}
+
+.rotate {
+    animation: rotate 2s ease-in-out forwards;
+}
+
+@keyframes slide-fade {
+    from {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.slide-fade {
+    animation: slide-fade 2s ease-in-out forwards;
+}
+
+@keyframes backgroundFade {
+    0% {
+        background-image: url('./assets/aboutAssets/240902_room-07.png');
+        opacity: 1;
+    }
+    100% {
+        background-image: url('./assets/aboutAssets/Asset 1.png');
+        opacity: 0;
+    }
+}
+
+
+/* Mobile Styles */
+@media (max-width: 600px) {
+    .main-image {
+      width: 80%;
+    }
+  
+    .tag-image {
+      max-width: 60%;
+    }
+  
+    .header-about h1 {
+      font-size: 30px;
+    }
+  }
+  
+
+  

@@ -1,0 +1,2809 @@
+/* =========================================================
+   IEFinance Lite Case Study
+   Design System Foundation
+   Figma source frame: 1440 × 1024
+   ========================================================= */
+
+:root {
+  /* -------------------------------------------------------
+     Canvas
+     ------------------------------------------------------- */
+
+  --case-design-width: 1440;
+  --case-design-height: 1024;
+
+  --case-slide-width: 1440px;
+  --case-slide-height: 1024px;
+
+  /* Slide layout */
+  --case-slide-padding-x: 64px;
+  --case-slide-header-y: 120px;
+
+  /* Slide title */
+  --case-title-size: 40px;
+  --case-title-line-height: 44px;
+  --case-title-letter-spacing: -0.4px;
+  --case-title-weight: 700;
+
+  /* -------------------------------------------------------
+     Typography
+     ------------------------------------------------------- */
+
+  /* Display / headings */ /* Fonts */
+  --font-heading: "Inter", sans-serif;
+  --font-body: "Roboto", sans-serif;
+  --font-mono: "Roboto Mono", monospace;
+
+  /* Eyebrows, indexes, technical/system labels */
+  --font-mono: "Roboto Mono", "SFMono-Regular", Consolas, monospace;
+  --font-heading: "Inter", sans-serif;
+  --font-body: "Roboto", sans-serif;
+  --font-mono: "Roboto Mono", monospace;
+
+  /* -------------------------------------------------------
+     Font weights
+     ------------------------------------------------------- */
+
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+
+  /* -------------------------------------------------------
+     Type scale
+     Based around the 1440 × 1024 Figma slides
+     ------------------------------------------------------- */
+
+  /* Large slide / hero title */
+  --text-display: 52px;
+  --line-display: 1.08;
+
+  /* Standard slide title */
+  --text-h1: 48px;
+  --text-h1-support: 40px;
+  --line-h1: 1.12;
+
+  /* Section title */
+  --text-h2: 32px;
+  --line-h2: 1.2;
+
+  /* Component / callout heading */
+  --text-h3: 24px;
+  --line-h3: 1.3;
+
+  /* Intro / lead paragraph */
+  --text-lead: 28px;
+  --text-lead-support: 24px;
+  --line-lead: 1.45;
+
+  /* Standard body */
+  --text-body-lg: 18px;
+  --line-body-lg: 1.5;
+
+  --text-body: 16px;
+  --line-body: 1.5;
+
+  /* Supporting content */
+  --text-small: 14px;
+  --line-small: 1.45;
+
+  /* Helper / metadata */
+  --text-helper: 12px;
+  --line-helper: 16px;
+
+  /* Mono labels / eyebrow */
+  --text-eyebrow: 12px;
+  --line-eyebrow: 1.4;
+  --tracking-eyebrow: 0.08em;
+
+  /* -------------------------------------------------------
+     Primary brand — red
+     ------------------------------------------------------- */
+
+  --red-50: #e7b9b8;
+  --red-100: #e0a5a3;
+  --red-200: #d27e7a;
+  --red-300: #c45652;
+  --red-400: #b62e29;
+  --red-500: #a80600;
+  --red-600: #8d0500;
+  --red-700: #720400;
+  --red-800: #570300;
+  --red-900: #3c0200;
+
+  /* Brand */
+  --brand-primary: var(--red-500);
+  --brand-primary-hover: var(--red-600);
+  --brand-primary-active: var(--red-700);
+  --brand-primary-soft: var(--red-50);
+
+  /* -------------------------------------------------------
+     Supporting blue family
+     Latest palette shown in your Figma system
+     ------------------------------------------------------- */
+
+  --blue-50: #c3ced4;
+  --blue-100: #b2c0c7;
+  --blue-200: #90a5af;
+  --blue-300: #6e8996;
+  --blue-400: #4c6d7d;
+  --blue-500: #2a5164;
+  --blue-600: #234454;
+  --blue-700: #1d3744;
+  --blue-800: #162a34;
+  --blue-900: #0f1d24;
+
+  /*
+   * Your case-study screenshots also use #023047
+   * as a stronger editorial dark blue.
+   * Keep it as a semantic token rather than forcing it
+   * into the newer numbered blue scale.
+   */
+  --blue-editorial: #023047;
+
+  --brand-secondary: var(--blue-editorial);
+  --brand-secondary-muted: var(--blue-200);
+  --brand-secondary-soft: var(--blue-50);
+
+  /* Optional lighter accent visible in your system */
+  --blue-accent: #8dcae6;
+
+  /* -------------------------------------------------------
+     Greyscale / semantic surfaces
+     ------------------------------------------------------- */
+
+  --surface-default: #ffffff;
+  --surface-subtle: #f6f7f8;
+  --surface-disabled: #f1f1f1;
+
+  --border-default: #e2e2de;
+  --border-disabled: #e5e7eb;
+  --border-strong: #323232;
+
+  --text-title: #111111;
+  --text-body: #323232;
+  --text-subtle: #666666;
+  --text-caption: #7b7b7b;
+  --text-disabled: #9a9a9a;
+  --text-negative: #ffffff;
+
+  /* -------------------------------------------------------
+     Semantic aliases for case-study slides
+     ------------------------------------------------------- */
+
+  --case-bg: var(--surface-default);
+
+  --case-heading: var(--brand-secondary);
+  --case-copy: var(--text-body);
+  --case-copy-muted: var(--text-subtle);
+
+  --case-accent: var(--brand-primary);
+  --case-rule: var(--border-default);
+
+  --case-eyebrow: var(--brand-primary);
+  --case-index: var(--brand-primary);
+
+  /* -------------------------------------------------------
+     8px spacing system
+     ------------------------------------------------------- */
+
+  --space-0: 0;
+  --space-0-5: 4px;
+  --space-1: 8px;
+  --space-1-5: 12px;
+  --space-2: 16px;
+  --space-3: 24px;
+  --space-4: 32px;
+  --space-5: 40px;
+  --space-6: 48px;
+  --space-7: 56px;
+  --space-8: 64px;
+  --space-10: 80px;
+  --space-12: 96px;
+  --space-14: 112px;
+  --space-16: 128px;
+
+  /* -------------------------------------------------------
+     Slide grid
+     ------------------------------------------------------- */
+
+  --grid-columns: 12;
+  --grid-gap: 24px;
+
+  /* approx. editorial margins from your Figma slides */
+  --slide-pad-x: 64px;
+  --slide-pad-top: 40px;
+  --slide-pad-bottom: 40px;
+
+  /* -------------------------------------------------------
+     Radius
+     ------------------------------------------------------- */
+
+  --radius-xs: 2px;
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+
+  /* -------------------------------------------------------
+     Motion
+     ------------------------------------------------------- */
+
+  --duration-fast: 140ms;
+  --duration-normal: 220ms;
+
+  --ease-ui: cubic-bezier(0.2, 0, 0, 1);
+
+  /* -------------------------------------------------------
+     Elevation
+     Keep restrained for editorial portfolio style
+     ------------------------------------------------------- */
+
+  --shadow-overlay: 0 24px 80px rgba(0, 0, 0, 0.22);
+
+  --shadow-device: 0 16px 40px rgba(0, 0, 0, 0.12);
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+}
+
+body.quick-case-study {
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.case-study-viewport {
+  width: 100%;
+  min-height: 100%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  overflow: visible;
+
+  background: #fff;
+}
+
+/* =========================================================
+   GRAY SLIDE SURFACE
+   ========================================================= */
+
+.case-slide--gray {
+  background: #f4f4f4;
+}
+
+/* Covers the empty area around the scaled slide */
+.case-study-viewport--gray {
+  background: #f4f4f4;
+}
+
+.case-study-stage {
+  width: 1440px;
+  height: 1024px;
+  position: relative;
+  transform-origin: top left;
+}
+
+.case-slide {
+  position: absolute;
+  inset: 0;
+
+  width: 1440px;
+  height: 1024px;
+
+  overflow: hidden;
+
+  background: var(--surface-default, #ffffff);
+}
+
+.case-slide__eyebrow {
+  margin: 0;
+
+  font-family: var(--font-mono);
+  font-size: var(--text-eyebrow);
+  line-height: var(--line-eyebrow);
+  font-weight: var(--font-weight-medium);
+  letter-spacing: var(--tracking-eyebrow);
+  text-transform: uppercase;
+
+  color: var(--case-eyebrow);
+}
+
+.case-slide__title {
+  margin: 0;
+
+  font-family: var(--font-heading);
+  font-size: var(--text-h1);
+  line-height: var(--line-h1);
+  font-weight: var(--font-weight-semibold);
+  letter-spacing: -0.025em;
+
+  color: var(--case-heading);
+  margin-bottom: var(--space-4);
+}
+
+.case-slide__title-snapshot {
+  margin: 0;
+
+  font-family: var(--font-heading);
+  font-size: var(--text-h1-support);
+  line-height: var(--line-h1);
+  font-weight: var(--font-weight-semibold);
+  letter-spacing: -0.025em;
+
+  color: var(--case-heading);
+  margin-bottom: var(--space-4);
+}
+
+.case-slide__title--display {
+  font-size: var(--text-display);
+  line-height: var(--line-display);
+}
+
+.case-slide__subtitle {
+  margin: 0;
+
+  max-width: 680px;
+
+  font-family: var(--font-body);
+  font-size: var(--text-lead);
+  line-height: var(--line-lead);
+  font-weight: var(--font-weight-regular);
+
+  color: var(--case-heading);
+}
+
+.case-slide__heading {
+  margin: 0;
+
+  font-family: var(--font-heading);
+  font-size: var(--text-h2);
+  line-height: var(--line-h2);
+  font-weight: var(--font-weight-semibold);
+
+  color: var(--case-heading);
+}
+
+.case-slide__subheading {
+  margin: 0;
+
+  font-family: var(--font-heading);
+  font-size: var(--text-h3);
+  line-height: var(--line-h3);
+  font-weight: var(--font-weight-semibold);
+
+  color: var(--case-heading);
+}
+
+/* =========================================================
+   CASE META
+   Product Design | B2B FinTech | Enterprise Workflow
+   ========================================================= */
+
+.case-meta {
+  display: flex;
+  align-items: center;
+  gap: 0;
+
+  width: fit-content;
+}
+
+.case-meta__item {
+  display: flex;
+  align-items: center;
+
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 400;
+
+  color: var(--blue-500);
+  white-space: nowrap;
+}
+
+/* Divider between items */
+.case-meta__item + .case-meta__item {
+  margin-left: 24px;
+  padding-left: 24px;
+
+  border-left: 1px solid var(--border-default);
+}
+
+.case-slide__body {
+  margin: 0;
+
+  font-family: var(--font-body);
+  font-size: var(--text-body);
+  line-height: var(--line-body);
+  font-weight: var(--font-weight-regular);
+
+  color: var(--case-copy);
+}
+
+.case-slide__body--large {
+  font-size: var(--text-body-lg);
+  line-height: var(--line-body-lg);
+}
+
+.case-slide__caption {
+  margin: 0;
+
+  font-family: var(--font-body);
+  font-size: var(--text-small);
+  line-height: var(--line-small);
+
+  color: var(--text-caption);
+}
+
+.case-slide__meta {
+  font-family: var(--font-mono);
+  font-size: var(--text-helper);
+  line-height: var(--line-helper);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+
+  color: var(--case-copy-muted);
+}
+
+.case-slide__index {
+  font-family: var(--font-mono);
+  font-size: var(--text-helper);
+  line-height: 1;
+  font-weight: var(--font-weight-medium);
+
+  color: var(--case-index);
+}
+
+.case-eyebrow {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.case-eyebrow::before {
+  content: "";
+  width: 16px;
+  height: 1px;
+  flex: 0 0 16px;
+
+  background: var(--brand-primary);
+}
+
+.case-eyebrow__text {
+  font-family: var(--font-mono);
+  font-size: var(--text-eyebrow);
+  line-height: var(--line-eyebrow);
+  font-weight: var(--font-weight-medium);
+  letter-spacing: var(--tracking-eyebrow);
+  text-transform: uppercase;
+
+  color: var(--brand-primary);
+}
+
+.case-grid {
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  column-gap: var(--grid-gap);
+  width: 100%;
+  height: 100%;
+  margin-top: 1rem;
+}
+
+.col-1 {
+  grid-column: span 1;
+}
+.col-2 {
+  grid-column: span 2;
+}
+.col-3 {
+  grid-column: span 3;
+}
+.col-4 {
+  grid-column: span 4;
+}
+.col-5 {
+  grid-column: span 5;
+}
+.col-6 {
+  grid-column: span 6;
+}
+.col-7 {
+  grid-column: span 7;
+}
+.col-8 {
+  grid-column: span 8;
+}
+.col-9 {
+  grid-column: span 9;
+}
+.col-10 {
+  grid-column: span 10;
+}
+.col-11 {
+  grid-column: span 11;
+}
+.col-12 {
+  grid-column: span 12;
+}
+
+.quick-case-nav {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+
+  background: rgba(255, 255, 255, 0.96);
+  backdrop-filter: blur(12px);
+
+  border-bottom: 1px solid #e5e5e5;
+}
+
+/* =========================================================
+   Case study slide
+   Original Figma frame: 1440 × 1024
+   ========================================================= */
+
+.case-slide {
+  position: relative;
+
+  width: 1440px;
+  height: 1024px;
+
+  background: var(--surface-default, #ffffff);
+  overflow: hidden;
+
+  font-family: var(--font-body, "Roboto", sans-serif);
+}
+
+/* Same horizontal padding for ALL slides */
+
+.case-slide__inner {
+  width: 100%;
+  height: 100%;
+
+  padding-inline: var(--case-slide-padding-x);
+
+  box-sizing: border-box;
+}
+
+.case-slide--architecture .case-slide__i {
+  display: flex;
+  flex-direction: column;
+
+  width: 100%;
+  padding: 0 64px;
+
+  box-sizing: border-box;
+  padding-top: var(--case-slide-header-y);
+}
+
+/* Grid items can still use flex internally */
+.case-grid__item {
+  min-width: 0;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.case-grid__item--visual {
+  align-items: center;
+}
+
+/* Content */
+.case-slide__content {
+  width: 100%;
+  max-width: 560px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: start;
+}
+
+.case-slide__visual-hero {
+  display: block;
+
+  width: 125%;
+  max-width: none;
+  height: auto;
+
+  object-fit: contain;
+
+  transform: translateX(-6%);
+}
+
+/* Visual */
+.case-slide__visual {
+  display: block;
+
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+
+  object-fit: contain;
+}
+
+/* =========================================================
+
+   ========================================================= */
+
+/* .case-slide__logo {
+  position: absolute;
+  top: 40px;
+  left: 64px;
+}
+
+.case-slide__logo-mark {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.case-slide__logo-image {
+  display: block;
+
+  width: 30px;
+  height: 24px;
+
+  object-fit: contain;
+}
+
+.case-slide__logo-accent {
+  display: block;
+
+  width: 7px;
+  height: 24px;
+
+  background: var(--red-600, #8d0500);
+} */
+
+/* =========================================================
+   Hero content
+   Figma:
+   width: 601px
+   left: 64px
+   top: 236px
+   ========================================================= */
+
+.case-hero__content {
+  position: absolute;
+  top: 236px;
+  left: 64px;
+
+  width: 601px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  gap: 16px;
+
+  z-index: 2;
+}
+
+.case-hero__copy {
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  gap: 16px;
+}
+
+/* =========================================================
+   Title
+   Figma:
+   Inter
+   48px
+   700
+   54px line-height
+   ========================================================= */
+
+.case-hero__title {
+  width: 100%;
+
+  margin: 0;
+  padding: 0 0 16px;
+
+  color: var(--brand-secondary, #023047);
+
+  font-family: var(--font-heading, "Inter", sans-serif);
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 54px;
+
+  letter-spacing: -0.02em;
+}
+
+/* =========================================================
+   Subtitle
+   Figma:
+   Roboto
+   28px
+   400
+   ========================================================= */
+
+.case-hero__subtitle {
+  width: 100%;
+  margin: 0;
+  color: var(--brand-secondary, #023047);
+  font-family: var(--font-body, "Roboto", sans-serif);
+  font-size: 28px;
+  font-weight: 400;
+  line-height: 1.25;
+  margin-bottom: var(--space-8);
+}
+
+.case-hero__subtitle-snapshot {
+  width: 100%;
+  margin: 0;
+  color: var(--brand-secondary, #023047);
+  font-family: var(--font-body, "Roboto", sans-serif);
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 1.25;
+  margin-bottom: var(--space-8);
+}
+
+/* =========================================================
+   Product image
+   Figma:
+   width: 1159px
+   height: 773px
+   left: 281px
+   top: 138px
+   ========================================================= */
+
+.case-hero__product-image {
+  position: absolute;
+
+  top: 138px;
+  left: 281px;
+
+  width: 1159px;
+  height: 773px;
+
+  object-fit: contain;
+
+  z-index: 1;
+
+  pointer-events: none;
+  user-select: none;
+}
+
+/* =========================================================
+   SLIDE 02 — PROJECT OVERVIEW
+   Figma frame: 1440 × 1024
+   ========================================================= */
+
+/* ---------------------------------------------------------
+   Logo
+   --------------------------------------------------------- */
+
+.case-slide__logo {
+  position: absolute;
+  top: 40px;
+  left: 64px;
+}
+
+.case-slide__logo-image {
+  display: block;
+  width: 48px;
+  height: auto;
+}
+
+/* ---------------------------------------------------------
+   Left content
+   --------------------------------------------------------- */
+
+.case-overview__content {
+  position: absolute;
+  top: 190px;
+  left: 64px;
+
+  width: 520px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+/* ---------------------------------------------------------
+   Eyebrow
+   --------------------------------------------------------- */
+
+.case-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: var(--space-3);
+}
+
+.case-eyebrow::before {
+  content: "";
+
+  width: 16px;
+  height: 1px;
+
+  background: var(--brand-primary, #a80600);
+}
+
+.case-eyebrow__text {
+  font-family: var(--font-mono, "Roboto Mono", monospace);
+  font-size: 12px;
+  line-height: 1.4;
+  font-weight: 500;
+
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+
+  color: var(--brand-primary, #a80600);
+}
+
+.case-eyebrow--section {
+  margin-bottom: 20px;
+}
+
+/* ---------------------------------------------------------
+   Title
+   --------------------------------------------------------- */
+
+.case-overview__title {
+  margin: 48px 0 0;
+
+  font-family: var(--font-heading, "Inter", sans-serif);
+  font-size: 48px;
+  line-height: 1.08;
+  font-weight: 700;
+  letter-spacing: -0.025em;
+
+  color: var(--brand-secondary, #023047);
+}
+
+/* ---------------------------------------------------------
+   Intro
+   --------------------------------------------------------- */
+
+.case-overview__intro {
+  margin: 36px 0 0;
+
+  max-width: 500px;
+
+  font-family: var(--font-body, "Roboto", sans-serif);
+  font-size: 24px;
+  line-height: 1.32;
+  font-weight: 400;
+
+  color: var(--brand-secondary, #023047);
+}
+
+/* ---------------------------------------------------------
+   Project snapshot
+   --------------------------------------------------------- */
+
+.case-overview__snapshot {
+  width: 100%;
+  margin-top: 94px;
+}
+
+.case-snapshot {
+  margin: 0;
+  padding: 0;
+}
+
+.case-snapshot__item {
+  padding: 0 0 18px;
+  margin: 0 0 18px;
+
+  border-bottom: 1px solid var(--border-default, #e2e2de);
+}
+
+.case-snapshot__item:last-child {
+  margin-bottom: 0;
+}
+
+.case-snapshot__label {
+  margin: 0 0 6px;
+
+  font-family: var(--font-mono, "Roboto Mono", monospace);
+  font-size: 12px;
+  line-height: 1.3;
+  font-weight: 500;
+
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+
+  color: var(--brand-primary, #a80600);
+}
+
+.case-snapshot__value {
+  margin: 0;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  font-family: var(--font-body, "Roboto", sans-serif);
+  font-size: 17px;
+  line-height: 1.35;
+
+  color: var(--brand-secondary, #023047);
+}
+
+.case-snapshot__value strong {
+  font-weight: 600;
+}
+
+.case-snapshot__value span {
+  margin-top: 2px;
+
+  color: var(--text-subtle, #666666);
+}
+
+.case-snapshot__value--impact {
+  max-width: 450px;
+
+  color: var(--blue-500);
+}
+
+/* ---------------------------------------------------------
+   Product visual
+   --------------------------------------------------------- */
+
+.case-overview__visual {
+  position: absolute;
+
+  top: 150px;
+  right: 44px;
+
+  width: 820px;
+  height: 660px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.case-overview__image {
+  display: block;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: contain;
+
+  user-select: none;
+  pointer-events: none;
+}
+
+/* ---------------------------------------------------------
+   Footer rule
+   --------------------------------------------------------- */
+
+.case-slide__footer-rule {
+  position: absolute;
+
+  left: 64px;
+  right: 64px;
+  bottom: 38px;
+
+  height: 1px;
+
+  background: var(--border-default, #e2e2de);
+}
+
+/* =========================================================
+   SLIDE 03 — WORKFLOW COMPARISON
+   ========================================================= */
+
+.case-slide--workflow .case-slide__inner {
+  display: flex;
+  flex-direction: column;
+
+  justify-content: flex-start;
+  align-items: stretch;
+
+  gap: var(--space-5);
+}
+
+/* =========================================================
+   PROBLEM STATEMENT
+   ========================================================= */
+
+.workflow-problem {
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+
+  gap: var(--space-2);
+}
+
+.workflow-problem__title {
+  display: flex;
+  align-items: baseline;
+
+  gap: var(--space-2);
+
+  margin: 0;
+
+  font-family: var(--font-heading);
+  font-size: var(--fs-body);
+  line-height: var(--lh-body);
+
+  color: var(--brand-secondary);
+}
+
+.workflow-problem__label {
+  position: relative;
+
+  padding-left: 24px;
+
+  font-family: var(--font-mono);
+  font-size: var(--fs-micro);
+  line-height: var(--lh-micro);
+  font-weight: 500;
+
+  letter-spacing: 0.08em;
+
+  color: var(--brand-primary);
+}
+
+.workflow-problem__label::before {
+  content: "";
+
+  position: absolute;
+  left: 0;
+  top: 50%;
+
+  width: 16px;
+  height: 1px;
+
+  background: var(--brand-primary);
+
+  transform: translateY(-50%);
+}
+
+.workflow-problem__list {
+  max-width: 1120px;
+
+  margin: 0;
+  padding-left: 24px;
+
+  font-family: var(--font-body);
+  font-size: var(--fs-small);
+  line-height: var(--lh-small);
+
+  color: var(--text-body);
+}
+
+.workflow-problem__list li + li {
+  margin-top: var(--space-1);
+}
+
+.workflow-problem__list strong {
+  color: var(--brand-primary);
+}
+
+/* =========================================================
+   WORKFLOW COMPARISON
+   Uses the shared .case-grid
+   ========================================================= */
+
+.workflow-comparison {
+  flex: 1;
+
+  min-height: 0;
+
+  align-items: start;
+}
+
+/* =========================================================
+   LEFT + RIGHT PANELS
+   ========================================================= */
+
+.workflow-panel {
+  min-width: 0;
+
+  display: flex;
+  flex-direction: column;
+
+  align-items: stretch;
+}
+
+.workflow-panel__header {
+  display: flex;
+  align-items: center;
+
+  gap: var(--space-2);
+
+  margin-bottom: var(--space-2);
+}
+
+.workflow-panel__eyebrow {
+  font-family: var(--font-mono);
+  font-size: var(--fs-micro);
+  line-height: var(--lh-micro);
+  font-weight: 500;
+
+  letter-spacing: 0.08em;
+
+  color: var(--brand-primary);
+}
+
+.workflow-panel__chip {
+  display: inline-flex;
+  align-items: center;
+
+  min-height: 22px;
+
+  padding: 4px 8px;
+
+  border: 1px solid var(--border-default);
+
+  font-family: var(--font-mono);
+  font-size: 10px;
+  line-height: 1;
+
+  letter-spacing: 0.08em;
+
+  color: var(--text-subtle);
+}
+
+.workflow-panel__title {
+  margin: 0 0 var(--space-2);
+
+  font-family: var(--font-heading);
+  font-size: var(--fs-small);
+  line-height: var(--lh-small);
+  font-weight: 600;
+
+  color: var(--brand-secondary);
+}
+
+.workflow-panel__image {
+  display: block;
+  height: auto;
+
+  max-height: 700px;
+
+  object-fit: contain;
+  object-position: top;
+
+  user-select: none;
+  margin-top: var(--space-1);
+  margin-bottom: var(--space-1);
+}
+
+/* =========================================================
+   MIDDLE — SYSTEM TRANSFORMATION
+   ========================================================= */
+
+.workflow-transform {
+  min-width: 0;
+  height: 100%;
+
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+
+  padding-inline: var(--space-2);
+
+  box-sizing: border-box;
+
+  border-left: 1px solid var(--border-default);
+  border-right: 1px solid var(--border-default);
+}
+
+.workflow-transform__heading {
+  margin-bottom: var(--space-7);
+
+  font-family: var(--font-mono);
+  font-size: var(--fs-micro);
+  line-height: var(--lh-micro);
+  font-weight: 500;
+
+  letter-spacing: 0.08em;
+  text-align: center;
+
+  color: var(--brand-primary);
+}
+
+/* =========================================================
+   9 → 4 METRIC
+   ========================================================= */
+
+.workflow-transform__metric {
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+
+  margin-bottom: var(--space-4);
+}
+
+.workflow-transform__from,
+.workflow-transform__to {
+  font-family: var(--font-heading);
+  font-size: var(--fs-h4);
+  line-height: 1;
+  font-weight: 700;
+}
+
+.workflow-transform__from {
+  color: var(--brand-primary);
+}
+
+.workflow-transform__to {
+  color: var(--brand-secondary);
+}
+
+.workflow-transform__arrow {
+  width: 1px;
+  height: 20px;
+
+  margin: var(--space-2) 0;
+
+  background: var(--brand-primary);
+}
+
+.workflow-transform__caption {
+  margin-top: var(--space-2);
+
+  font-family: var(--font-mono);
+  font-size: 9px;
+  line-height: 1.3;
+
+  letter-spacing: 0.08em;
+  text-align: center;
+
+  color: var(--text-caption);
+}
+
+/* =========================================================
+   TRANSFORMATION PRINCIPLES
+   ========================================================= */
+
+.workflow-transform__principles {
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+
+  width: 100%;
+}
+
+.workflow-transform__principle {
+  width: 100%;
+  max-width: 112px;
+
+  min-height: 42px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: var(--space-1) var(--space-2);
+
+  box-sizing: border-box;
+
+  border: 1px solid var(--border-default);
+
+  background: var(--surface-default);
+
+  font-family: var(--font-heading);
+  font-size: var(--fs-micro);
+  line-height: 1.25;
+  font-weight: 600;
+
+  text-align: center;
+
+  color: var(--brand-secondary);
+}
+
+.workflow-transform__connector {
+  width: 1px;
+  height: 20px;
+
+  background: var(--brand-primary);
+}
+
+/* =========================================================
+   END MARKER
+   ========================================================= */
+
+.workflow-transform__end-marker {
+  display: flex;
+  align-items: center;
+
+  margin-top: var(--space-3);
+}
+
+.workflow-transform__end-marker span {
+  width: 32px;
+  height: 1px;
+
+  background: var(--brand-primary);
+}
+
+.workflow-transform__end-marker i {
+  width: 8px;
+  height: 8px;
+
+  background: var(--brand-primary);
+}
+
+/* ---------- Title ---------- */
+.case-slide--hypothesis .case-slide__inner {
+  display: flex;
+  flex-direction: column;
+
+  align-items: stretch;
+  justify-content: flex-start;
+
+  /* IMPORTANT:
+     no horizontal padding here.
+     Shared .case-slide__inner owns slide padding.
+  */
+}
+
+.hypothesis-intro {
+  width: 100%;
+  max-width: 780px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.hypothesis-intro__title {
+  margin: var(--space-5) 0 var(--space-5);
+
+  font-family: var(--font-heading);
+  font-size: var(--text-h1);
+  line-height: var(--lh-h1);
+  font-weight: 700;
+
+  letter-spacing: -0.02em;
+
+  color: var(--brand-secondary);
+}
+
+/* ---------- Description ---------- */
+
+.hypothesis-intro__lead {
+  max-width: 760px;
+
+  margin: 0;
+
+  font-family: var(--font-body);
+  font-size: var(--fs-body);
+  line-height: var(--lh-body);
+  font-weight: 400;
+
+  color: var(--text-subtle);
+}
+
+/* =========================================================
+   KEY PILLARS LABEL
+   ========================================================= */
+
+.hypothesis-section-label {
+  margin-top: var(--space-5);
+  margin-bottom: var(--space-4);
+}
+
+/* =========================================================
+   PILLARS GRID
+   ========================================================= */
+
+.hypothesis-pillars {
+  flex: 1;
+
+  min-height: 0;
+
+  align-items: stretch;
+}
+
+/* =========================================================
+   INDIVIDUAL PILLAR
+   ========================================================= */
+
+.hypothesis-pillar {
+  position: relative;
+
+  min-width: 0;
+
+  display: flex;
+  flex-direction: column;
+
+  align-items: flex-start;
+
+  padding-right: var(--space-6);
+
+  box-sizing: border-box;
+}
+
+/* Vertical divider between pillars */
+
+.hypothesis-pillar:not(:first-child) {
+  padding-left: var(--space-6);
+
+  border-left: 1px solid var(--border-default);
+}
+
+/* =========================================================
+   PILLAR INDEX
+   ========================================================= */
+
+.hypothesis-pillar__index {
+  display: block;
+
+  margin-bottom: var(--space-2);
+
+  font-family: var(--font-mono);
+  font-size: var(--fs-micro);
+  line-height: var(--lh-micro);
+  font-weight: 500;
+
+  letter-spacing: 0.08em;
+
+  color: var(--brand-primary);
+}
+
+/* =========================================================
+   PILLAR TITLE
+   ========================================================= */
+
+.hypothesis-pillar__title {
+  margin: 0 0 var(--space-2);
+
+  font-family: var(--font-heading);
+  font-size: var(--fs-h4);
+  line-height: var(--lh-h4);
+  font-weight: 600;
+
+  color: var(--brand-secondary);
+}
+
+/* =========================================================
+   PILLAR DESCRIPTION
+   ========================================================= */
+
+.hypothesis-pillar__body {
+  max-width: 350px;
+
+  margin: 0;
+
+  font-family: var(--font-body);
+  font-size: var(--fs-small);
+  line-height: var(--lh-small);
+  font-weight: 500;
+  color: var(--text-body);
+}
+
+/* =========================================================
+   9 STEPS → 4 STAGES
+   ========================================================= */
+
+.hypothesis-pillar__metric {
+  display: flex;
+  align-items: center;
+
+  gap: 7px;
+
+  margin-top: var(--space-4);
+
+  font-family: var(--font-mono);
+  font-size: 16px;
+  line-height: 1;
+
+  letter-spacing: 0.04em;
+
+  color: var(--text-caption);
+}
+
+.hypothesis-pillar__metric strong {
+  font-size: 12px;
+  font-weight: 600;
+
+  color: var(--brand-primary);
+}
+
+.hypothesis-pillar__arrow {
+  margin-inline: 3px;
+
+  font-size: 16px;
+
+  color: var(--brand-primary);
+}
+
+/* =========================================================
+   RETRIEVE → VALIDATE → REVIEW
+   ========================================================= */
+
+.hypothesis-pillar__process {
+  display: flex;
+  align-items: center;
+
+  flex-wrap: wrap;
+
+  gap: 7px;
+
+  margin-top: var(--space-4);
+
+  font-family: var(--font-mono);
+  font-size: 16px;
+  line-height: 1.2;
+  font-weight: 500;
+
+  letter-spacing: 0.07em;
+
+  color: var(--brand-secondary);
+}
+
+.hypothesis-pillar__process i {
+  font-style: normal;
+  font-size: 15px;
+  font-weight: 400;
+
+  color: var(--brand-primary);
+}
+
+/* =========================================================
+   BOTTOM DESIGN PRINCIPLE
+   ========================================================= */
+
+.hypothesis-flow {
+  display: flex;
+  align-items: center;
+
+  gap: var(--space-2);
+
+  min-height: 40px;
+
+  margin-top: var(--space-3);
+
+  font-family: var(--font-mono);
+  font-size: 10px;
+  line-height: 1;
+  font-weight: 500;
+
+  letter-spacing: 0.08em;
+
+  color: var(--brand-secondary);
+}
+
+.hypothesis-flow i {
+  font-style: normal;
+
+  font-size: 18px;
+  font-weight: 300;
+
+  color: var(--brand-primary);
+}
+
+/* =========================================================
+   HEADER
+   ========================================================= */
+
+.architecture-header__title {
+  grid-column: span 7;
+  align-self: end;
+  margin: 0;
+
+  font-family: var(--font-heading);
+  font-size: var(--case-title-size); /* 40px */
+  line-height: var(--case-title-line-height); /* 44px */
+  font-weight: var(--case-title-weight); /* 700 */
+  letter-spacing: var(--case-title-letter-spacing); /* -0.4px */
+
+  color: var(--brand-secondary);
+}
+
+/* ---------- Left ---------- */
+
+.architecture-header__title {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+/* ---------- Main title ---------- */
+
+.architecture-title {
+  margin: var(--space-5) 0 0;
+
+  font-family: var(--font-heading);
+  font-size: var(--fs-h1);
+  line-height: var(--lh-h1);
+  font-weight: 700;
+
+  letter-spacing: -0.02em;
+
+  color: var(--brand-secondary);
+}
+
+/* ---------- Right description ---------- */
+
+.architecture-header__description {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-end;
+
+  padding-top: 88px;
+
+  box-sizing: border-box;
+}
+
+.architecture-lead {
+  width: 100%;
+  max-width: 470px;
+
+  margin: 0;
+
+  font-family: var(--font-body);
+  font-size: var(--fs-body);
+  line-height: var(--lh-body);
+  font-weight: 400;
+
+  color: var(--text-subtle);
+}
+
+/* =========================================================
+   ARCHITECTURE GRAPHIC
+   ========================================================= */
+
+.architecture-visual {
+  width: 100%;
+
+  display: flex;
+
+  justify-content: center;
+
+  /*
+   * Controls distance between header
+   * and architecture diagram.
+   */
+  margin-top: var(--space-4);
+
+  /*
+   * Allows diagram to occupy remaining
+   * available vertical space.
+   */
+  flex: 1;
+
+  min-height: 0;
+}
+
+.architecture-visual__image {
+  display: block;
+
+  width: 100%;
+  height: auto;
+
+  /*
+   * Prevent the diagram from becoming
+   * taller than its available area.
+   */
+
+  object-fit: contain;
+  object-position: center;
+}
+
+/* =========================================================
+   OUTCOME / BOTTOM STATEMENT
+   ========================================================= */
+
+.architecture-outcome {
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+
+  margin-top: var(--space-4);
+  padding-bottom: var(--space-2);
+}
+
+.architecture-outcome__text {
+  margin: 0;
+
+  font-family: var(--font-body);
+  font-size: var(--fs-body);
+  line-height: var(--lh-body);
+  font-weight: 600;
+
+  color: var(--text-body);
+}
+
+/* =========================================================
+   ARCHITECTURE HEADER
+   F1 = 12 cols
+   F2 + F3 = second row
+   ========================================================= */
+
+/* F1 */
+
+.architecture-header__eyebrow {
+  grid-column: span 12;
+}
+
+/* F2 */
+
+.architecture-header__title {
+  align-self: end;
+}
+
+.architecture-title {
+  margin: 0;
+
+  font-family: var(--font-heading);
+  font-size: var(--fs-h1);
+  line-height: var(--lh-h1);
+  font-weight: 700;
+
+  color: var(--brand-secondary);
+}
+
+/* F3 */
+
+.architecture-header__description {
+  align-self: end;
+
+  display: flex;
+  justify-content: flex-end;
+}
+
+.architecture-lead {
+  width: 100%;
+  max-width: 470px;
+  margin: 0;
+
+  font-family: var(--font-body);
+  font-size: var(--fs-body);
+  line-height: var(--lh-body);
+
+  color: var(--text-subtle);
+}
+
+.architecture-visual__rule {
+  width: 100%;
+  height: 1px;
+
+  margin-top: var(--space-3);
+
+  background: var(--border-default);
+}
+
+/* =========================================================
+   SMALL SAFETY ADJUSTMENT
+   ========================================================= */
+
+.workflow-panel--before .workflow-panel__image,
+.workflow-panel--after .workflow-panel__image {
+  max-height: 760px;
+}
+
+.component-system__group {
+  margin-top: 2rem;
+}
+
+/* - SLIDE 08 — APPLICATION ARCHITECTURE  ============= */
+.component-system__group--accessibility {
+  justify-content: flex-start;
+  border-left: 1px solid var(--border-default);
+  padding-left: 24px;
+}
+
+.component-state {
+  justify-content: flex-start;
+}
+
+.component-system__spec-copy {
+  margin: 0;
+}
+
+/* =========================================================
+   ACCESSIBILITY LAYERS PANEL
+   ========================================================= */
+
+.accessibility-layers {
+  margin-top: var(--space-3);
+
+  padding: var(--space-1);
+
+  border: 1px solid var(--border-default);
+  background: var(--surface-default);
+
+  box-sizing: border-box;
+}
+
+.accessibility-layers__title {
+  margin: 0 0 var(--space-2);
+
+  font-family: var(--font-mono);
+  font-size: 10px;
+  line-height: 1.3;
+  font-weight: 500;
+
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+
+  color: var(--brand-primary);
+}
+
+.accessibility-layers__list {
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+  counter-reset: accessibility-layer;
+}
+
+.accessibility-layers__list li {
+  counter-increment: accessibility-layer;
+
+  display: grid;
+  grid-template-columns: 24px 160px minmax(0, 1fr);
+
+  column-gap: 12px;
+
+  align-items: start;
+
+  padding: 8px 0;
+
+  border-bottom: 1px solid var(--border-default);
+
+  font-family: var(--font-body);
+  font-size: 14px;
+  line-height: 1.35;
+
+  color: var(--text-subtle);
+}
+
+.accessibility-layers__list li:last-child {
+  border-bottom: 0;
+}
+
+.accessibility-layers__list li::before {
+  content: counter(accessibility-layer) ".";
+
+  font-family: var(--font-mono);
+  font-size: 14px;
+  line-height: 1.35;
+
+  color: var(--brand-primary);
+}
+
+.accessibility-layers__list strong {
+  font-family: var(--font-mono);
+  font-size: 14px;
+  line-height: 1.35;
+  font-weight: 500;
+
+  color: var(--brand-secondary);
+}
+
+.accessibility-layers__list span {
+  color: var(--text-subtle);
+}
+
+/* =========================================================
+   CONTRAST RATIOS
+   ========================================================= */
+
+.contrast-section {
+  margin-top: var(--space-2);
+}
+
+.contrast-section__heading {
+  margin-bottom: var(--space-1);
+
+  font-family: var(--font-mono);
+  font-size: 12px;
+  line-height: 1.3;
+  font-weight: 500;
+
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+
+  color: var(--brand-secondary);
+}
+
+.contrast-grid {
+  height: auto;
+
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+
+  column-gap: var(--grid-gap);
+  row-gap: var(--space-2);
+}
+
+.contrast-card {
+  min-height: 102px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  padding: 14px 16px;
+
+  box-sizing: border-box;
+
+  border: 1px solid var(--border-default);
+  background: var(--surface-default);
+}
+
+/* Tag label — 13.77:1 */
+.contrast-card--muted {
+  background: #e0e0e0;
+}
+
+/* Body text — 15.3:1 */
+.contrast-card--body {
+  background: #ffffff;
+}
+
+/* Link on white — 8.59:1 */
+.contrast-card--link {
+  background: #ffffff;
+}
+
+.contrast-card--link strong {
+  color: #0f62fe;
+}
+
+/* Yellow row text — 6.2:1 */
+.contrast-card--warning {
+  background: #fef7e0;
+}
+
+.contrast-card span {
+  margin: 0;
+
+  font-family: var(--font-mono);
+  font-size: 14px;
+  line-height: 1.3;
+
+  color: var(--text-caption);
+}
+
+.contrast-card strong {
+  margin-top: 8px;
+
+  font-family: var(--font-heading);
+  font-size: 26px;
+  line-height: 1;
+  font-weight: 500;
+
+  letter-spacing: -0.02em;
+}
+
+.contrast-card small {
+  margin-top: 8px;
+
+  font-family: var(--font-mono);
+  font-size: 14px;
+  line-height: 1.25;
+
+  letter-spacing: 0.04em;
+
+  color: var(--text-subtle);
+}
+
+.component-system__lead-copy {
+  margin-bottom: 0;
+}
+
+/* Slide-specific background */
+.case-slide--component-system {
+  background-color: #f4f4f4;
+}
+
+/* State heading */
+
+.resolution-state__label {
+  display: flex;
+  align-items: center;
+
+  gap: 7px;
+
+  margin-bottom: var(--space-2);
+}
+
+.resolution-state__dot {
+  width: 5px;
+  height: 5px;
+
+  flex: 0 0 5px;
+
+  border-radius: 50%;
+
+  background: #8dabb9;
+}
+
+.resolution-state__dot--active {
+  background: var(--brand-primary);
+}
+
+.resolution-state__meta {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  line-height: 1.2;
+
+  letter-spacing: 0.04em;
+
+  color: var(--text-subtle);
+}
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
+
+.resolution-footer {
+  margin-top: auto;
+
+  padding-top: var(--space-4);
+}
+
+.resolution-footer__flow {
+  display: flex;
+  align-items: center;
+
+  gap: 8px;
+
+  font-family: var(--font-mono);
+  font-size: 16px;
+
+  letter-spacing: 0.06em;
+
+  color: var(--brand-secondary);
+}
+
+.resolution-footer__flow i {
+  font-style: normal;
+  color: var(--brand-primary);
+}
+
+.resolution-footer__flow span:nth-of-type(3),
+.resolution-footer__flow span:nth-of-type(5) {
+  color: var(--brand-primary);
+}
+
+.resolution-footer__note {
+  margin: 6px 0 0;
+
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1.4;
+
+  color: var(--text-body);
+}
+
+/* =========================================================
+   SLIDE — CONSTRAINTS & TRADE-OFFS
+   ========================================================= */
+
+.case-slide--constraints .case-slide__inner {
+  display: flex;
+  flex-direction: column;
+
+  width: 100%;
+  height: 100%;
+
+  padding: 64px var(--case-slide-padding-x) 32px;
+
+  box-sizing: border-box;
+}
+
+/* =========================================================
+   HEADER
+   ========================================================= */
+
+.constraints-header {
+  height: auto;
+
+  row-gap: var(--space-4);
+
+  align-items: end;
+}
+
+.constraints-header__lead {
+  max-width: 420px;
+
+  margin: 0 0 4px auto;
+
+  font-family: var(--font-body);
+  font-size: var(--fs-small);
+  line-height: var(--lh-small);
+
+  text-align: right;
+
+  color: var(--text-subtle);
+}
+
+/* =========================================================
+   TABLE WRAPPER
+   ========================================================= */
+
+.constraints-table {
+  margin-top: var(--space-6);
+}
+
+/* =========================================================
+   TABLE HEADER
+   ========================================================= */
+
+.constraints-table__header {
+  height: auto;
+
+  padding-bottom: 10px;
+
+  border-bottom: 1px solid var(--border-strong);
+}
+
+.constraints-table__heading {
+  font-family: var(--font-mono);
+  font-size: 14px;
+  line-height: 1.2;
+  font-weight: 500;
+
+  letter-spacing: 0.08em;
+
+  color: var(--text-body);
+}
+
+/* =========================================================
+   TABLE ROW
+   ========================================================= */
+
+.constraints-table__row {
+  position: relative;
+
+  height: auto;
+
+  align-items: stretch;
+
+  border-bottom: 1px solid var(--border-default);
+  margin-top: 0;
+}
+
+/* index sits outside the normal column content */
+
+.constraints-table__index {
+  position: absolute;
+
+  left: 0;
+  top: 20px;
+
+  transform: translateX(-28px);
+
+  font-family: var(--font-mono);
+  font-size: 14px;
+  line-height: 1;
+
+  color: var(--brand-primary);
+}
+
+/* =========================================================
+   TABLE CELLS
+   ========================================================= */
+
+.constraints-table__cell {
+  min-height: 84px;
+
+  display: flex;
+  align-items: flex-start;
+
+  padding: 20px 18px;
+
+  box-sizing: border-box;
+
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1.45;
+
+  color: var(--text-body);
+}
+
+/* ---------------------------------------------------------
+   Constraint column
+   --------------------------------------------------------- */
+
+.constraints-table__cell--constraint {
+  position: relative;
+
+  background: #fef7e0;
+
+  padding-left: 22px;
+}
+
+.constraints-table__cell--constraint::before {
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+  top: 0;
+  bottom: 0;
+
+  width: 3px;
+
+  background: #e8b000;
+}
+
+/* ---------------------------------------------------------
+   Design response
+   --------------------------------------------------------- */
+
+.constraints-table__cell--response {
+  position: relative;
+}
+
+.constraints-table__cell--response::after {
+  content: "";
+
+  position: absolute;
+
+  right: 0;
+  top: 0;
+  bottom: 0;
+
+  width: 3px;
+
+  background: #0f62fe;
+}
+
+/* ---------------------------------------------------------
+   User benefit
+   --------------------------------------------------------- */
+
+.constraints-table__cell--benefit {
+  padding-left: 22px;
+}
+
+/* =========================================================
+   DESIGN PRINCIPLE
+   ========================================================= */
+
+.constraints-principle {
+  display: flex;
+
+  align-items: stretch;
+
+  gap: var(--space-3);
+
+  margin-top: var(--space-5);
+}
+
+.constraints-principle__accent {
+  width: 4px;
+
+  flex: 0 0 4px;
+
+  background: var(--brand-primary);
+}
+
+.constraints-principle__content {
+  display: grid;
+
+  grid-template-columns: 130px minmax(0, 1fr);
+
+  column-gap: var(--space-3);
+
+  align-items: start;
+
+  padding: 18px 0;
+}
+
+.constraints-principle__label {
+  font-family: var(--font-mono);
+  font-size: 14px;
+  line-height: 1.3;
+  font-weight: 500;
+
+  letter-spacing: 0.08em;
+
+  color: var(--brand-primary);
+}
+
+.constraints-principle__text {
+  max-width: 760px;
+
+  margin: 0;
+
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1.4;
+  font-weight: 600;
+
+  color: var(--text-body);
+}
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
+
+.constraints-footer {
+  margin-top: auto;
+
+  padding-top: var(--space-3);
+  padding-bottom: var(--space-2);
+
+  border-bottom: 1px solid var(--border-default);
+}
+
+.constraints-footer__note {
+  margin: 0;
+
+  font-family: var(--font-body);
+  font-size: 14px;
+  line-height: 1.45;
+
+  color: var(--text-subtle);
+}
+
+.constraints-footer__note strong {
+  font-weight: 600;
+
+  color: var(--text-body);
+}
+
+/* =========================================================
+   METRIC GRID
+   4 / 4 / 4
+   ========================================================= */
+
+.outcomes-metrics {
+  height: auto;
+
+  margin-top: var(--space-7);
+
+  align-items: stretch;
+}
+
+/* =========================================================
+   METRIC CARD
+   ========================================================= */
+
+.outcomes-card {
+  min-width: 0;
+
+  display: flex;
+  flex-direction: column;
+
+  align-items: flex-start;
+
+  padding-right: var(--space-5);
+
+  box-sizing: border-box;
+}
+
+.outcomes-card:not(:first-child) {
+  padding-left: var(--space-5);
+
+  border-left: 1px solid var(--border-default);
+}
+
+/* =========================================================
+   LABEL
+   ========================================================= */
+
+.outcomes-card__label {
+  display: flex;
+  align-items: center;
+
+  gap: 10px;
+
+  margin-bottom: var(--space-4);
+
+  font-family: var(--font-mono);
+  font-size: 16px;
+  line-height: 1.2;
+  font-weight: 500;
+
+  letter-spacing: 0.08em;
+
+  color: var(--brand-secondary);
+}
+
+.outcomes-card__label span {
+  width: 14px;
+  height: 1px;
+
+  background: var(--brand-primary);
+}
+
+/* =========================================================
+   LARGE NUMBERS
+   ========================================================= */
+
+.outcomes-card__number {
+  display: block;
+
+  margin: 0;
+
+  font-family: var(--font-heading);
+  font-size: 64px;
+  line-height: 1;
+  font-weight: 700;
+
+  letter-spacing: -0.04em;
+
+  color: var(--brand-secondary);
+}
+
+.outcomes-card__number--muted {
+  color: #d9d9d9;
+}
+
+/* =========================================================
+   F1 — 09 → 04
+   ========================================================= */
+
+.outcomes-card__stage-change {
+  display: flex;
+  align-items: center;
+
+  gap: var(--space-3);
+}
+
+.outcomes-card__stage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.outcomes-card__stage small {
+  margin-top: 10px;
+
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1.2;
+
+  color: var(--text-caption);
+}
+
+.outcomes-card__change {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  gap: 4px;
+
+  margin-top: -8px;
+}
+
+.outcomes-card__change span {
+  font-family: var(--font-mono);
+  font-size: 16px;
+  line-height: 1;
+
+  color: var(--brand-primary);
+}
+
+.outcomes-card__change i {
+  font-style: normal;
+
+  font-size: 16px;
+
+  color: var(--brand-primary);
+}
+
+/* =========================================================
+   CAPTIONS / DESCRIPTION
+   ========================================================= */
+
+.outcomes-card__caption {
+  margin: var(--space-3) 0 var(--space-3);
+
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1.3;
+
+  color: var(--text-subtle);
+}
+
+.outcomes-card__description {
+  max-width: 290px;
+
+  margin: var(--space-4) 0 0;
+
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1.45;
+
+  color: var(--text-body);
+}
+
+/* =========================================================
+   F2 — INPUT LIST
+   ========================================================= */
+
+.outcomes-card__list {
+  width: 100%;
+
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+.outcomes-card__list li {
+  position: relative;
+
+  padding: 7px 0 7px 16px;
+
+  border-bottom: 1px solid var(--border-default);
+
+  font-family: var(--font-mono);
+  font-size: 16px;
+  line-height: 1.2;
+
+  color: var(--text-body);
+}
+
+.outcomes-card__list li::before {
+  content: "•";
+
+  position: absolute;
+  left: 0;
+
+  color: var(--brand-primary);
+}
+
+/* =========================================================
+   F3 — SOURCES
+   ========================================================= */
+
+.outcomes-card__sources {
+  display: flex;
+  align-items: center;
+
+  gap: var(--space-2);
+
+  margin-top: var(--space-3);
+
+  font-family: var(--font-mono);
+  font-size: 16px;
+  line-height: 1.2;
+
+  color: var(--brand-secondary);
+}
+
+.outcomes-card__sources i {
+  font-style: normal;
+
+  color: var(--brand-primary);
+}
+
+/* =========================================================
+   BOTTOM VALIDATION STRIP
+   ========================================================= */
+
+.outcomes-validation {
+  height: auto;
+
+  margin-top: auto;
+
+  padding: var(--space-3) 0 var(--space-3);
+
+  border-top: 1px solid var(--border-default);
+
+  align-items: start;
+}
+
+.outcomes-validation__label {
+  margin-bottom: var(--space-2);
+
+  font-family: var(--font-mono);
+  font-size: 16px;
+  line-height: 1.3;
+
+  letter-spacing: 0.08em;
+
+  color: var(--text-caption);
+}
+
+.outcomes-validation__metrics {
+  display: flex;
+  align-items: center;
+
+  flex-wrap: wrap;
+
+  gap: var(--space-4);
+
+  font-family: var(--font-mono);
+  font-size: 16px;
+  line-height: 1.3;
+
+  color: var(--text-subtle);
+}
+
+.outcomes-validation__note {
+  max-width: 280px;
+
+  margin: 0 0 0 auto;
+
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1.4;
+
+  text-align: right;
+
+  color: var(--text-subtle);
+}
+
+/* =========================================================
+   LESSON GRID
+   4 / 4 / 4
+   ========================================================= */
+
+.reflection-lessons {
+  height: auto;
+
+  margin-top: var(--space-6);
+
+  padding-top: var(--space-3);
+
+  border-top: 1px solid var(--border-default);
+
+  align-items: stretch;
+}
+
+.reflection-lesson {
+  min-width: 0;
+
+  display: flex;
+  flex-direction: column;
+
+  align-items: flex-start;
+
+  padding-right: var(--space-5);
+
+  box-sizing: border-box;
+}
+
+.reflection-lesson:not(:first-child) {
+  padding-left: var(--space-5);
+
+  border-left: 1px solid var(--border-default);
+}
+
+/* =========================================================
+   LESSON LABEL
+   ========================================================= */
+
+.reflection-lesson__label {
+  margin-bottom: var(--space-3);
+
+  font-family: var(--font-mono);
+  font-size: 16px;
+  line-height: 1.3;
+  font-weight: 500;
+
+  letter-spacing: 0.08em;
+
+  color: var(--brand-primary);
+}
+
+/* =========================================================
+   LESSON TITLE
+   ========================================================= */
+
+.reflection-lesson__title {
+  max-width: 320px;
+
+  margin: 0;
+
+  font-family: var(--font-heading);
+  font-size: 16px;
+  line-height: 1.4;
+  font-weight: 600;
+
+  color: var(--brand-secondary);
+}
+
+/* =========================================================
+   LESSON BODY
+   ========================================================= */
+
+.reflection-lesson__body {
+  max-width: 330px;
+
+  margin: var(--space-3) 0 0;
+
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1.55;
+  font-weight: 400;
+
+  color: var(--text-subtle);
+}
+
+/* =========================================================
+   KEY REFLECTION STATEMENT
+   ========================================================= */
+
+.reflection-statement {
+  margin: 170px 0 0;
+
+  padding: 0;
+
+  border: 0;
+
+  font-family: var(--font-heading);
+  font-size: 24px;
+  line-height: 1.35;
+  font-weight: 600;
+  font-style: italic;
+
+  color: var(--brand-primary);
+  margin-bottom: var(--space-2);
+}
+
+/* =========================================================
+   FOOTER FLOW
+   ========================================================= */
+
+.reflection-footer {
+  margin-top: auto;
+
+  padding-bottom: var(--space-3);
+
+  border-bottom: 1px solid var(--border-default);
+}
+
+.reflection-footer__flow {
+  display: flex;
+  align-items: center;
+
+  gap: 8px;
+
+  font-family: var(--font-mono);
+  font-size: 14px;
+  line-height: 1;
+
+  letter-spacing: 0.08em;
+
+  color: var(--brand-secondary);
+}
+
+.reflection-footer__flow i {
+  font-style: normal;
+
+  color: var(--brand-primary);
+}
+
+@media (max-width: 900px) {
+  .case-grid {
+    grid-template-columns: 1fr;
+    row-gap: 48px;
+    align-items: start;
+  }
+
+  .case-grid > [class*="col-"] {
+    grid-column: 1 / -1;
+  }
+
+  .case-grid__item {
+    width: 100%;
+  }
+
+  .case-slide__inner {
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+
+  .case-slide__visual {
+    max-width: 720px;
+    margin-inline: auto;
+  }
+}

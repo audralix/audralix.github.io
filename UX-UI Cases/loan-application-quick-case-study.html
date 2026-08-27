@@ -1,0 +1,1263 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FinTech Onboarding Case Study | Melis Konez Product Design</title>
+    <meta
+      name="title"
+      content="FinTech Onboarding Case Study | Melis Konez Product Design"
+    />
+    <meta
+      name="description"
+      content="How I redesigned a complex broker onboarding portal using progressive disclosure to reduce cognitive load and accelerate first-time user activation."
+    />
+    <!-- Open Graph / LinkedIn -->
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://melisknz.com/fintech-onboarding" />
+    <meta
+      property="og:title"
+      content="FinTech Partner Portal UX Redesign | Case Study"
+    />
+    <meta
+      property="og:description"
+      content="Streamlining broker onboarding and complex compliance workflows using progressive disclosure and modular design systems."
+    />
+    <meta
+      property="og:image"
+      content="https://melisknz.com/assets/og-fintech-case-study.jpg"
+    />
+    <!-- CSS-STYLE -->
+    <link rel="stylesheet" href="/style/designstyle.css" />
+    <link rel="stylesheet" href="/style/quick-case-study.css" />
+  </head>
+  <body class="quick-case-study">
+    <!-- <nav class="quick-case-nav">...</nav> -->
+
+    <main class="case-study-viewport">
+      <div class="case-study-scale-shell">
+        <div class="case-study-stage">
+          <!-- SLIDE 01 — HERO  ====================================================== -->
+          <section class="case-slide">
+            <div class="case-slide__inner">
+              <div class="case-grid">
+                <!-- Left content -->
+                <div class="case-grid__item col-5">
+                  <div class="case-slide__content">
+                    <div class="case-eyebrow">
+                      <span class="case-eyebrow__text">
+                        B2B FINTECH · ENTERPRISE UX
+                      </span>
+                    </div>
+                    <h1 class="case-slide__title">
+                      B2B SME Loan<br />
+                      Application Redesign
+                    </h1>
+
+                    <p class="case-hero__subtitle">
+                      Streamlining High-Friction SME Onboarding Risk Assessment
+                      Workflows
+                    </p>
+                    <div class="case-meta">
+                      <span class="case-meta__item">Product Design</span>
+                      <span class="case-meta__item">B2B FinTech</span>
+                      <span class="case-meta__item">Enterprise Workflow</span>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Right visual -->
+                <div class="case-grid__item case-grid__item--visual col-7">
+                  <img
+                    class="case-slide__visual-hero"
+                    src="/assets/LoanApplication-QuickView/Hero-img.png"
+                    alt="IEFinance loan application displayed on a laptop"
+                  />
+                </div>
+              </div>
+            </div>
+          </section>
+          <!-- SLIDE 02 — Snapshot  ====================================================== -->
+          <section class="case-slide">
+            <div class="case-slide__inner">
+              <div class="case-grid">
+                <!-- Left content -->
+                <div class="case-grid__item col-5">
+                  <div class="case-slide__content">
+                    <div class="case-eyebrow">
+                      <span class="case-eyebrow__text">
+                        B2B FINTECH · ENTERPRISE UX
+                      </span>
+                    </div>
+
+                    <h2 class="case-slide__title-snapshot">
+                      Redesigning the B2B SME<br />
+                      Loan Application Portal
+                    </h2>
+
+                    <p class="case-hero__subtitle-snapshot">
+                      Transforming a high-friction, multi-step risk assessment
+                      workflow into an intuitive, progressive disclosure
+                      onboarding experience.
+                    </p>
+
+                    <div class="case-slide__section">
+                      <div class="case-eyebrow case-eyebrow--section">
+                        <span class="case-eyebrow__text">
+                          PROJECT SNAPSHOT
+                        </span>
+                      </div>
+
+                      <dl class="case-snapshot">
+                        <div class="case-snapshot__item">
+                          <dt class="case-snapshot__label">ROLE</dt>
+                          <dd class="case-snapshot__value">
+                            <strong>Senior Product Designer</strong>
+                            <span>Lead UX/UI Architecture</span>
+                          </dd>
+                        </div>
+
+                        <div class="case-snapshot__item">
+                          <dt class="case-snapshot__label">PLATFORM</dt>
+                          <dd class="case-snapshot__value">
+                            <strong>Enterprise B2B SaaS</strong>
+                            <span>FinTech Portal</span>
+                          </dd>
+                        </div>
+
+                        <div class="">
+                          <dt class="case-snapshot__label">CORE IMPACT</dt>
+                          <dd
+                            class="case-snapshot__value case-snapshot__value--impact"
+                          >
+                            Reduced onboarding completion time, eliminated form
+                            drop-off, and accelerated compliance review cycles.
+                          </dd>
+                        </div>
+                      </dl>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Right visual -->
+                <div class="case-grid__item case-grid__item--visual col-7">
+                  <img
+                    class="case-slide__visual"
+                    src="/assets/LoanApplication-QuickView/260330_01 1.png"
+                    alt="IEFinance loan application displayed on a laptop"
+                  />
+                </div>
+              </div>
+            </div>
+
+            <div class="case-slide__footer-rule" aria-hidden="true"></div>
+          </section>
+          <section class="case-slide case-slide--workflow">
+            <div class="case-slide__inner">
+              <!-- ==================================================
+         TOP — PROBLEM STATEMENT
+         ================================================== -->
+
+              <div class="workflow-problem">
+                <div class="workflow-problem__title">
+                  <span class="workflow-problem__label"> PROBLEM: </span>
+
+                  <strong> High Cognitive Load &amp; Abandonment Rates </strong>
+                </div>
+
+                <ul class="workflow-problem__list">
+                  <li>
+                    Small and medium enterprise (SME) applicants faced a dense,
+                    25+ field form requiring complex financial data, KYC
+                    documentation, and multi-role approvals.
+                  </li>
+
+                  <li>
+                    <strong>Friction Points:</strong>
+                    High cognitive overload, unclear error-state handling, lack
+                    of session-saving capability, and frequent session timeouts
+                    leading to a high drop-off rate during risk verification.
+                  </li>
+                </ul>
+              </div>
+
+              <!-- ==================================================
+         COMPARISON — 12 COLUMN GRID
+         ================================================== -->
+
+              <div class="case-grid workflow-comparison">
+                <!-- =========================
+           LEFT — BEFORE
+           5 columns
+           ========================= -->
+
+                <div class="workflow-panel workflow-panel--before col-5">
+                  <div class="workflow-panel__header">
+                    <span class="workflow-panel__eyebrow"> BEFORE </span>
+
+                    <span class="workflow-panel__chip"> 9-STEP WORKFLOW </span>
+                  </div>
+
+                  <h2 class="workflow-panel__title">
+                    Front-loaded data collection
+                  </h2>
+
+                  <img
+                    class="workflow-panel__image"
+                    src="/assets/LoanApplication-QuickView/LoadedDataCollection_00.png"
+                    alt="Previous nine-step loan application workflow"
+                  />
+                </div>
+
+                <!-- =========================
+           MIDDLE — TRANSFORMATION
+           2 columns
+           ========================= -->
+
+                <div class="workflow-transform col-2">
+                  <div class="workflow-transform__heading">
+                    SYSTEM LOGIC<br />
+                    REDESIGNED
+                  </div>
+
+                  <div class="workflow-transform__metric">
+                    <span class="workflow-transform__from"> 9 </span>
+
+                    <span
+                      class="workflow-transform__arrow"
+                      aria-hidden="true"
+                    ></span>
+
+                    <span class="workflow-transform__to"> 4 </span>
+
+                    <span class="workflow-transform__caption">
+                      STEPS CONSOLIDATED
+                    </span>
+                  </div>
+
+                  <div class="workflow-transform__principles">
+                    <div class="workflow-transform__principle">Ask less</div>
+
+                    <span
+                      class="workflow-transform__connector"
+                      aria-hidden="true"
+                    ></span>
+
+                    <div class="workflow-transform__principle">
+                      Retrieve<br />
+                      available data
+                    </div>
+
+                    <span
+                      class="workflow-transform__connector"
+                      aria-hidden="true"
+                    ></span>
+
+                    <div class="workflow-transform__principle">
+                      Guide<br />
+                      progressively
+                    </div>
+                  </div>
+
+                  <div
+                    class="workflow-transform__end-marker"
+                    aria-hidden="true"
+                  >
+                    <span></span>
+                    <i></i>
+                  </div>
+                </div>
+
+                <!-- =========================
+           RIGHT — AFTER
+           5 columns
+           ========================= -->
+
+                <div class="workflow-panel workflow-panel--after col-5">
+                  <div class="workflow-panel__header">
+                    <span class="workflow-panel__eyebrow"> AFTER </span>
+
+                    <span class="workflow-panel__chip"> 4-STEP WORKFLOW </span>
+                  </div>
+
+                  <h2 class="workflow-panel__title">
+                    Progressive, system-assisted workflow
+                  </h2>
+
+                  <img
+                    class="workflow-panel__image"
+                    src="/assets/LoanApplication-QuickView/SystemAssistedWorkflow.png"
+                    alt="Redesigned four-stage system-assisted workflow"
+                  />
+                </div>
+              </div>
+            </div>
+          </section>
+          <!--  SLIDE 04 — SYSTEM-ASSISTED DATA & EARLY GUIDANCE ====================================================== -->
+          <section class="case-slide case-slide--architecture">
+            <div class="case-slide__i">
+              <!--  INTRO =================================================== -->
+              <header class="architecture-header case-grid">
+                <div class="architecture-header__eyebrow col-12">
+                  <div class="case-eyebrow">
+                    <span class="case-eyebrow__text">
+                      DESIGN HYPOTHESIS · SYSTEM LOGIC
+                    </span>
+                  </div>
+                </div>
+
+                <!-- F2: title -->
+                <div class="architecture-header__title col-7">
+                  <h2 class="architecture-title">
+                    System-Assisted Data<br />
+                    &amp; Early Guidance
+                  </h2>
+                </div>
+
+                <!-- F3: supporting description -->
+                <div class="architecture-header__description col-5">
+                  <p class="architecture-lead">
+                    Reorganizing the application flow to reduce unnecessary
+                    partner input, retrieve available data automatically, and
+                    provide guidance earlier in the process.
+                  </p>
+                </div>
+              </header>
+
+              <!-- ==================================================
+         SECTION LABEL
+         ================================================== -->
+
+              <div
+                class="case-eyebrow case-eyebrow--section hypothesis-section-label"
+              >
+                <span class="case-eyebrow__text"> KEY PILLARS </span>
+              </div>
+
+              <!-- ==================================================
+         3 PILLARS — 12 COLUMN GRID
+         ================================================== -->
+
+              <div class="case-grid hypothesis-pillars">
+                <!-- 01 -->
+                <article class="hypothesis-pillar col-4">
+                  <span class="hypothesis-pillar__index"> 01 </span>
+
+                  <h3 class="hypothesis-pillar__title">
+                    Progressive Disclosure
+                  </h3>
+
+                  <p class="hypothesis-pillar__body">
+                    Restructuring the dense 9-step application into four
+                    logically grouped stages, while requesting additional
+                    partner input only when it becomes relevant or requires
+                    review.
+                  </p>
+
+                  <div class="hypothesis-pillar__metric">
+                    <strong>9</strong>
+                    <span>STEPS</span>
+
+                    <span class="hypothesis-pillar__arrow" aria-hidden="true">
+                      →
+                    </span>
+
+                    <strong>4</strong>
+                    <span style="color: #023047">STAGES</span>
+                  </div>
+                </article>
+
+                <!-- 02 -->
+                <article class="hypothesis-pillar col-4">
+                  <span class="hypothesis-pillar__index"> 02 </span>
+
+                  <h3 class="hypothesis-pillar__title">
+                    System-Assisted Validation
+                  </h3>
+
+                  <p class="hypothesis-pillar__body">
+                    Automatically retrieving and validating available business
+                    data, while asking partners to review only information that
+                    is missing or requires attention.
+                  </p>
+
+                  <div class="hypothesis-pillar__process">
+                    <span>RETRIEVE</span>
+                    <i aria-hidden="true">→</i>
+                    <span>VALIDATE</span>
+                    <i aria-hidden="true">→</i>
+                    <span>REVIEW</span>
+                  </div>
+                </article>
+
+                <!-- 03 -->
+                <article class="hypothesis-pillar col-4">
+                  <span class="hypothesis-pillar__index"> 03 </span>
+
+                  <h3 class="hypothesis-pillar__title">Multi-Role Alignment</h3>
+
+                  <p class="hypothesis-pillar__body">
+                    Designing distinct views for SME applicants with clear
+                    progress and minimal friction, and compliance officers with
+                    faster risk assessment.
+                  </p>
+                </article>
+              </div>
+            </div>
+            <!-- ==================================================
+         BOTTOM PRINCIPLE
+         ================================================== -->
+
+            <!-- Bottom rule -->
+            <div class="case-slide__footer-rule" aria-hidden="true"></div>
+          </section>
+          <!-- ======================================================
+     SLIDE 05 — APPLICATION ARCHITECTURE
+     ====================================================== -->
+
+          <section class="case-slide case-slide--architecture">
+            <div class="case-slide__i">
+              <!-- ==================================================
+                  INTRO
+                  ================================================== -->
+
+              <header class="architecture-header case-grid">
+                <!-- F1: full-width eyebrow -->
+                <div class="architecture-header__eyebrow col-12">
+                  <div class="case-eyebrow">
+                    <span class="case-eyebrow__text">
+                      APPLICATION ARCHITECTURE
+                    </span>
+                  </div>
+                </div>
+
+                <!-- F2: title -->
+                <div class="architecture-header__title col-7">
+                  <h2 class="architecture-title">
+                    Restructuring the<br />
+                    Application Architecture
+                  </h2>
+                </div>
+
+                <!-- F3: supporting description -->
+                <div class="architecture-header__description col-5">
+                  <p class="architecture-lead">
+                    Essential inputs now trigger product guidance, external data
+                    retrieval and conditional review throughout the application.
+                  </p>
+                </div>
+              </header>
+              <div class="architecture-visual">
+                <img
+                  class="architecture-visual__image"
+                  src="/assets/LoanApplication-QuickView/ApplicationArchitecture.png"
+                  alt="Application architecture showing essential inputs, early product guidance, business identity verification, conditional review, and application completion."
+                />
+              </div>
+            </div>
+
+            <!-- Bottom rule -->
+            <div class="case-slide__footer-rule" aria-hidden="true"></div>
+          </section>
+
+          <section class="case-slide case-slide--architecture">
+            <div class="case-slide__i">
+              <header class="architecture-header case-grid">
+                <!-- F1: full-width eyebrow -->
+                <div class="architecture-header__eyebrow col-12">
+                  <div class="case-eyebrow">
+                    <span class="case-eyebrow__text"> PARTNER experience </span>
+                  </div>
+                </div>
+
+                <!-- F2: title -->
+                <div class="architecture-header__title col-7">
+                  <h2 class="architecture-title">
+                    Streamlining the Partner Application Experience
+                  </h2>
+                </div>
+
+                <!-- F3: supporting description -->
+                <div class="architecture-header__description col-5">
+                  <p class="architecture-lead">
+                    The redesigned flow gives partners clearer progress, earlier
+                    product guidance and more context for confident
+                    decision-making.
+                  </p>
+                </div>
+              </header>
+              <div class="architecture-visual">
+                <img
+                  class="architecture-visual__image"
+                  src="/assets/LoanApplication-QuickView/PartnerExperience_00.png"
+                  alt="Application architecture showing essential inputs, early product guidance, business identity verification, conditional review, and application completion."
+                />
+              </div>
+            </div>
+            <!-- Bottom rule -->
+            <!--             <div class="case-slide__footer-rule" aria-hidden="true"></div>
+ -->
+          </section>
+
+          <section class="case-slide case-slide--architecture">
+            <div class="case-slide__i">
+              <header class="architecture-header case-grid">
+                <!-- F1: full-width eyebrow -->
+                <div class="architecture-header__eyebrow col-12">
+                  <div class="case-eyebrow">
+                    <span class="case-eyebrow__text">
+                      Data Review & Validation</span
+                    >
+                  </div>
+                </div>
+
+                <!-- F2: title -->
+                <div class="architecture-header__title col-7">
+                  <h2 class="architecture-title">
+                    Turning Data Validation into Actionable Review
+                  </h2>
+                </div>
+
+                <!-- F3: supporting description -->
+                <div class="architecture-header__description col-5">
+                  <p class="architecture-lead">
+                    Retrieved business data is verified by the system, while
+                    partner attention is directed to information that requires
+                    review.
+                  </p>
+                </div>
+              </header>
+              <div class="architecture-visual">
+                <img
+                  class="architecture-visual__image"
+                  src="/assets/LoanApplication-QuickView/ActionableReview_00.png"
+                  alt="Application architecture showing essential inputs, early product guidance, business identity verification, conditional review, and application completion."
+                />
+                <div class="architecture-visual__rule" aria-hidden="true"></div>
+              </div>
+            </div>
+            <!-- Bottom rule -->
+          </section>
+          <!-- SLIDE 08 — APPLICATION ARCHITECTURE  =================== -->
+          <section
+            class="case-slide case-slide--architecture case-slide--component-system case-slide--gray"
+            style="margin-top: 2rem"
+          >
+            <div class="case-slide__i">
+              <header class="architecture-header case-grid">
+                <!-- F1: full-width eyebrow -->
+                <div class="architecture-header__eyebrow col-12">
+                  <div class="case-eyebrow">
+                    <span class="case-eyebrow__text"> Component System</span>
+                  </div>
+                </div>
+
+                <!-- F2: title -->
+                <div class="architecture-header__title col-7">
+                  <h2 class="architecture-title">
+                    Extending Carbon for Data Review
+                  </h2>
+                </div>
+
+                <!-- F3: supporting description -->
+                <div class="architecture-header__description col-5">
+                  <p class="architecture-lead">
+                    Reusable states and composite patterns create a consistent
+                    path from verified data to exception review and resolution.
+                  </p>
+                </div>
+              </header>
+              <!-- Main content -->
+              <!-- ============================================
+         MAIN — F1 + F2
+         ============================================ -->
+              <div
+                class="case-grid component-system__layout"
+                style="justify-content: flex-start"
+              >
+                <!-- ==========================================
+           F1 — STRUCTURED LIST
+           ========================================== -->
+                <section class="case-grid__item col-7 component-system__group">
+                  <!-- Section header -->
+                  <div class="component-system__section-heading">
+                    <span class="workflow-panel__eyebrow">
+                      01 · STRUCTURED LIST
+                    </span>
+
+                    <span class="workflow-panel__chip">
+                      DATA VALIDATION STATES
+                    </span>
+                  </div>
+
+                  <!-- A + B -->
+                  <div class="case-grid component-system__state-grid">
+                    <!-- A -->
+                    <article class="case-grid__item col-6 component-state">
+                      <div
+                        class="workflow-panel__eyebrow component-state__status component-state__status--verified"
+                      >
+                        • VERIFIED
+                      </div>
+
+                      <img
+                        class="workflow-panel__image component-state__image"
+                        src="/assets/LoanApplication-QuickView/Data-V6_00.png"
+                        alt="Verified company details structured list"
+                      />
+                    </article>
+
+                    <!-- B -->
+                    <article class="case-grid__item col-6 component-state">
+                      <div
+                        class="workflow-panel__eyebrow component-state__status component-state__status--review"
+                      >
+                        • REVIEW REQUIRED
+                      </div>
+
+                      <img
+                        class="workflow-panel__image component-state__image"
+                        src="/assets/LoanApplication-QuickView/Data-V6_CompanyDetails.png"
+                        alt="Company details structured list requiring review"
+                      />
+                    </article>
+                  </div>
+
+                  <!-- User action -->
+                  <div class="component-system__interaction">
+                    <div class="workflow-panel__eyebrow">
+                      ↓ USER ACTION → VIEW ISSUE → REVEAL RESOLUTION CONTEXT
+                    </div>
+
+                    <div class="case-grid component-system__spec-grid">
+                      <div class="case-slide__content col-3">
+                        <h3 class="workflow-panel__eyebrow">STRUCTURED LIST</h3>
+
+                        <p class="component-system__spec-copy">
+                          validationState =<br />
+                          verified / reviewRequired
+                        </p>
+                      </div>
+
+                      <div class="case-slide__content col-4">
+                        <h3 class="workflow-panel__eyebrow">DATA ROW</h3>
+
+                        <p class="component-system__spec-copy">
+                          state = default / issue
+                        </p>
+                      </div>
+
+                      <div class="case-slide__content col-5">
+                        <h3 class="workflow-panel__eyebrow">CONDITIONAL UI</h3>
+
+                        <p class="component-system__spec-copy">
+                          Match → verified<br />
+                          Issue tag + View issue → reviewRequired
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </section>
+
+                <!-- ==========================================
+           F2 — ACCESSIBILITY
+           ========================================== -->
+                <aside
+                  class="case-grid__item col-5 component-system__group component-system__group--accessibility"
+                >
+                  <!-- F2 heading -->
+                  <div class="component-system__section-heading">
+                    <span class="workflow-panel__eyebrow">
+                      02 · ACCESSIBILITY SPEC
+                    </span>
+
+                    <span class="workflow-panel__chip">
+                      SEMANTIC STATES, NOT COLOR ALONE
+                    </span>
+                  </div>
+
+                  <p class="component-system__lead-copy">
+                    The issue state is never communicated through color alone.
+                    Each exception combines five distinct layers.
+                  </p>
+
+                  <!-- Accessibility layers -->
+                  <div class="accessibility-layers">
+                    <div class="workflow-panel__eyebrow">
+                      ISSUE STATE — FIVE REQUIRED LAYERS
+                    </div>
+
+                    <ol class="accessibility-layers__list">
+                      <li>
+                        <strong>Issue 1 tag</strong>
+                        <span
+                          >Neutral cross-reference, no color dependency</span
+                        >
+                      </li>
+
+                      <li>
+                        <strong>Yellow row + border</strong>
+                        <span
+                          >Warning context, combined with written label</span
+                        >
+                      </li>
+
+                      <li>
+                        <strong>“Action required”</strong>
+                        <span>Explicit status for assistive technology</span>
+                      </li>
+
+                      <li>
+                        <strong>View issue link</strong>
+                        <span>Keyboard-focusable, 2px focus outline</span>
+                      </li>
+
+                      <li>
+                        <strong>Resolution panel link</strong>
+                        <span>Direct connection to the issue panel</span>
+                      </li>
+                    </ol>
+                  </div>
+
+                  <!-- Contrast -->
+                  <div class="contrast-section">
+                    <div class="contrast-section__heading">CONTRAST RATIOS</div>
+
+                    <div class="case-grid contrast-grid">
+                      <div class="contrast-card contrast-card--muted col-6">
+                        <span>Tag label 12px</span>
+                        <strong>13.77:1</strong>
+                        <small>WCAG AAA</small>
+                      </div>
+
+                      <div class="contrast-card col-6">
+                        <span>Body text 14px</span>
+                        <strong>15.3:1</strong>
+                        <small>WCAG AAA</small>
+                      </div>
+
+                      <div class="contrast-card contrast-card--link col-6">
+                        <span>Link on white</span>
+                        <strong>8.59:1</strong>
+                        <small>WCAG AAA</small>
+                      </div>
+
+                      <div class="contrast-card contrast-card--warning col-6">
+                        <span>Yellow row text</span>
+                        <strong>6.2:1</strong>
+                        <small>WCAG AA</small>
+                      </div>
+                    </div>
+                  </div>
+                </aside>
+              </div>
+            </div>
+          </section>
+          <!-- SLIDE 09 — COMPONENT SYSTEM / RESOLUTION =================== -->
+          <section
+            class="case-slide case-slide--architecture case-slide--gray case-slide--component-system"
+          >
+            <div class="case-slide__i">
+              <!-- HEADER -->
+              <header class="architecture-header case-grid">
+                <div class="case-grid__item col-12">
+                  <div class="case-eyebrow">
+                    <span class="case-eyebrow__text"> COMPONENT SYSTEM </span>
+                  </div>
+                </div>
+
+                <div class="case-grid__item col-7">
+                  <h2 class="case-slide__title">
+                    Extending Carbon for Resolution
+                  </h2>
+                </div>
+              </header>
+
+              <!-- COMPONENT TYPE -->
+              <div class="resolution-section-heading">
+                <span class="workflow-panel__eyebrow">
+                  01 · COMPONENT SYSTEM
+                </span>
+
+                <span class="workflow-panel__chip">
+                  PROGRESSIVE DISCLOSURE
+                </span>
+              </div>
+
+              <!-- STATES -->
+              <div class="case-grid resolution-layout">
+                <div class="case-grid__item col-11 resolution-states">
+                  <!-- COLLAPSED -->
+                  <div class="resolution-state">
+                    <div class="resolution-state__label">
+                      <span class="resolution-state__dot"></span>
+
+                      <span class="workflow-panel__eyebrow"> COLLAPSED </span>
+
+                      <span class="resolution-state__meta">
+                        expanded = false
+                      </span>
+                    </div>
+
+                    <img
+                      class="resolution-state__image resolution-state__image--collapsed workflow-panel__image"
+                      src="/assets/LoanApplication-QuickView/collapsed-expanded-false_00.png"
+                      alt="Collapsed issue component showing a registered address change requiring action"
+                    />
+                  </div>
+
+                  <!-- EXPANDED -->
+                  <div class="resolution-state">
+                    <div class="resolution-state__label">
+                      <span
+                        class="resolution-state__dot resolution-state__dot--active"
+                      ></span>
+
+                      <span class="workflow-panel__eyebrow"> EXPANDED </span>
+
+                      <span class="resolution-state__meta">
+                        expanded = true
+                      </span>
+                    </div>
+
+                    <img
+                      class="resolution-state__image resolution-state__image--expanded workflow-panel__image"
+                      src="/assets/LoanApplication-QuickView/resolutionPanel_00.png"
+                      alt="Expanded issue component showing status, context, source comparison and resolution actions"
+                    />
+                  </div>
+                </div>
+              </div>
+
+              <!-- FOOTER -->
+              <footer class="resolution-footer">
+                <div class="resolution-footer__flow">
+                  <span>DEFAULT</span>
+                  <i>→</i>
+
+                  <span>VERIFIED</span>
+                  <i>→</i>
+
+                  <span>ISSUE DETECTED</span>
+                  <i>→</i>
+
+                  <span>REVIEW</span>
+                  <i>→</i>
+
+                  <span>RESOLVE</span>
+                </div>
+
+                <p class="resolution-footer__note">
+                  The same component architecture adapts to data state,
+                  surfacing additional interaction only when partner attention
+                  is required.
+                </p>
+              </footer>
+            </div>
+
+            <div class="case-slide__footer-rule" aria-hidden="true"></div>
+          </section>
+          <!-- SLIDE 10 — Constraints & Trade-Offs =================== -->
+          <section class="case-slide case-slide--architecture">
+            <div class="case-slide__i">
+              <!-- HEADER -->
+              <header class="architecture-header case-grid">
+                <div class="case-grid__item col-12">
+                  <div class="case-eyebrow">
+                    <span class="case-eyebrow__text">
+                      Constraints & Trade-Offs
+                    </span>
+                  </div>
+                </div>
+
+                <div class="case-grid__item col-7">
+                  <h2 class="case-slide__title">
+                    Designing for Real-World Constraints
+                  </h2>
+                </div>
+                <!-- F3: supporting description -->
+                <div class="architecture-header__description col-5">
+                  <p class="architecture-lead">
+                    How technical and regulatory assumptions shaped the proposed
+                    experience.
+                  </p>
+                </div>
+              </header>
+
+              <!-- =====================================================
+         CONSTRAINT TABLE
+         ===================================================== -->
+              <section class="constraints-table">
+                <!-- Table header -->
+                <div class="case-grid constraints-table__header">
+                  <div class="case-grid__item col-4">
+                    <span class="constraints-table__heading">
+                      CONSTRAINT CONSIDERED
+                    </span>
+                  </div>
+
+                  <div class="case-grid__item col-4">
+                    <span class="constraints-table__heading">
+                      DESIGN RESPONSE
+                    </span>
+                  </div>
+
+                  <div class="case-grid__item col-4">
+                    <span class="constraints-table__heading">
+                      USER BENEFIT
+                    </span>
+                  </div>
+                </div>
+
+                <!-- ROW 01 -->
+                <div class="case-grid constraints-table__row">
+                  <div class="constraints-table__index">01</div>
+
+                  <div
+                    class="case-grid__item col-4 constraints-table__cell constraints-table__cell--constraint"
+                  >
+                    External data and document checks may not return instantly.
+                  </div>
+
+                  <div
+                    class="case-grid__item col-4 constraints-table__cell constraints-table__cell--response"
+                  >
+                    Use asynchronous processing with clear progress indicators
+                    and real-time status updates.
+                  </div>
+
+                  <div
+                    class="case-grid__item col-4 constraints-table__cell constraints-table__cell--benefit"
+                  >
+                    Partners can continue working without wondering whether the
+                    system has stalled.
+                  </div>
+                </div>
+
+                <!-- ROW 02 -->
+                <div class="case-grid constraints-table__row">
+                  <div class="constraints-table__index">02</div>
+
+                  <div
+                    class="case-grid__item col-4 constraints-table__cell constraints-table__cell--constraint"
+                  >
+                    CRO, Revenue and banking data may conflict with existing
+                    records.
+                  </div>
+
+                  <div
+                    class="case-grid__item col-4 constraints-table__cell constraints-table__cell--response"
+                  >
+                    Flag only affected rows and connect each row to its
+                    corresponding issue panel.
+                  </div>
+
+                  <div
+                    class="case-grid__item col-4 constraints-table__cell constraints-table__cell--benefit"
+                  >
+                    Partners can identify and resolve mismatches without
+                    reviewing the entire application.
+                  </div>
+                </div>
+
+                <!-- ROW 03 -->
+                <div class="case-grid constraints-table__row">
+                  <div class="constraints-table__index">03</div>
+
+                  <div
+                    class="case-grid__item col-4 constraints-table__cell constraints-table__cell--constraint"
+                  >
+                    KYC and GDPR requirements demand clear evidence and user
+                    control.
+                  </div>
+
+                  <div
+                    class="case-grid__item col-4 constraints-table__cell constraints-table__cell--response"
+                  >
+                    Show the data source, explain why action is required and
+                    request confirmation before records are updated.
+                  </div>
+
+                  <div
+                    class="case-grid__item col-4 constraints-table__cell constraints-table__cell--benefit"
+                  >
+                    Partners can make informed decisions with greater
+                    confidence.
+                  </div>
+                </div>
+              </section>
+
+              <!-- =====================================================
+         DESIGN PRINCIPLE
+         ===================================================== -->
+              <section class="constraints-principle">
+                <div class="constraints-principle__accent"></div>
+
+                <div class="constraints-principle__content">
+                  <span class="constraints-principle__label">
+                    DESIGN PRINCIPLE
+                  </span>
+
+                  <p class="constraints-principle__text">
+                    I treated constraints as interaction requirements—not
+                    reasons to expose backend complexity to the user.
+                  </p>
+                </div>
+              </section>
+            </div>
+
+            <div class="case-slide__footer-rule" aria-hidden="true"></div>
+          </section>
+          <!-- SLIDE 11 — Design Outcomes =================== -->
+          <section class="case-slide case-slide--architecture">
+            <div class="case-slide__i">
+              <header class="case-grid outcomes-header">
+                <div class="case-grid__item col-12">
+                  <div class="case-eyebrow">
+                    <span class="case-eyebrow__text"> DESIGN OUTCOMES </span>
+                  </div>
+                </div>
+                <div class="case-grid__item col-7">
+                  <h2 class="case-slide__title">
+                    Validating the Hypothesis Through Design Outcomes
+                  </h2>
+                </div>
+                <div class="case-grid__item col-5">
+                  <p class="outcomes-header__lead">
+                    The redesigned workflow reduced structural complexity,
+                    minimized upfront partner input, and shifted available
+                    business-data retrieval to the system.
+                  </p>
+                </div>
+              </header>
+
+              <!-- =====================================================
+         F1 + F2 + F3
+         Equal width: 4 + 4 + 4
+         ===================================================== -->
+              <div class="case-grid outcomes-metrics">
+                <!-- ===================================================
+           F1 — WORKFLOW STAGES
+           =================================================== -->
+                <article
+                  class="case-grid__item col-4 outcomes-card case-slide__content"
+                >
+                  <div class="outcomes-card__label">
+                    <span></span>
+                    WORKFLOW STAGES
+                  </div>
+
+                  <div class="outcomes-card__stage-change">
+                    <div class="outcomes-card__stage">
+                      <strong
+                        class="outcomes-card__number outcomes-card__number--muted"
+                      >
+                        09
+                      </strong>
+                      <small>Before</small>
+                    </div>
+
+                    <div class="outcomes-card__change">
+                      <span>-5 STAGES</span>
+                      <i>→</i>
+                    </div>
+
+                    <div class="outcomes-card__stage">
+                      <strong class="outcomes-card__number"> 04 </strong>
+                      <small>Redesigned</small>
+                    </div>
+                  </div>
+
+                  <p class="outcomes-card__description">
+                    Nine front-loaded stages were reorganized into four
+                    logically grouped stages.
+                  </p>
+                </article>
+
+                <!-- ===================================================
+           F2 — ESSENTIAL INPUTS
+           =================================================== -->
+                <article
+                  class="case-grid__item col-4 outcomes-card case-slide__content"
+                >
+                  <div class="outcomes-card__label">
+                    <span></span>
+                    ESSENTIAL INPUTS
+                  </div>
+
+                  <strong class="outcomes-card__number"> 04 </strong>
+
+                  <p class="outcomes-card__caption">Inputs required upfront</p>
+
+                  <ul class="outcomes-card__list">
+                    <li>CRO number</li>
+                    <li>VAT number</li>
+                    <li>Business type</li>
+                    <li>Requested amount</li>
+                  </ul>
+
+                  <p class="outcomes-card__description">
+                    Only the information needed to establish initial context is
+                    requested upfront.
+                  </p>
+                </article>
+
+                <!-- ===================================================
+           F3 — CONNECTED SOURCES
+           =================================================== -->
+                <article
+                  class="case-grid__item col-4 outcomes-card case-slide__content"
+                >
+                  <div class="outcomes-card__label">
+                    <span></span>
+                    CONNECTED SOURCES
+                  </div>
+
+                  <strong class="outcomes-card__number"> 02 </strong>
+
+                  <p class="outcomes-card__caption">External data sources</p>
+
+                  <div class="outcomes-card__sources">
+                    <span>CRO</span>
+                    <i>+</i>
+                    <span>REVENUE</span>
+                  </div>
+                </article>
+              </div>
+
+              <!-- =====================================================
+         POST-LAUNCH VALIDATION STRIP
+         ===================================================== -->
+              <footer class="case-grid outcomes-validation">
+                <!-- Left -->
+                <div class="case-grid__item col-8">
+                  <div class="outcomes-validation__label">
+                    POST-LAUNCH METRICS TO VALIDATE
+                  </div>
+
+                  <div class="outcomes-validation__metrics">
+                    <span>Completion rate ↑</span>
+                    <span>Time to submit ↓</span>
+                    <span>Manual data entry ↓</span>
+                    <span>Issue-resolution rate ↑</span>
+                  </div>
+                </div>
+
+                <!-- Right -->
+                <div class="case-grid__item col-4">
+                  <p class="outcomes-validation__note">
+                    These are proposed success measures for the prototype, not
+                    production results.
+                  </p>
+                </div>
+              </footer>
+            </div>
+
+            <div class="case-slide__footer-rule" aria-hidden="true"></div>
+          </section>
+          <!-- SLIDE 12 — Design Outcomes =================== -->
+          <section class="case-slide case-slide--architecture">
+            <div class="case-slide__i">
+              <!-- HEADER -->
+              <header class="case-grid reflection-header">
+                <div class="case-grid__item col-12">
+                  <div class="case-eyebrow">
+                    <span class="case-eyebrow__text"> REFLECTION </span>
+                  </div>
+                </div>
+
+                <div class="case-grid__item col-7">
+                  <h2 class="case-slide__title">
+                    Reflection &amp; Scalability Lessons
+                  </h2>
+                </div>
+
+                <div class="case-grid__item col-5">
+                  <p class="reflection-header__lead">
+                    What the redesign taught me about simplifying complex
+                    workflows, introducing automation responsibly, and
+                    validating system-assisted experiences.
+                  </p>
+                </div>
+              </header>
+
+              <!-- 3 EQUAL LESSONS -->
+              <div class="case-grid reflection-lessons">
+                <!-- F1 -->
+                <article class="case-grid__item col-4 reflection-lesson">
+                  <div class="reflection-lesson__label">
+                    WORKFLOW ARCHITECTURE
+                  </div>
+
+                  <h3 class="reflection-lesson__title">
+                    Complexity can be structured without hiding necessary
+                    information.
+                  </h3>
+
+                  <p class="reflection-lesson__body">
+                    Progressive disclosure helped restructure the dense 9-stage
+                    application into four logically grouped stages, while
+                    requesting additional information only when it became
+                    relevant.
+                  </p>
+                </article>
+
+                <!-- F2 -->
+                <article class="case-grid__item col-4 reflection-lesson">
+                  <div class="reflection-lesson__label">SYSTEM + HUMAN</div>
+
+                  <h3 class="reflection-lesson__title">
+                    Automation works best when ambiguity remains visible.
+                  </h3>
+
+                  <p class="reflection-lesson__body">
+                    The system can retrieve, validate and compare available
+                    business information, but conflicting records should be
+                    surfaced for partner review and client confirmation.
+                  </p>
+                </article>
+
+                <!-- F3 -->
+                <article class="case-grid__item col-4 reflection-lesson">
+                  <div class="reflection-lesson__label">NEXT ITERATION</div>
+
+                  <h3 class="reflection-lesson__title">
+                    Automation works best when ambiguity remains visible.
+                  </h3>
+
+                  <p class="reflection-lesson__body">
+                    Exploring AI-assisted document pre-parsing to auto-fill
+                    financial figures directly from uploaded PDF tax returns.
+                  </p>
+                </article>
+              </div>
+
+              <!-- KEY REFLECTION -->
+              <blockquote class="reflection-statement">
+                Designing for enterprise complexity is not about removing
+                information.<br />
+                — it is about revealing the right information at the right
+                moment.
+              </blockquote>
+
+              <!-- BOTTOM PRINCIPLE FLOW -->
+              <footer class="reflection-footer">
+                <div class="reflection-footer__flow">
+                  <span>SIMPLIFY</span>
+                  <i>·</i>
+                  <span>ASSIST</span>
+                  <i>·</i>
+                  <span>REVIEW</span>
+                  <i>·</i>
+                  <span>VALIDATE</span>
+                </div>
+              </footer>
+            </div>
+          </section>
+        </div>
+      </div>
+    </main>
+
+    <script src="/js/quick-case-study.js"></script>
+  </body>
+</html>

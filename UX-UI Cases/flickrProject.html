@@ -1,0 +1,780 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Melis Portfolio</title>
+    <!-- NAVIGATION  -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <!-- External CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css"
+    />
+    <!-- jQuery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <!-- CSS-STYLE -->
+     <link rel="stylesheet" href="../style.css">
+     <link rel="stylesheet" href="../project.css">
+     <link rel="stylesheet" href="../style/slideshow.css">
+         <!-- favicon -->
+     <link rel="icon" type="image/png" sizes="32x32" href="../favicon-32x32.png">
+
+    <script
+      src="https://kit.fontawesome.com/ed552a7faf.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <div class="navigation-wrap start-header start-style">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <nav class="navbar navbar-expand-md navbar-light">
+              <a
+                class="navbar-brand"
+                href="./index.html"
+                target="_blank"
+                ><img src="./assets/homeAssets/220614_logo_01.png" alt=""
+              /></a>
+
+              <button
+                class="navbar-toggler"
+                type="button"
+                data-toggle="collapse"
+                data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent"
+                aria-expanded="false"
+                aria-label="Toggle navigation"
+              >
+                <span class="navbar-toggler-icon"></span>
+              </button>
+
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ml-auto py-4 py-md-0">
+   
+                  <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4 ">
+                    <a class="nav-link" href="../index.html">Home</a>
+                  </li>
+                  <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4 active">
+                    <a class="nav-link" href="../index.html">Works</a>
+                  </li>
+                  <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4 ">
+                    <a class="nav-link" href="../about.html">About</a>
+                  </li>
+                
+        
+                </ul>
+              </div>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="menuContainer">
+      <div class="">
+       
+        <!--   <div id="menu-toggle" class="menu-toggle">
+               <i class="fa-solid fa-list fa-sm"></i>
+          </div> -->
+ 
+ 
+         <div id="leftNav" class="leftNav">
+           <nav class="sideNav">
+             <ul>
+               <li class="nav-item">
+                 <a href="#overview" class="nav-link" 
+                   ><i class="fa-regular fa-circle fa-xs"></i>Overview
+                 </a>
+               </li>
+               <li class="nav-item">
+                 <a
+                   href="#designProcess"
+                   class="nav-link"
+                   ><i class="fa-regular fa-circle fa-xs"></i>Design Process</a
+                 >
+               </li>
+               <li class="nav-item">
+                 <a href="#discovery" class="nav-link dropdown-btn">
+                     <i class="fa-regular fa-circle fa-xs"></i> Discovery
+                     <span class="triangle-icon">&#9662;</span>
+                 </a>
+                 <ul class="sub-menu dropdown-container"> 
+                     <li><a href="#observation">Observation</a></li> 
+               
+                     <li><a href="#persona">Persona</a></li> 
+                     <li><a href="#analyse">Analyse</a></li> 
+ 
+ 
+             
+                 </ul>
+               </li>
+ 
+               <li class="nav-item">
+                 <a href="#ideation" class="nav-link dropdown-btn">
+                     <i class="fa-regular fa-circle fa-xs"></i> Ideation 
+                     <span class="triangle-icon">&#9662;</span>
+                 </a>
+                 <ul class="sub-menu dropdown-container"> 
+                     <li><a href="#architecture">Architecture</a></li> 
+                     <li><a href="#userFlow">User Flow</a></li> 
+             
+                 </ul>
+               </li>
+               <li class="nav-item">
+                 <a href="#design" class="nav-link dropdown-btn">
+                     <i class="fa-regular fa-circle fa-xs"></i> Design 
+                     <span class="triangle-icon">&#9662;</span>
+                 </a>
+                 <ul class="sub-menu dropdown-container"> 
+                     <li><a href="#wireframe">Wireframe</a></li> 
+                 </ul>
+             </li>
+ 
+   
+ 
+             
+               <li class="nav-item">
+                 <a href="#poster" class="nav-link" onclick="toggleIcon(this)"
+                   ><i class="fa-regular fa-circle fa-xs"></i>Poster</a
+                 >
+               </li>
+               <li class="nav-item">
+                 <a href="#promoVideo" class="nav-link" onclick="toggleIcon(this)"
+                   ><i class="fa-regular fa-circle fa-xs"></i>Promo Video</a
+                 >
+               </li>
+             </ul>
+           </nav>
+         </div>
+       </div>
+
+
+        <section class="" >
+          <div class="heroContent">
+            <img
+              src="../assets/flickrProject/230105_Flickr_Main02.jpg"
+              alt=""
+              class="main-image"
+            />
+          </div>
+        </section>
+        <section id="overview"  class="page">
+          <div class="content2">
+            <h1 class="header">FLICKR</h1>
+            <p class="style-light2">Reversed UX Case study</p>
+
+            <!-- <p class="style-light2">
+              UX CASE | UX/UI DESIGN | USERS RESEARCH | USABILITY TESTING |
+              DEVELOPMENT
+            </p> -->
+            <h2>Project Overview</h2>
+
+            <div class="flex-container2">
+              <div class="item">
+                <p class="">
+                  Flickr is a widely recognized platform for photo sharing and hosting, utilized by amateur and professional photographers alike to showcase their work and explore photography. This project aims to critically analyze the current user experience (UX) of the Flickr app and identify areas where both usability and visual design could be improved. The goal is to enhance the overall user experience, making content more engaging and accessible, and ensuring that the platform provides a seamless and enjoyable experience for its diverse user base.
+                </p>
+              </div>
+              <div>
+                <div class="role">
+                  <div class="">
+                    <h3>My Role</h3>
+                  </div>
+                  <div class="text">
+                    <p>Sole UX/UI Designer</p>
+                  </div>
+                </div>
+              </div>
+              <div>
+                <div class="role">
+                  <div class="">
+                    <h3>Tools</h3>
+                  </div>
+                  <div class="text">
+                    <p>
+                      Figma
+                      <br />
+                      
+                    </p>
+                  </div>
+                </div>
+
+              </div>
+
+              <div>
+                <div class="role">
+                  <div class="">
+                    <h3>Duration</h3>
+                  </div>
+                  <div class="text">
+                    <p>4 weeks</p>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </section>
+        <section id="designProcess"  class="">
+                  <!-- DESIGN PROCESS-->
+        <div class="content2">
+          <h2 class="">Design Process</h2>
+          <div class="table2 icons">
+            <div>
+              <div>
+                <h3 class="">Discovery</h3>
+              </div>
+              <ul>
+                <li>Observation</li>
+                <li>Analyse</li>
+                <li>User Persona</li>
+                <li>Understand</li>
+                <li>Find Problem</li>
+              </ul>
+         
+            </div>
+            <div>
+              <div>
+                <h3 class="">Ideation</h3>
+              </div>
+              <ul>
+                <li>Concepts</li>
+                <li>User Flow</li>
+                <li>Information Architecture</li>
+              </ul>
+     
+            </div>
+            <div>
+              <div>
+                <h3 class="colorHeader">Design</h3>
+              </div>
+              <ul>
+                <li>UX Concept & Wireframing</li>
+                <li>UI Concept</li>
+              </ul>
+
+            </div>
+            <div>
+              <div>
+                <h3 class="colorHeader">Delivery</h3>
+              </div>
+              <ul>
+                <li>User Testing</li>
+                <li>Prototype</li>
+                <li>Documentation</li>
+              </ul>
+
+            </div>
+          </div>
+        </div>
+
+        </section>
+        <section id="discovery">
+            <div id="" >
+            <div  class="content2">
+              <h2>Discovery</h2>
+              <h3 id="observation" class="heading--left">Observation</h3>
+              <div id="">
+                <div class="content2">
+                
+                  <div>
+                      <p class="text">After a lot of research and using the app, I interpreted some key features of UX and UI that Flickr wants to have and protect.
+                        This part made me create bullet points that I should protect this point of Flickr's current mobile application overall.</p>
+                  </div>
+                  <div class="box2">
+                    <ul>
+                      <h5><i class="fa-regular fa-compass"></i>Observation</h5>    
+                      <li style="color:#E8E9EB;"><i class="fa-solid fa-check" style="color:rgb(251, 247, 25);
+                      padding: 8px;"></i><span>Avoid repetition of photos</span> shared by one user, such
+                      as sharing 3 or 5 photos once.
+                      </li>
+                      <li style="color:#E8E9EB;"><i class="fa-solid fa-check" style="color:rgb(251, 247, 25);
+                      padding: 8px;"></i><span>Protect the aspect of photos</span> if they were shared
+                      one by one on the photo stream.
+                      </li>
+                      <li style="color:#E8E9EB;"><i class="fa-solid fa-check" style="color:rgb(251, 247, 25);
+                        padding: 8px;"></i>On photo stream, the layout leads the user to
+                     <span>focus on a photo </span>first, then the user's name, and profile photo.
+                      </li>
+                      <li style="color:#E8E9EB;"><i class="fa-solid fa-check" style="color:rgb(251, 247, 25);
+                        padding: 8px;"></i> Make appeal generally
+                        <span>user name, profile, the number of photos shared, and the number of followers</span>,
+                        which are iterated for other frames constantly.
+                     </li>
+                     <li style="color:#E8E9EB;"><i class="fa-solid fa-check" style="color:rgb(251, 247, 25);
+                        padding: 8px;"></i> <span>Using toggle segment</span> for passing from sub-headers
+                     with exception of the main navigation.
+                     </li>
+                     <li style="color:#E8E9EB;"><i class="fa-solid fa-check" style="color:rgb(251, 247, 25);
+                        padding: 8px;"></i> Using a similar <span>list template</span> for albums, and
+                groups.
+                     </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+        
+
+              <div id="persona" class="content2">
+                <h3 class="heading--left">User Persona</h3>
+      
+    
+                <div class="slideshow-container ">
+                  <div class="mySlides ani">
+                    <h3 class="heading--left">General Users</h3>
+                    <div>
+                        <p class="text">
+                          One of whose expertise is photography and makes money from
+                          this job. For that reason, presenting the photos is so
+                          significant to introduce the styling of the photos in order
+                          to want people to know.
+                        </p>
+                    </div>
+                    <img src="../assets/flickrProject/221220_UserPersona_01.jpg" alt="">
+                    <div class="captionText">User Persona 1</div>
+                  </div>
+    
+    
+                  <div class="mySlides ani">
+                    <h3 class="heading--left">Other Users</h3>
+                    <div>
+                        <p class="text">
+                          Who is at amateur level of the photography, wants to explore
+                          gears, methods to apply for the next photos.
+                        </p>
+                    </div>
+                    <img src="../assets/flickrProject/221220_UserPersona_00.jpg" alt="">
+                    <div class="captionText">User Persona 2</div>
+    
+                  </div>
+    
+                  
+                  
+                  <a class="prev" onclick="plusSlides(-1)">❮</a>
+                  <a class="next" onclick="plusSlides(1)">❯</a>
+                  
+                  </div>
+                  <br>
+                  
+                  <div style="text-align:center">
+                    <span class="dot" onclick="currentSlide(1)"></span> 
+                    <span class="dot" onclick="currentSlide(2)"></span> 
+                  </div>
+              </div>
+
+              <div class="content2">
+                <h3 id="analyse" class="heading--left">Analyse</h3>
+                <p class="text">
+                    I analysed both the website and mobile application of Flickr in
+                    order to find the differences for both between them and to
+                    understand how to implement some features for both fields. In
+                    this part, I present some of them to benefit Flickr mobile app.  
+                </p> 
+                <div class="content2 row">
+                    <div class="column">
+                            <h4>Flickr Web</h4>
+                            <img
+                              src="../assets/flickrProject/Flickr_web _Nav_Analysis.jpg"
+                              alt=""
+                            />
+                            <p class="text">
+                              The home frame gives a lot of subheaders to browse. One of
+                              which is seeing all activities, and another is under explore
+                              nav button.
+                            </p>
+                    </div>
+                    
+                
+                     
+                    <div class="column">
+                        
+                        <div class="widthPhone">
+                            <h4>Flickr Mobile App</h4>
+                            <img
+                              class="imagePhone"
+                              src="../assets/flickrProject/Flickr Mobile _Nav_Analysis.jpg"
+                              alt=""
+                            />
+                            <p class="text">
+                              Photo steam shows only photos that the users follow.
+                            </p>
+                            <img
+                              class="imagePhone"
+                              src="../assets/flickrProject/Flickr Mobile _Nav_Analysis_01.jpg"
+                              alt=""
+                            />
+                            <p class="text">
+                              Photos, people and groups are under search on the
+                              navigation.
+                            </p>
+                          </div>
+    
+    
+                     
+                        
+                    </div>
+                 </div>
+              </div>
+
+              <div class="content2">       
+                <h2 class="">Problem & Solution</h2>
+                    <div>
+                        <h3 class="heading--left">Problem Statement</h3>
+
+                      <div class="text">
+                        <p class="text">
+                            Flickr mobile application uses the search button on the
+                            navigation to
+                            <span
+                              >explore new content, which causes less chance of discovery,
+                              and connection of content.
+                            </span>
+                            <br />
+                            The problem is
+                            <span
+                              >how to make the users feed with new content and increase the
+                              connection with other users, groups, and blogs.</span
+                            >
+                          </p>
+                      </div>
+                    </div>
+                    <div>
+                        <h3 class="heading--left">Solution</h3>
+                        <p class="text">
+                          Reconsidering the information architecture for this necessity.
+                          <br />
+                          Redesigning some UI to make the user information and groups
+                          information to make more appeal.
+                        </p>
+                      </div>
+
+              </div> 
+            </div>
+          
+        </section>
+
+        <section id="ideation" class="">
+            <div class="content2">       
+             <h2 class="">Ideation</h2>
+                 <div>
+                    <h3 id="architecture" class="heading--left">Information Architecture</h3>
+
+                    <div class="content2">
+                        <p class="text">
+                          The information architecture of the Flickr App was observed in
+                          order to comprehend how the user encounters new content on the
+                          app, and where these contents are under which navigational layers.
+                          <br />
+                          In addition, analysing the app with these screens and every
+                          navigation path contributed to making me realise the repetitive
+                          components and templates that the app used on UI, which means that
+                          the app wants to keep the eye familiar with its design elements.
+                          <br />
+                          The same approach for information architecture was made by just
+                          using the name of actions that the user takes and what information
+                          was presented under each navigation layer, which led me to
+                          interpret the current user flow for the app.
+                        </p>
+                      </div>
+                 </div>
+             </div> 
+             <div class="content1 imagePadding">
+                <img
+                  id="myImg3"
+                  class="  "
+                  src="../assets/flickrProject/221213_FlickrApp_Analysis_02_01.jpg"
+                  alt=""
+                />
+              </div>
+
+              <div class="content1 imagePadding">
+                <img
+                  class=" "
+                  src="../assets/flickrProject/221213_FlickrApp_Analysis_02.jpg"
+                  alt=""
+                />
+              </div>
+
+
+
+             
+
+      
+             
+        
+             <div id="userFlow" >
+               <div class="content2">
+                 <h3 id="userFlow" class="heading--left">User Flow</h3>
+                 <h4 class="">The current User Flow</h4>
+                 <p class="text">
+                    By mapping the user flow for each layer, I examined how the user
+                    can navigate the app in order to come across new content, and
+                    where this content for making the user discover more photos,
+                    groups, and discussions converged.
+                  </p>
+               </div>
+               <div class="content1 imagePadding">
+                 <div class="">
+                   <img
+                     id="myImg2"
+                     src="../assets/flickrProject/221213_FlickrApp_Flow Analysis_00_03.jpg"
+                     alt=""
+                   />
+                 </div>
+               </div>
+
+               <div class="content2">
+                <p class="text">
+                  In my interpretation of making the user see more content, I
+                  considered that the search layer with its segments should be
+                  embedded in the photo stream. In that case, the content is
+                  consumed by the users more effectively. So for that reason, the
+                  navigation layers should be changed slightly affecting the photo
+                  stream and search layers.
+                </p>
+              </div>
+
+              <h4 class="content2">New User Flow</h4>
+
+          <div class= "content1 imagePadding ">
+            <img
+              class=""
+              src="../assets/flickrProject/221213_FlickrApp_ChangedFlow Analysis_00_04.jpg"
+              alt=""
+            />
+          </div>
+
+
+   
+             </div>
+        </section>
+
+        <section id="design" class="">
+            <div class="">
+              <div class="content2">
+                <h2 class="">Design</h2>
+              </div>
+              <div class="content1">
+                <h3 id="wireframe" class="heading--left">UX Concept and Wireframing</h3>
+                <div id="Mid-Fi" class="content1">
+                  <h3 class="heading--left">Navigation</h3>
+                  <div class="table9">
+                    <div class="widthPhone">
+                      <img src="../assets/flickrProject/Fliclr_Nav.png" alt="" />
+                    </div>
+                    <div class="widthPhone">
+                      <img src="../assets/flickrProject/Nav_00.gif" alt="" />
+                    </div>
+                    <div class="widthPhone text">
+                      <p>Steps of the navigation</p>
+                      <p>
+                        Photo Stream, User frame, and Camera Buttons appear on the nav
+                        bar.
+                      </p>
+                      <p>
+                        1-The first photo stream shows up on the app.
+                        <br />
+                        2- In the meantime, as to scroll down on the photo stream, the
+                        three sub-headers that are photos, people, and groups appear
+                        under the main navigation bar as toggle segments, which leads to
+                        disappear the user button and camera button on the main
+                        navigation, and also to bring search button on the main
+                        navigation bar.
+                        <br />
+                        3- As tabbing the search button, the search filter is going to
+                        be active for every subheader, which are photos, people, and
+                        groups.
+                        <br />
+                        4-Scrolling up is going to lead to disappear those sub-headers
+                        that are sub-header of stream photo and search button on the
+                        navigation in order to bring back the user and camera button on
+                        the navigation.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+               <div class="content1">
+                <h2 >Photo Stream & Wireframing Process</h2>
+
+               </div>
+              <div class="table10 content1">
+                <div class="widthPhone">
+                  <h4>Flickr - Photo Stream- Original</h4>
+                  <img
+                    src="../assets/flickrProject/221224_Flickr_Photo Stream_Frames_01-1.jpg"
+                    alt=""
+                  />
+                </div>
+                <div class="widthPhone">
+                  <h4>Flickr - Photo Stream- V01</h4>
+                  <img
+                    src="../assets/flickrProject/221224_Flickr_Photo Stream_Frames_01-2.jpg"
+                    alt=""
+                  />
+                  <p>changed the layout slightly</p>
+                </div>
+                <div class="widthPhone">
+                  <h4>Flickr - Photo Stream- V02</h4>
+                  <img
+                    src="../assets/flickrProject/221224_Flickr_Photo Stream_Frames_01-3.jpg"
+                    alt=""
+                  />
+                  <p>
+                    view 16 photos- +16 photos
+                    <br />
+                    removed small icons for faved and comment
+                    <br />
+                    added recommended
+                    <br />
+                    added blog
+                  </p>
+                </div>
+                <div class="widthPhone">
+                  <h4>Flickr - Photo Stream- V02-Hi fi</h4>
+                  <img
+                    src="../assets/flickrProject/221224_Flickr_Photo Stream_Frames_01-4.jpg"
+                    alt=""
+                  />
+                </div>
+              </div>
+              <div class="content1">
+                <h2 class="">Photo Stream with Subheaders</h2>
+
+              </div>
+              <div class="table10 content1">
+                <div class="widthPhone">
+                  <h4>Flickr - Photo Stream/Photos</h4>
+                  <img
+                    src="../assets/flickrProject/221227_Flickr_01_Photos.jpg"
+                    alt=""
+                  />
+                </div>
+                <div class="widthPhone">
+                  <h4>Flickr - Photo Stream/People</h4>
+                  <img
+                    src="../assets/flickrProject/221227_Flickr_01_People.jpg"
+                    alt=""
+                  />
+                  <!--               <p>changed the layout slightly</p>
+     -->
+                </div>
+                <div class="widthPhone">
+                  <h4>Flickr - Photo Stream/Groups</h4>
+                  <img
+                    src="../assets/flickrProject/221227_Flickr_01_Groups.jpg"
+                    alt=""
+                  />
+                  <p>
+                    <!--                 view 16 photos- +16 photos
+                    <br />
+                    removed small icons for faved and comment
+                    <br />
+                    added recommended
+                    <br />
+                    added blog -->
+                  </p>
+                </div>
+                <div class="widthPhone">
+                  <h4>Flickr - Photo Stream/Blog</h4>
+                  <img
+                    src="../assets/flickrProject/221227_Flickr_01_blog.jpg"
+                    alt=""
+                  />
+                </div>
+              </div>
+
+              <section id="poster">
+                <!--Poster -->
+                <div class="">
+                  <div class="content2">
+                    <h2 class="">Poster</h2>
+                  </div>
+                  <div class="content1">
+                    <img
+                    class="posterImage"
+                    src="../assets/flickrProject/221227_Screen_00-2.jpg"
+                    alt=""
+                  />
+                  </div>
+               
+                </div>
+              </section>
+              <section id="promoVideo">
+                  <!--Video -->
+                  <div class="content2">
+                    <h2 class="">Promo Video</h2>
+                  </div>
+                  <div class="content1">
+                    <video class="video1" controls>
+                      <source
+                        src="../assets/flickrProject/Page 1 - 221214_Flickr - Figma 2023-01-04 23-43-15.mp4"
+                        type="video/mp4"
+                      />
+                    </video>
+
+                    <div class="alignCenter">
+                        <a class="custom-btn btn-2"  
+                        href="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2F3WBwkAMW5tDUm6WNZx75gy%2F221214_Flickr%3Fpage-id%3D0%253A1%26node-id%3D91%253A115%26viewport%3D-1132%252C486%252C0.52%26scaling%3Dscale-down%26starting-point-node-id%3D91%253A115"   
+                        target="_blank">
+                        View Prototype
+                       </a>
+                      </div>
+
+  
+                  </div>
+    
+                
+                  
+              </section>
+    
+
+            
+        </section>
+        
+     <!-- Footer -->
+     <footer>
+      <div class="">
+          <div class="row"> 
+              <div class="homeIcon1">
+                <a href="https://www.linkedin.com/in/meliskonez/">
+                  <i class="fa-brands fa-linkedin"></i>
+                </a>
+                <a href="https://github.com/audralix/">
+                <i class="fa-brands fa-github"></i>
+                </a>
+              </div>
+              <div>
+                <p>
+                  Website designed and developed from scratch by Melis Konez.
+                </p>
+                <p>
+                  Copyright &copy; 2024, All Rights Reserved by Melis Konez.
+                </p>
+              </div>
+              </div>
+          </div>
+      </div>
+  </footer>
+
+    <script src="../script.js"></script>
+    <script src="../js/slideshow.js"></script>
+    <script src="../js/sideNav.js"></script>
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <!-- Popper.js (for Bootstrap 4) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
+    
+    <!-- Bootstrap JS -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  </body>
+</html>

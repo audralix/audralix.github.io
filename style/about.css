@@ -1,0 +1,226 @@
+/* ==================================================
+   ABOUT SECTION
+================================================== */
+
+.about-section {
+  position: relative;
+  overflow: visible;
+}
+
+.about-section__inner {
+  width: 100%;
+}
+
+/* ==================================================
+   EYEBROW
+================================================== */
+
+.about-section .work-section-header__eyebrow {
+  margin-bottom: 28px;
+}
+
+/* ==================================================
+   TITLE
+================================================== */
+
+.about-section__title {
+  /*
+    Important:
+    title is NOT inside either column.
+  */
+  width: min(820px, 78%);
+
+  margin: 0 0 42px;
+
+  font-size: clamp(40px, 4.2vw, 64px);
+  line-height: 1.02;
+  letter-spacing: -0.04em;
+  font-weight: 700;
+}
+
+/* ==================================================
+   BODY — FLEXBOX
+================================================== */
+
+.about-section__body {
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+
+  gap: clamp(64px, 7vw, 120px);
+
+  width: 100%;
+}
+
+/* LEFT */
+
+.about-section__content {
+  flex: 0 0 50%;
+  max-width: 620px;
+}
+
+/* RIGHT */
+
+.about-section__visual {
+  position: relative;
+
+  flex: 1;
+
+  min-height: 600px;
+
+  /* extend visual toward viewport edge */
+  width: calc(50vw + 50%);
+
+  margin-right: calc(50% - 50vw);
+
+  overflow: visible;
+  left: -120px;
+}
+
+/* ==================================================
+   INTRO
+================================================== */
+
+.about-section__intro {
+  max-width: 580px;
+}
+
+.about-section__intro p {
+  margin: 0 0 28px;
+
+  font-size: 16px;
+  line-height: 1.65;
+}
+
+.about-section__intro strong {
+  font-weight: 700;
+}
+
+/* ==================================================
+   CAPABILITIES
+================================================== */
+
+.about-capabilities {
+  width: 100%;
+  margin-top: 38px;
+}
+
+.about-capabilities__label {
+  margin-bottom: 10px;
+
+  font-family: "Roboto Mono", monospace;
+  font-size: 16px;
+  letter-spacing: 0.18em;
+
+  color: #737373;
+}
+
+.capability-row {
+  width: 100%;
+
+  display: flex;
+  align-items: flex-start;
+
+  gap: 20px;
+
+  padding: 18px 0;
+
+  border: 0;
+  border-bottom: 1px solid #dedede;
+
+  background: transparent;
+
+  text-align: left;
+  cursor: pointer;
+}
+
+.capability-number {
+  flex: 0 0 22px;
+
+  font-family: "Roboto Mono", monospace;
+  font-size: 14px;
+
+  color: #a80600;
+}
+
+.capability-copy {
+  display: flex;
+  flex-direction: column;
+
+  gap: 6px;
+}
+
+.capability-title {
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.capability-description {
+  font-size: 16px;
+  line-height: 1.5;
+
+  color: #777;
+}
+
+/* ==================================================
+   META
+================================================== */
+
+.about-meta {
+  display: flex;
+  flex-wrap: wrap;
+
+  gap: 8px 12px;
+
+  margin-top: 32px;
+
+  font-family: "Roboto Mono", monospace;
+  font-size: 16px;
+
+  color: #666;
+}
+
+.about-meta span:first-child {
+  color: #a80600;
+}
+
+/* ==================================================
+   CTA
+================================================== */
+
+.about__cta {
+  margin-top: 16px;
+}
+
+/* ==================================================
+   THREE.JS AVATAR
+================================================== */
+
+.about-avatar {
+  /*
+    Independent width.
+    No longer dependent on your 12-column grid.
+  */
+  position: absolute;
+
+  position: absolute;
+  inset: 0;
+
+  width: 100%;
+  height: 100%;
+
+  overflow: visible;
+}
+
+/* CANVAS */
+
+#about-avatar-canvas {
+  display: block;
+
+  width: 100%;
+  height: 100%;
+
+  margin: 0;
+  padding: 0;
+}

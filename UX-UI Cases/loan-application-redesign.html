@@ -1,0 +1,2369 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Loan Application Redesign</title>
+    <!-- CSS-STYLE -->
+    <!--  <link rel="stylesheet" href="../style.css"> -->
+    <!-- <link rel="stylesheet" href="../project.css"> -->
+
+    <link rel="stylesheet" href="../style/slideshow.css" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="../favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="../style/designstyle.css" />
+    <link rel="stylesheet" href="../style/racketStyle.css" />
+    <link rel="stylesheet" href="../style/lightboxImageGallery.css" />
+
+    <link
+      rel="stylesheet"
+      href="../style/ipad.css"
+      media="screen and (min-width: 744px) and (max-width: 1024px)"
+    />
+    <link
+      rel="stylesheet"
+      href="../style/phone.css"
+      media="screen and (max-width: 744px)"
+    />
+    <script
+      src="https://kit.fontawesome.com/ed552a7faf.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <!-- ===== NAVBAR ===== -->
+    <header class="site-header" data-nav>
+      <div class="nav-wrap">
+        <a class="brand" href="/index.html" aria-label="Home">
+          <img style="height: 28px" src="/favicon-32x32.png" alt="" />
+        </a>
+
+        <!-- Mobile toggle -->
+        <button
+          class="nav-toggle"
+          aria-expanded="false"
+          aria-controls="site-menu"
+          aria-label="Open menu"
+        >
+          <span class="nav-toggle__bar"></span>
+          <span class="nav-toggle__bar"></span>
+          <span class="nav-toggle__bar"></span>
+        </button>
+
+        <nav class="nav" id="site-menu" aria-label="Primary">
+          <ul class="nav__list">
+            <!-- add .is-active to the current page -->
+            <li><a class="nav__link" href="/">Home</a></li>
+        <li><a class="nav__link is-active" href="/index.html#mywork">Case Studies</a></li>
+
+
+            <li><a class="nav__link" href="/index.html#about">About</a></li>
+                        <!-- Navbar actions -->
+            <li class="nav__actions">
+              <a
+                class="quick-case-study__button"
+                href="/assets/Melis_Konez_Resume.pdf"
+                target="_blank"
+                rel="noopener"
+                aria-label="Open Melis Konez's résumé"
+              >
+                Resume
+              </a>
+
+              <a
+                class="tertiary-button__control"
+                href="https://www.linkedin.com/in/meliskonez"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Open Melis Konez's LinkedIn profile"
+                title="LinkedIn"
+              >
+                <i class="fa-brands fa-linkedin" aria-hidden="true"></i>
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <!-- ==== PROCESS MENU (left) ==== -->
+    <nav class="process-nav" aria-label="Case study process">
+      <ol class="process-list">
+        <li><a href="#overview">Overview</a></li>
+        <li><a href="#case ">Brief</a></li>
+        <li class="has-children" data-group="ideation">
+          <div class="item-row">
+            <a href="#discovery" class="parent-link">Discover</a>
+            <button
+              class="toggle"
+              aria-expanded="false"
+              aria-controls="sub-research"
+              title="Expand"
+            >
+              <span class="visually-hidden">Toggle User Research</span>
+              ▾
+            </button>
+          </div>
+
+          <ol id="sub-research" class="sublist" hidden>
+            <li><a href="#investigation">Investigation</a></li>
+            <li><a href="#serviceBlueprint">Service Blueprint</a></li>
+            <li><a href="#surveySimulation">Survey Simulation</a></li>
+            <li><a href="#research">Exploratory Research</a></li>
+            <li><a href="#Empathy-Map">Empathy Map</a></li>
+          </ol>
+        </li>
+        <li class="has-children" data-group="ideation">
+          <div class="item-row">
+            <a href="#define" class="parent-link">Define</a>
+            <button
+              class="toggle"
+              aria-expanded="false"
+              aria-controls="sub-research"
+              title="Expand"
+            >
+              <span class="visually-hidden">Toggle User Research</span>
+              ▾
+            </button>
+          </div>
+
+          <ol id="sub-research" class="sublist" hidden>
+            <li><a href="#PStatement">Problem Statement</a></li>
+            <li><a href="#userPersona">User Persona</a></li>
+            <li><a href="#JTBD">Jobs To Be Done</a></li>
+            <li><a href="#JourneyMap">Journey Map</a></li>
+          </ol>
+        </li>
+
+        <li class="has-children" data-group="ideation">
+          <div class="item-row">
+            <a href="#ideate" class="parent-link">Ideate</a>
+            <button
+              class="toggle"
+              aria-expanded="false"
+              aria-controls="sub-research"
+              title="Expand"
+            >
+<!--               <span class="visually-hidden">Toggle User Research</span>
+              ▾ -->
+            </button>
+          </div>
+
+
+        </li>
+
+        <li class="has-children" data-group="ideation">
+          <div class="item-row">
+            <a href="#Develop" class="parent-link">Develop</a>
+            <button
+              class="toggle"
+              aria-expanded="false"
+              aria-controls="sub-research"
+              title="Expand"
+            >
+              <span class="visually-hidden">Toggle User Research</span>
+              ▾
+            </button>
+          </div>
+
+          <ol id="sub-research" class="sublist" hidden>
+            <li><a href="#Workflow">Workflow</a></li>
+            <li><a href="#UI"> UI Concept </a></li>
+            <li><a href="#midfide">Mid Fidelity</a></li>
+            <li><a href="#Iteration">Iteration</a></li>
+            
+          </ol>
+        </li>
+        <li><a href="#prototype">Prototype </a></li>
+        <li><a href="#iWould">Reflections </a></li>
+        
+
+<!--         <li><a href="#poster">Poster </a></li>
+ -->        
+      </ol>
+    </nav>
+    <section data-theme="" >
+        <img  src="../assets/LoanApplicationRedesign/Final/251229_Cover_00.jpg" alt="">
+    </section>
+    <!-- OVERVIEW -->
+    <section id="overview" class="">
+      <div class="container--small grid-9">
+        <h2 class="span-9">
+          IEFinance Partner Portal – Loan Application Redesign
+        </h2>
+       
+
+        <p class="span-9 cs-lead">
+          A broker portal redesign for IEFinance to streamline the loan
+          application workflow, improve data accuracy, and provide early
+          compliance insights using CRO and Revenue data. My role included
+          end-to-end UX/UI design over four months.
+        </p>
+        <!-- 3-up facts row: 3 × 3-col blocks -->
+        <div class="facts span-9 grid-9">
+          <div class="span-9">
+            <h4>My Role</h4>
+            <p class="cs-lead">
+              UX/UI Designer — Led end-to-end redesign of the broker loan
+              application, from research and IA to high-fidelity UI and
+              prototyping using IBM Carbon.
+            </p>
+          </div>
+          <div class="span-3">
+            <h4>Tools</h4>
+            <p class="">Figma · IBM Carbon · Miro · FigJam · Notion</p>
+          </div>
+          <div class="span-3">
+            <h4>Timeline</h4>
+            <p class="">4 months (Research → Design → Prototype → Testing)</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="case">
+      <div class="container--small grid-9 cs-section">
+        <h3 class="" >Problem</h3>
+        <p class="span-9 cs-lead">
+          The IEFinance Partner Portal redesign focuses on improving the
+          end-to-end loan application experience for brokers and financial
+          partners. The existing system relied heavily on manual data entry,
+          fragmented information sources, and inconsistent workflows, creating
+          unnecessary friction during the application process.
+        </p>
+        <!-- Card -->
+        <article
+          class="card span-9"
+          role="group"
+          aria-labelledby="card-title-1"
+        >
+          <header class="card__header">
+            <span class="chip chip--insight">Insight</span>
+            <h2 id="card-title-1" class="card__title">Case</h2>
+          </header>
+          <ul class="card__body">
+            <li>
+              The portal has not been widely adopted. Partners often reach out
+              directly to IEFinance’s sales support via calls and emails,
+              leaving IEFinance staff to complete the application on their
+              behalf.
+            </li>
+          </ul>
+        </article>
+        <div class="slideshow-container span-9 cs-visual">
+          <div class="mySlides ani">
+            <!-- <h5>General Users</h5> -->
+
+            <img
+              src="../assets/LoanApplicationRedesign/251212_typical_diagram_00.jpg"
+              alt=""
+            />
+            <div class="captionText">What happens typically</div>
+          </div>
+
+          <div class="mySlides ani">
+            <!--          <h5>Other Users</h5> -->
+
+            <img
+              src="../assets/LoanApplicationRedesign/251212_ideal_diagram_00.png"
+              alt=""
+            />
+            <div class="captionText">Ideal streamline</div>
+          </div>
+
+          <div style="text-align: center; padding: 16px 0">
+            <span class="dot slideActive" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+          </div>
+
+          <a class="prev" onclick="plusSlides(-1)">❮</a>
+          <a class="next" onclick="plusSlides(1)">❯</a>
+        </div>
+      </div>
+    </section>
+    <!-- Discover -->
+    <section id="discovery">
+      <div class="container--small grid-9">
+        <h3 class="span-9 " >Discover</h3>
+        <!--     Investigation -->
+        <div class="span-9 cs-section" id="investigation">
+          <h4 class="cs-h2 span-9">How I investigated the problem.</h4>
+          <p class="span-9 cs-lead">
+            I began by analysing the existing partner portal to understand its
+            workflow, pain points, and data gaps. This revealed unclear
+            progress, fragmented information, and early data demands on brokers.
+            These insights led me to create a Service Blueprint mapping broker
+            actions, IEFinance processes, and external data sources, helping
+            identify where UX improvements, automation, and early compliance
+            indicators would add the most value.
+          </p>
+          <div class="facts span-9 grid-9">
+            <div class="span-3 cs-visual">
+              <h6 class="cs-figure__label">The partner's phase process:</h6>
+              <img
+                src="/assets/LoanApplicationRedesign/251212_PartnerPhase_00.jpg"
+                alt=""
+              />
+            </div>
+            <div class="span-6 cs-visual">
+              <h6 class="cs-figure__label">Existing Portal Screen view</h6>
+              <div class="portal-screen">
+                <div class="portal-screen__inner">
+                  <img
+                    src="/assets/LoanApplicationRedesign/251212_ExistingPortalScreenView_00.jpg"
+                    alt="Existing portal screen view"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--  Service Blueprint -->
+        <div class="span-9 cs-section" id="serviceBlueprint">
+          <h4 class="cs-h2 span-9">Service Blueprint</h4>
+          <p class="span-9 cs-lead">
+            I began by analysing the existing partner portal to understand its
+            workflow, pain points, and data gaps. This revealed unclear
+            progress, fragmented information, and early data demands on brokers.
+            These insights led me to create a Service Blueprint mapping broker
+            actions, IEFinance processes, and external data sources, helping
+            identify where UX improvements, automation, and early compliance
+            indicators would add the most value.
+          </p>
+          <div class="phase-carousel span-9 js-carousel cs-visual" id="">
+            <div class="phases-header">
+              <h5 class=" js-phaseHeader phase__title" id="">
+                Phases of Existing Platform
+              </h5>
+              <div class="phases-nav">
+                <button class="phases-prev" type="button" aria-label="Previous">
+                  ‹
+                </button>
+                <button class="phases-next" type="button" aria-label="Next">
+                  ›
+                </button>
+              </div>
+            </div>
+            <!-- CAROUSEL -->
+            <div class="viewport">
+              <div class="track">
+                <article class="slide" data-phase="Phase 1" data-title="Login & Application Start">
+                  <img
+                    class="slide-main"
+                    src="/assets/LoanApplicationRedesign/Phase-1.jpg"
+                    alt="Phase 1"
+                  />
+                  <div class="notes"></div>
+                </article>
+                <article
+                  class="slide"
+                  data-phase="Phase 2"
+                  data-title="Business Information"
+                >
+                  <img
+                    class="slide-main"
+                    src="/assets/LoanApplicationRedesign/Phase-2.jpg"
+                    alt="Phase 2"
+                  />
+                  <div class="notes">
+                    <div class="note note--data">
+                      <h3>Key Data Extracted</h3>
+                      <p>
+                        The business information is associated with a CRO number
+                      </p>
+                    </div>
+                  </div>
+                </article>
+                <article
+                  class="slide"
+                  data-phase="Phase 3"
+                  data-title="Application Type"
+                >
+                  <img
+                    class="slide-main"
+                    src="/assets/LoanApplicationRedesign/Phase-3.jpg"
+                    alt="Phase 3"
+                  />
+                  <div class="notes">
+                    <div class="note note--data">
+                      <h3>Key Data Extracted</h3>
+                      <p>
+                        the monthly amount of card and non-card receipts. the
+                        type of deals
+                      </p>
+                    </div>
+                    <div class="note note--assumption">
+                      <h3>My Assumption</h3>
+                      <p>
+                        Phase 3 is the decision phase, determining whether the
+                        customer is promising.
+                      </p>
+                    </div>
+                  </div>
+                </article>
+                <article
+                  class="slide"
+                  data-phase="Phase 4"
+                  data-title="Funding Requirement"
+                >
+                  <img
+                    class="slide-main"
+                    src="/assets/LoanApplicationRedesign/Phase-4.jpg"
+                    alt="Phase 4"
+                  />
+                  <div class="notes">
+                    <div class="note note--data">
+                      <h3>Key Data Extracted</h3>
+                      <p>Loan Amount</p>
+                    </div>
+                  </div>
+                </article>
+                <article
+                  class="slide"
+                  data-phase="Phase 5"
+                  data-title="Declaration"
+                >
+                  <img
+                    class="slide-main"
+                    src="/assets/LoanApplicationRedesign/Phase-5.jpg"
+                    alt="Phase 5"
+                  />
+                  <div class="notes">
+                    <div class="note note--data">
+                    <h3>Key Data Extracted</h3>
+                    <p>authorization for clients</p>
+                  </div>
+                  </div>
+                 
+                </article>
+                <article
+                  class="slide"
+                  data-phase="Phase 6"
+                  data-title="Manage Signatories"
+                >
+                  <img
+                    class="slide-main"
+                    src="/assets/LoanApplicationRedesign/Phase-6.jpg"
+                    alt="Phase 6"
+                  />
+                  <div class="notes">
+                    <div class="note note--data">
+                      <h3>Key Data Extracted</h3>
+                      <p>
+                        Identification of customers: Each requires a signatory.
+                        Cross check with
+                      </p>
+                    </div>
+                    <div class="note note--assumption">
+                      <h3>My Assumption</h3>
+                      <p>
+                        If there is a mismatch info, the loan may be delayed.
+                      </p>
+                    </div>
+                  </div>
+                </article>
+                <article
+                  class="slide"
+                  data-phase="Phase 7"
+                  data-title="Know Your Client"
+                >
+                  <img
+                    class="slide-main"
+                    src="/assets/LoanApplicationRedesign/Phase-7.jpg"
+                    alt="Phase 7"
+                  />
+                  <div class="notes">
+                    <div class="note note--data">
+                      <h3>Key Data Extracted</h3>
+                      <p>
+                        Know your customer:Business tax number (VAT) -
+                        verification Personal ID vefirication
+                      </p>
+                    </div>
+                    <div class="note note--assumption">
+                      <h3>My Assumption</h3>
+                      <p>
+                        KYC is where the most required documents are uploaded.
+                      </p>
+                    </div>
+                    <div class="note note--assumption">
+                      <h3>My Assumption</h3>
+                      <p>
+                        Clients take time to collect the whole documents, which
+                        cause frustration for partners.
+                      </p>
+                    </div>
+                  </div>
+                </article>
+                <article
+                  class="slide"
+                  data-phase="Phase 8"
+                  data-title="Connect Open Banking"
+                >
+                  <img
+                    class="slide-main"
+                    src="/assets/LoanApplicationRedesign/Phase-8.jpg"
+                    alt="Phase 8"
+                  />
+                  <div class="notes">
+                    <div class="note note--data">
+                      <h3>Key Data Extracted</h3>
+                      <p>
+                        Connect Open Banking : System can fetch bank data
+                        automatically
+                      </p>
+                    </div>
+                    <div class="note note--assumption">
+                      <h3>My Assumption</h3>
+                      <p>
+                        What if clients do not want share it with open banking
+                        (?)
+                      </p>
+                    </div>
+                  </div>
+                </article>
+                <article
+                  class="slide"
+                  data-phase="Phase 9"
+                  data-title="Supporting Documents"
+                >
+                  <img
+                    class="slide-main"
+                    src="/assets/LoanApplicationRedesign/Phase-9.jpg"
+                    alt="Phase 9"
+                  />
+                  <div class="notes">
+                    <div class="note note--data">
+                      <h3>Key Data Extracted</h3>
+                      <p>Supporting Doc: Tax Status level required.</p>
+                    </div>
+                  </div>
+                </article>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--  Survey Simulation -->
+        <div class="span-9 cs-section" id="surveySimulation">
+          <h4 class="cs-h2 span-9">Survey Simulation</h4>
+          <p class="span-9 cs-lead">
+            To validate my early assumptions, I conducted a survey simulation
+            based on industry research and broker discussions. While I did not
+            have access to real users, this approach helped test whether the
+            identified pain points aligned with common broker challenges in SME
+            lending.
+          </p>
+          <div class="facts span-9 grid-9 cs-visual">
+            <div class="span-5">
+              <h5 class="cs-figure__label">My key survey questions</h5>
+              <img style="border: 1px solid var(--border)"
+                src="/assets/LoanApplicationRedesign/251214_surveyimg_00.JPG"
+                alt=""
+              />
+            </div>
+            <div class="span-4">
+              <div  style="margin-bottom: 1rem;">
+                <h5 class=" cs-figure__label">Main Challenges</h5>
+                <img 
+                src="/assets/LoanApplicationRedesign/251214_surveyimg_Q4-mainchallange.png"
+                alt=""
+                />
+              </div>
+              <div>
+                <h5 class="cs-figure__label">
+                What Brokers Value Most (client-focused factors)
+              </h5>
+              <img
+                src="/assets/LoanApplicationRedesign/251214_surveyimg_Q5-value.png"
+                alt=""
+              />
+
+              </div>
+             
+
+            </div>
+          </div>
+          <!-- Card -->
+          <article
+            class="card span-9"
+            role="group"
+            aria-labelledby="card-title-1"
+          >
+            <header class="card__header">
+              <span class="chip chip--insight">Insight</span>
+              <h2 id="card-title-1" class="card__title"></h2>
+            </header>
+            <p class="card__body">
+              These early signals were validated <strong>through exploratory research</strong>, confirming friction around <strong>document collection, manual admin workload </strong> , and <strong>communication speed</strong> .
+            </p>
+          </article>
+        </div>
+        <!--   Exploratory research-->
+        <div class="span-9 cs-section" id="research">
+          <h4 class="cs-h2 span-9">Exploratory Research</h4>
+          <p class="span-9 cs-lead">
+            I conducted exploratory research across lender documentation,
+            broker-focused articles, and industry reports to validate early
+            signals around delays in loan applications. This research confirmed
+            that document collection is the primary bottleneck, driven by
+            incomplete submissions, unclear requirements, and repeated
+            follow-ups.
+          </p>
+          <article
+            class="card span-9"
+            role="group"
+            aria-labelledby="card-title-1"
+          >
+            <header class="card__header">
+              <span class="chip chip--insight">Validated insights</span>
+              <h2 id="card-title-1" class="card__title"></h2>
+            </header>
+            <ol class="card__body">
+              <li>
+                <i class="fa-solid fa-circle  bullet" ></i>
+                Brokers spend significant time chasing missing or incorrect
+                documents
+              </li>
+              <li>
+                <i class="fa-solid fa-circle bullet" ></i>
+                Incomplete submissions cause rework and internal handoffs
+              </li>
+              <li>
+                <i class="fa-solid fa-circle bullet"></i
+                >Speed and clarity are critical to broker confidence and
+                throughput
+              </li>
+            </ol>
+          </article>
+          <div class=" span-9 grid-9 cs-visual">
+            <div class="span-5">
+              <h5 class="cs-figure__label">Evidence From Industry Research</h5>
+              <img
+                src="/assets/LoanApplicationRedesign/251215_research-exploratory_00.jpg"
+                alt=""
+              />
+            </div>
+            <div class="span-4">
+              <h5 class="cs-figure__label">Why delay?</h5>
+              <img
+                src="/assets/LoanApplicationRedesign/251215_research-exploratory2_00.png"
+                alt=""
+              />
+            </div>
+          </div>
+        </div>
+        <!--     Field Research: Empathy Map    -->
+        <div class="span-9 cs-section" id="Empathy-Map">
+          <h4 class="cs-h2 span-9">Field Research: Empathy Map</h4>
+          <p class="span-9 cs-lead">
+            This empathy map captures the behaviours, thoughts, and emotional
+            states of brokers during the SME loan application process, based on
+            exploratory research and validated survey signals.
+          </p>
+          <div class="span-9">
+            <img
+              class="marginbottom"
+              src="../assets/LoanApplicationRedesign/251006_Empathy-maps_00.jpg"
+              alt=""
+            />
+          </div>
+          <article
+            class="card span-9"
+            role="group"
+            aria-labelledby="card-title-1"
+          >
+            <header class="card__header">
+              <span class="chip chip--insight"
+                >Synthesis: What this revealed</span
+              >
+              <h2 id="card-title-1" class="card__title"></h2>
+            </header>
+            <ol class="card__body">
+              <li>
+                <i class="fa-solid fa-circle bullet " ></i>
+                Brokers feel responsible for progress but lack control over
+                document flow.
+              </li>
+              <li>
+                <i class="fa-solid fa-circle bullet " ></i>
+                Repeated document requests create frustration and loss of
+                confidence
+              </li>
+              <li>
+                <i class="fa-solid fa-circle bullet" ></i
+                >Delays are emotional (stress, embarrassment), not just
+                operational
+              </li>
+            </ol>
+          </article>
+        </div>
+      </div>
+    </section>
+    <!-- Define -->
+    <section>
+      <div class="container--small grid-9" id="define">
+        <h3 class="span-9 cs-h1">Define</h3>
+        <!--         Problem Statement  -->
+        <div class="span-9 cs-section" id="PStatement">
+          <h4 class="cs-h2">Problem Statement</h4>
+          <div class="pov-card span-9">
+            <div class="pov-row">
+              <div class="pov-label">WHO</div>
+              <div class="pov-content">
+                <p>
+                  Financial partners (brokers) submitting SME loan applications
+                  through IEFinance’s Partner Portal.
+                </p>
+              </div>
+            </div>
+
+            <div class="pov-row">
+              <div class="pov-label">NEED</div>
+              <div class="pov-content">
+                <p>
+                  <span class="hl">
+                    A faster, clearer way to progress applications using the
+                    information and documents they already have —
+                  </span>
+                  with transparency around what is required, when, and why —
+                  without waiting on clients or repeatedly interrupting the
+                  process.
+                </p>
+              </div>
+            </div>
+
+            <div class="pov-row">
+              <div class="pov-label">INSIGHT</div>
+              <div class="pov-content">
+                <p>
+                  Because the portal requests detailed customer information and
+                  documents too early, brokers are unable to progress
+                  applications independently. This leads to delays, frustration,
+                  and reliance on IEFinance’s Sales Support instead of the
+                  digital portal.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="pov-card span-9">
+            <div class="pov-row">
+              <div class="pov-label">BUSINESS IMPACT</div>
+              <div class="pov-content">
+                <p>
+                  Early friction causes brokers to abandon the portal
+                  mid-application, increasing manual workload and slowing loan
+                  processing.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--         User Persona -->
+
+        <div class="span-9 cs-section" id="userPersona">
+          <h4 class="cs-h2">User Persona</h4>
+          <h5 class="">Separated the Persona into Two Types</h5>
+          <p class="cs-lead" style="margin-bottom: 0">
+            Personas were created through exploratory research, combining
+            repository research and empathy mapping, and synthesised using a
+            proto-persona approach.
+          </p>
+          <div class="lightbox-gallery span-9">
+            <div class="lightbox-gallery__track">
+              <button class="lightbox-gallery__item" type="button">
+                <img
+                  src="/assets/LoanApplicationRedesign/251223_persona-alex.jpg"
+                  alt="Persona Alex"
+                  class="lightbox-gallery__thumbnail"
+                />
+              </button>
+              <button class="lightbox-gallery__item" type="button">
+                <img
+                  src="/assets/LoanApplicationRedesign/251223_persona-catherine.jpg"
+                  alt="Persona Catherine"
+                  class="lightbox-gallery__thumbnail"
+                />
+              </button>
+            </div>
+          </div>
+          <!-- Lightbox -->
+          <div class="lightbox" id="lightbox-modal" aria-hidden="true">
+            <div class="lightbox__content" role="dialog" aria-modal="true">
+              <button class="lightbox__close" aria-label="Close">
+                &times;
+              </button>
+              <img class="lightbox__image" alt="" />
+            </div>
+          </div>
+          <article
+            class="card span-9"
+            role="group"
+            aria-labelledby="card-title-1"
+          >
+            <header class="card__header">
+              <span class="chip chip--insight">INSIGHT</span>
+              <h2 id="card-title-1" class="card__title"></h2>
+            </header>
+            <p class="card__body">
+              Both personas share similar pain points within the IEFinance
+              process — complexity, document delays, and lack of
+              clarity.However, their motivations and expectations differ,
+              shaping how each reacts to these challenges. <br />
+              Caroline seeks reassurance and trust, while Alex seeks efficiency
+              and control — and these differences guide distinct UX strategies
+              for improving the portal experience.
+            </p>
+          </article>
+        </div>
+        <!--         Persona - Jobs to be done -->
+        <div class="span-9 cs-section" id="JTBD">
+          <h4 class="cs-h2">Persona - Jobs to be done</h4>
+          <p class="cs-lead">
+            This section captures the core jobs each partner is trying to
+            accomplish across the loan application journey.
+          </p>
+          <div class="persona-grid span-9">
+            <img
+              src="../assets/LoanApplicationRedesign/251224_alex-jtbd_00.jpg"
+              alt="Alex Murphy persona"
+              class="persona-card"
+            />
+            <img
+              src="../assets/LoanApplicationRedesign/251224_caroline-jtbd_00.jpg"
+              alt="Caroline Byrne persona"
+              class="persona-card"
+            />
+          </div>
+          <article
+            class="card span-9"
+            role="group"
+            aria-labelledby="card-title-1"
+          >
+            <header class="card__header">
+              <span class="chip chip--insight">INSIGHT</span>
+              <h2 id="card-title-1" class="card__title">
+                Core Shared Job to Be Done (Both Personas)
+              </h2>
+            </header>
+            <p class="card__body">
+              Complete and submit accurate loan applications with confidence and
+              minimal friction, while clearly understanding what is complete,
+              what is missing, and what happens next — without unnecessary
+              rework or delays.
+            </p>
+          </article>
+          <p class="cs-lead">
+            Alex wants the system to do the heavy lifting, so he can move
+            quickly and confidently across multiple applications. Caroline wants
+            the system to support her judgement and communication, so she can
+            confidently guide clients and maintain trust. Both partners want to
+            submit accurate applications with minimal friction — Alex
+            prioritises speed and control, while Caroline prioritises clarity,
+            trust, and continuity.
+          </p>
+        </div>
+        <!-- Persona × Phase Breakdown -->
+        <div class="span-9 cs-section" id="JourneyMap">
+          <h4 class="cs-h2">Persona × Journey Map</h4>
+          <p class="cs-lead">
+            To translate personas into actionable design insights, I analysed
+            how each persona experiences critical phases of the application
+            journey.
+          </p>
+
+          <div class="cs-visual">
+            <h5 class="cs-h3">Alex Murphy’s Journey Map</h5>
+            <div class="pov-card span-9">
+              <div class="pov-row">
+                <div class="pov-label">
+                  <img
+                    src="/assets/LoanApplicationRedesign/251223_persona-alex-profile.png"
+                    alt=""
+                  />
+                </div>
+                <div class="pov-content">
+                  <p>The Tech-Savvy Efficient Partner</p>
+                  <p>
+                    His goal: to complete the client’s loan application quickly
+                    and accurately, without needing back-and-forth communication
+                    or manual rework.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div
+              id=""
+              class="phase-carousel js-carousel span-9"
+              data-max-width="1000"
+            >
+              <div class="phases-header">
+                <!-- LEFT -->
+                <h5 class="phases-title js-phaseHeader phase__title">
+                  Alex Murphy’s Journey Map in Phase 3
+                </h5>
+
+                <!-- RIGHT -->
+                <div class="phases-controls">
+                  <div class="phases-nav">
+                    <button
+                      class="phases-prev"
+                      type="button"
+                      aria-label="Previous"
+                    >
+                      ‹
+                    </button>
+                    <button class="phases-next" type="button" aria-label="Next">
+                      ›
+                    </button>
+                  </div>
+
+                  <button
+                    class="peek-btn"
+                    type="button"
+                    aria-label="Service Blueprint Peek"
+                  >
+                    <span class="peek-btn__icon">i</span>
+                    <span>Service Blueprint Peek</span>
+                  </button>
+                </div>
+              </div>
+
+              <div class="viewport">
+                <div class="track">
+                  <article
+                    class="slide"
+                    data-phase="Phase 3"
+                    data-title="Application Type (with Estimates)"
+                    data-peek="/assets/LoanApplicationRedesign/251222_Phase-3-00.png"
+                  >
+                    <img
+                      class="slide-main"
+                      src="/assets/LoanApplicationRedesign/251224_alex-Phase3_00.png"
+                      alt="Phase 3"
+                    />
+                    <img
+                      class="slide-info"
+                      src="/assets/LoanApplicationRedesign/251222_alex-Phase3Info_00.png"
+                      alt="Phase 3 info"
+                    />
+                  </article>
+                  <article
+                    class="slide"
+                    data-phase="Phase 4"
+                    data-title="Declarations & Compliance"
+                    data-peek="/assets/LoanApplicationRedesign/251224_Phase-4-00.png"
+                  >
+                    <img
+                      class="slide-main"
+                      src="/assets/LoanApplicationRedesign/251224_alex-Phase4_00.png"
+                      alt="Phase 1"
+                    />
+                    <img
+                      class="slide-info"
+                      src="/assets/LoanApplicationRedesign/251224_alex-Phase4Info_00.png"
+                      alt="Phase 1"
+                    />
+                  </article>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="cs-visual">
+            <h5 class="cs-h3">Caroline Byrne’s Journey Map</h5>
+            <div class="pov-card span-9">
+              <div class="pov-row">
+                <div class="pov-label">
+                  <img
+                    src="/assets/LoanApplicationRedesign/251223_persona-caroline-profile.png"
+                    alt=""
+                  />
+                </div>
+                <div class="pov-content">
+                  <p>The Experienced Relationship-Driven Partner</p>
+                  <p>
+                    Her goal: is to submit a complete and accurate loan
+                    application, even when client documents are delayed or
+                    flawed — while also ensuring she can clearly advise her
+                    clients on what’s missing or incorrect to prevent delays or
+                    rejection.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div
+              id=""
+              class="phase-carousel js-carousel span-9"
+              data-max-width="1000"
+            >
+              <div class="phases-header">
+                <!-- LEFT -->
+                <h5 class="phases-title js-phaseHeader phase__title">
+                  Caroline Byrne’s Journey Map
+                </h5>
+
+                <!-- RIGHT -->
+                <div class="phases-controls">
+                  <div class="phases-nav">
+                    <button
+                      class="phases-prev"
+                      type="button"
+                      aria-label="Previous"
+                    >
+                      ‹
+                    </button>
+                    <button class="phases-next" type="button" aria-label="Next">
+                      ›
+                    </button>
+                  </div>
+
+                  <button
+                    class="peek-btn"
+                    type="button"
+                    aria-label="Service Blueprint Peek"
+                  >
+                    <span class="peek-btn__icon">i</span>
+                    <span>Service Blueprint Peek</span>
+                  </button>
+                </div>
+              </div>
+
+              <div class="viewport">
+                <div class="track">
+                  <article
+                    class="slide"
+                    data-phase="Phase 2"
+                    data-title="Application Type (with Estimates)"
+                    data-peek="/assets/LoanApplicationRedesign/251222_Phase-2-00-caroline.png"
+                  >
+                    <img
+                      class="slide-main"
+                      src="/assets/LoanApplicationRedesign/251224_caroline-Phase2_00.png"
+                      alt="Phase 3"
+                    />
+                    <img
+                      class="slide-info"
+                      src="/assets/LoanApplicationRedesign/251222_caroline-Phase2Info_00.png"
+                      alt="Phase 3 info"
+                    />
+                  </article>
+                  <article
+                    class="slide"
+                    data-phase="Phase 6"
+                    data-title="Declarations & Compliance"
+                    data-peek="/assets/LoanApplicationRedesign/251222_Phase-6-00.png"
+                  >
+                    <img
+                      class="slide-main"
+                      src="/assets/LoanApplicationRedesign/251224_caroline-Phase6_00.png"
+                      alt="Phase 1"
+                    />
+                    <img
+                      class="slide-info"
+                      src="/assets/LoanApplicationRedesign/251222_caroline-Phase6Info_00.png"
+                      alt="Phase 1"
+                    />
+                  </article>
+                  <article
+                    class="slide"
+                    data-phase="Phase 7"
+                    data-title="Declarations & Compliance"
+                    data-peek="/assets/LoanApplicationRedesign/251222_Phase-7-00.png"
+                  >
+                    <img
+                      class="slide-main"
+                      src="/assets/LoanApplicationRedesign/251224_caroline-Phase7_00.png"
+                      alt="Phase 1"
+                    />
+                    <img
+                      class="slide-info"
+                      src="/assets/LoanApplicationRedesign/251222_caroline-Phase7Info_00.png"
+                      alt="Phase 1"
+                    />
+                  </article>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Ideate -->
+    <section>
+      <div class="container--small grid-9 cs-section" id="ideate">
+        <h3 class="span-9 cs-h1">Ideate</h3>
+        <p class="span-9 cs-lead">
+          Building on the personas and their Jobs to Be Done, I translated key
+          pain points into How Might We statements to explore solution
+          directions. These questions helped me identify where the loan
+          application experience could better support partners throughout the
+          journey.
+        </p>
+        <div
+          class="hmw-card span-9"
+          aria-label="Alex Murphy - Insight to Decision table"
+        >
+          <header class="hmw-top">
+            <img
+              class="hmw-avatar"
+              src="/assets/LoanApplicationRedesign/251223_persona-alex-profile.png"
+              alt="Alex Murphy"
+            />
+            <div class="hmw-title">
+              <h6>Alex Murphy</h6>
+              <p>— The Tech-Savvy Efficient Partner</p>
+            </div>
+          </header>
+
+          <div
+            class="hmw-grid"
+            role="table"
+            aria-label="Insight, HMW, Decision"
+          >
+            <!-- LEFT GROUP (two columns) -->
+            <div class="hmw-panel hmw-panel--left">
+              <div class="hmw-head" role="rowgroup">
+                <div class="hmw-headcell" role="columnheader">
+                  <span class="chip chip--insight">INSIGHT</span>
+                </div>
+                <div class="hmw-headcell" role="columnheader">
+                  <h2 id="card-title-1" class="card__title hmwd">
+                    How Might We Statements
+                  </h2>
+                </div>
+              </div>
+
+              <div class="hmw-body" role="rowgroup">
+                <!-- row 1 -->
+                <div class="hmw-row" role="row">
+                  <div class="hmw-cell" role="cell">
+                    <p class="card__body">Users lack clarity at submission</p>
+                  </div>
+                  <div class="hmw-cell hmwd" role="cell">
+                    <p class="card__body">
+                      HMW can we give partners real-time visibility into
+                      application progress so they stay in control?
+                    </p>
+                  </div>
+                </div>
+
+                <!-- row 2 -->
+                <div class="hmw-row" role="row">
+                  <div class="hmw-cell" role="cell">
+                    <p class="card__body">
+                      Re-uploading valid documents slows down Alex’s workflow
+                    </p>
+                  </div>
+                  <div class="hmw-cell hmwd" role="cell">
+                    <p class="card__body">
+                      How might we reuse previously submitted, valid documents?
+                    </p>
+                  </div>
+                </div>
+                <!-- row 3 -->
+                <div class="hmw-row" role="row">
+                  <div class="hmw-cell" role="cell">
+                    <p class="card__body">
+                      Errors or completion status are discovered too late
+                    </p>
+                  </div>
+                  <div class="hmw-cell hmwd" role="cell">
+                    <p class="card__body">
+                      How might we surface errors and confirm completion
+                      instantly?
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- RIGHT GROUP (one column) -->
+            <div class="hmw-panel hmw-panel--right">
+              <div class="hmw-head hmw-head--right" role="rowgroup">
+                <div class="hmw-headcell" role="columnheader">
+                  <span class="chip chip--decision">DECISION</span>
+                </div>
+              </div>
+
+              <div class="hmw-body" role="rowgroup">
+                <!-- row 1 -->
+                <div class="hmw-row hmw-row--single" role="row">
+                  <div class="hmw-cell" role="cell">
+                    <p class="card__body">
+                      Persistent real-time progress tracking.
+                    </p>
+                  </div>
+                </div>
+
+                <!-- row 2 -->
+                <div class="hmw-row hmw-row--single" role="row">
+                  <div class="hmw-cell" role="cell">
+                    <p class="card__body">Intelligent document reuse</p>
+                  </div>
+                </div>
+                <!-- row 3 -->
+                <div class="hmw-row hmw-row--single" role="row">
+                  <div class="hmw-cell" role="cell">
+                    <p class="card__body">
+                      Real-time validation & clear completion states
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="hmw-card span-9"
+          aria-label="Caroline Byrne  - Insight to Decision table"
+        >
+          <header class="hmw-top">
+            <img
+              class="hmw-avatar"
+              src="/assets/LoanApplicationRedesign/251223_persona-caroline-profile.png"
+              alt="Alex Murphy"
+            />
+            <div class="hmw-title">
+              <h6>Alex Murphy</h6>
+              <p>— The Experienced Relationship-Driven Partner</p>
+            </div>
+          </header>
+
+          <div
+            class="hmw-grid"
+            role="table"
+            aria-label="Insight, HMW, Decision"
+          >
+            <!-- LEFT GROUP (two columns) -->
+            <div class="hmw-panel hmw-panel--left">
+              <div class="hmw-head" role="rowgroup">
+                <div class="hmw-headcell" role="columnheader">
+                  <span class="chip chip--insight">INSIGHT</span>
+                </div>
+                <div class="hmw-headcell" role="columnheader">
+                  <h2 id="card-title-1" class="card__title hmwd">
+                    How Might We Statements
+                  </h2>
+                </div>
+              </div>
+
+              <div class="hmw-body" role="rowgroup">
+                <!-- row 1 -->
+                <div class="hmw-row" role="row">
+                  <div class="hmw-cell" role="cell">
+                    <p class="card__body">Missing docs block progress</p>
+                  </div>
+                  <div class="hmw-cell hmwd" role="cell">
+                    <p class="card__body">
+                      How might we allow partners to submit partial KYC
+                      documents, showing what’s missing?
+                    </p>
+                  </div>
+                </div>
+
+                <!-- row 2 -->
+                <div class="hmw-row" role="row">
+                  <div class="hmw-cell" role="cell">
+                    <p class="card__body">Repetition breaks continuity</p>
+                  </div>
+                  <div class="hmw-cell hmwd" role="cell">
+                    <p class="card__body">
+                      How might we reuse verified client data so partners don’t
+                      repeat steps ?
+                    </p>
+                  </div>
+                </div>
+                <!-- row 3 -->
+                <div class="hmw-row" role="row">
+                  <div class="hmw-cell" role="cell">
+                    <p class="card__body">Changes create uncertainty</p>
+                  </div>
+                  <div class="hmw-cell hmwd" role="cell">
+                    <p class="card__body">
+                      How might we help partners stay confident and informed
+                      when company information changes?
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- RIGHT GROUP (one column) -->
+            <div class="hmw-panel hmw-panel--right">
+              <div class="hmw-head hmw-head--right" role="rowgroup">
+                <div class="hmw-headcell" role="columnheader">
+                  <span class="chip chip--decision">DECISION</span>
+                </div>
+              </div>
+
+              <div class="hmw-body" role="rowgroup">
+                <!-- row 1 -->
+                <div class="hmw-row hmw-row--single" role="row">
+                  <div class="hmw-cell" role="cell">
+                    <p class="card__body">
+                      Partial submission + missing indicators
+                    </p>
+                  </div>
+                </div>
+
+                <!-- row 2 -->
+                <div class="hmw-row hmw-row--single" role="row">
+                  <div class="hmw-cell" role="cell">
+                    <p class="card__body">Persistent client data reuse</p>
+                  </div>
+                </div>
+                <!-- row 3 -->
+                <div class="hmw-row hmw-row--single" role="row">
+                  <div class="hmw-cell" role="cell">
+                    <p class="card__body">
+                      Change indicators + contextual explanations
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PARALLAX HERO (70vh background + PNG layer moving on scroll)
+        - Pure HTML/CSS/JS (no libs)
+        - Drop into your page
+        - Replace image URLs with your own
+    -->
+
+    <section class="parallax-hero" aria-label="Parallax section" id="Develop">
+      <!-- Background layer (can be gradient or image) -->
+      <div class="parallax-hero__bg" aria-hidden="true"></div>
+
+      <!-- Floating PNG layer (moves over background while scrolling) -->
+      <img
+        class="parallax-hero__png"
+        src="../assets/LoanApplicationRedesign/Final/components-img.png"
+        alt=""
+        loading="lazy"
+        decoding="async"
+      />
+
+
+    </section>
+    <!-- Develop -->
+    <section>
+      <div class="container--small grid-9" id="Develop">
+        <h3 class="span-9 cs-h1">Develop</h3>
+        <div class="span-9 cs-section">
+          <h4 class="span-9 cs-h2" id="Workflow">
+            Design Process | Structuring the End-to-End Portal Journey
+          </h4>
+          <p class="span-9 cs-lead">
+            I mapped the full broker journey from entry to submission to
+            validate task order, responsibility boundaries, and system feedback
+            before refining UI or interactions.
+          </p>
+          <div class="journey span-9 cs-visual">
+            <div class="journey-grid">
+              <!-- Entry -->
+              <div class="journey-step">
+                <h3>Entry</h3>
+                <div class="journey-line">
+                  <span class="journey-dot"></span>
+                </div>
+
+                <img
+                  src="/assets/LoanApplicationRedesign/low-fi/Wireframe - 1440_1024-SignIn.jpg"
+                  alt="Entry screen 1"
+                />
+                <img
+                  src="/assets/LoanApplicationRedesign/low-fi/Wireframe - 1440_1024-Dashboard.png"
+                  alt="Entry screen 2"
+                />
+              </div>
+
+              <!-- Data Collection -->
+              <div class="journey-step">
+                <h3>Data Collection</h3>
+                <div class="journey-line">
+                  <span class="journey-dot"></span>
+                </div>
+                <img
+                  src="/assets/LoanApplicationRedesign/low-fi/Wireframe - 1440_1024-Business Info.png"
+                  alt="Data collection screen 1"
+                />
+                <img
+                  src="/assets/LoanApplicationRedesign/low-fi/Wireframe - 1440_1024-02 – Loan Request Details.png"
+                  alt="Data collection screen 2"
+                />
+              </div>
+
+              <!-- Recommendation -->
+              <div class="journey-step">
+                <h3>Recommendation</h3>
+                <div class="journey-line">
+                  <span class="journey-dot"></span>
+                </div>
+                <img
+                  src="/assets/LoanApplicationRedesign/low-fi/Wireframe - 1440_1024-Recommended Finance Product.png"
+                  alt="Recommendation screen"
+                />
+              </div>
+
+              <!-- Review & Compliance -->
+              <div class="journey-step">
+                <h3>Review & Compliance</h3>
+                <div class="journey-line">
+                  <span class="journey-dot"></span>
+                </div>
+                <img
+                  src="/assets/LoanApplicationRedesign/low-fi/Wireframe - 1440_1024-01 – Business Info & CRO Lookup.png"
+                  alt="Review screen 1"
+                />
+                <img
+                  src="/assets/LoanApplicationRedesign/low-fi/Wireframe - 1440_1024-Know Your Client.png"
+                  alt="Review screen 2"
+                />
+                <img
+                  src="/assets/LoanApplicationRedesign/low-fi/Wireframe - 1440_1024-Compliance Check.png"
+                  alt="Review screen 3"
+                />
+              </div>
+
+              <!-- Submission -->
+              <div class="journey-step">
+                <h3>Submission</h3>
+                <div class="journey-line">
+                  <span class="journey-dot"></span>
+                </div>
+                <img
+                  src="/assets/LoanApplicationRedesign/low-fi/Wireframe-Submit_00.jpg"
+                  alt="Submission confirmation"
+                />
+              </div>
+            </div>
+          </div>
+          <p class="span-9">
+            The journey illustrates how brokers progress from initial access
+            through data collection, product recommendation, and multi-stage
+            review before submission. At this stage, the focus was on validating
+            task order, responsibility shifts, and system clarity — deliberately
+            removing visual styling to prioritise usability.
+          </p>
+        </div>
+        <div class="span-9 cs-section" id="UI">
+          <h4 class="cs-h2">
+            UI Concept — Adapting IBM Carbon for a Broker-Focused Workflow
+          </h4>
+          <div class="cs-subsection">
+            <h5 class="cs-h3">
+              Adapted Carbon Tile — Recommended Finance Product
+            </h5>
+            <p class="cs-lead">
+              Built on IBM Carbon’s expandable tile pattern, this component was
+              iterated to refine action hierarchy, icon alignment, and content
+              density within the expanded state. Testing focused on keeping key
+              decisions in context while ensuring the tile remained scannable
+              and predictable for brokers.
+            </p>
+            <div class="cs-visual">
+              <img
+                class=""
+                src="/assets/LoanApplicationRedesign/UI-Component/251229_adaptedTile_00.jpg"
+                alt=""
+              />
+            </div>
+            <ol class="steps">
+              <li>
+                A contextual tag is used to indicate the system-recommended
+                finance option, providing clarity without implying approval or
+                validation status.
+              </li>
+              <li>
+                Action hierarchy within the expandable tile was refined through
+                testing to guide brokers from review to progression without
+                breaking context or increasing cognitive load.
+              </li>
+            </ol>
+          </div>
+          <div class="cs-subsection">
+            <h5 class="cs-h3">Contained List → Verification Container</h5>
+            <p class="cs-lead">
+              At this stage of the flow, the system is verifying externally
+              sourced data and guiding brokers on where attention is required,
+              without implying approval or failure. At the data verification
+              stage, IBM Carbon’s contained list component was adapted to
+              support layered attention without introducing validation or
+              approval semantics. To support this, a single Carbon component
+              (Contained List) is reused with layered signals at different
+              levels.
+            </p>
+            <div class="cs-visual">
+              <img
+                class="marginbottom"
+                src="/assets/LoanApplicationRedesign/UI-Component/251229_verificationContainer_00.jpg"
+                alt=""
+              />
+            </div>
+            <ol class="steps">
+              <li>
+                Informational tags summarise dataset changes, row-level
+                highlights localise mismatches.
+              </li>
+
+              <li>
+                The row highlight means: “This specific data value has been
+                flagged by the system and requires broker attention or
+                verification.”
+              </li>
+              <li>
+                Inline indicators act as persistent reminders —guiding brokers
+                through verification while maintaining trust in externally
+                sourced data.
+              </li>
+            </ol>
+          </div>
+          <div class="cs-subsection">
+            <h5 class="cs-h3">
+              Alert-Triggered Resolution Panel — Adapted Carbon Accordion
+            </h5>
+            <p class="cs-lead">
+              When a data mismatch requires explicit broker action, an
+              alert-triggered resolution panel is introduced. Built on Carbon’s
+              accordion pattern, the component expands only when needed to
+              present change context, structured comparison, and clear
+              resolution actions. Informational tagging and restrained emphasis
+              guide compliance decisions without interrupting the broader
+              application flow.
+            </p>
+            <div class="cs-visual">
+              <img
+                class=""
+                src="/assets/LoanApplicationRedesign/UI-Component/251229_AccordionList_00.jpg"
+                alt=""
+              />
+            </div>
+            <ol class="steps">
+              <li>
+                Header Title — Alert Scope Identifier anchors the alert to a
+                specific data field.
+              </li>
+
+              <li>
+                The tag maintains semantic consistency with the earlier
+                verification container.
+              </li>
+              <li>Icon: indicates if the panel is open or closed.</li>
+              <li>
+                Presents all information required to resolve the alert: Explicit
+                resolution actions
+              </li>
+            </ol>
+          </div>
+        </div>
+        <div class="span-9 cs-section" id="midfide">
+          <h4 class="cs-h2">Workflow Transition - Mid Fidelity</h4>
+          <p class="span-9 cs-lead">
+            Based on research findings, pain points, and system constraints, I
+            proposed an end-to-end workflow outlining how brokers could move
+            from data entry to submission. This workflow was first articulated
+            in low fidelity to define structure, sequence, and responsibility
+            boundaries, and then translated into mid-fidelity designs to explore
+            component behaviour, feedback patterns, and system responses.
+          </p>
+          <div class="wuj span-9 cs-visual" id="workflowUserJourney">
+            <!-- Header row -->
+            <header class="wuj__header">
+              <h3 class="phase__title">Workflow User Journey</h3>
+
+              <!-- Toggle (Low / Mid) -->
+              <div
+                class="wuj__toggle"
+                role="group"
+                aria-label="Fidelity toggle"
+              >
+                <button
+                  type="button"
+                  class="wuj__pill"
+                  data-fidelity="low"
+                  aria-pressed="true"
+                >
+                  Low-Fi
+                </button>
+                <button
+                  type="button"
+                  class="wuj__pill is-active"
+                  data-fidelity="mid"
+                  aria-pressed="false"
+                >
+                  Mid-Fi
+                </button>
+              </div>
+            </header>
+
+            <!-- Tabs -->
+            <nav class="wuj__tabs" role="tablist" aria-label="Workflow phases">
+              <button
+                class="wuj__tab is-active"
+                role="tab"
+                aria-selected="true"
+                data-tab="entry"
+              >
+                Entry
+              </button>
+              <button
+                class="wuj__tab"
+                role="tab"
+                aria-selected="false"
+                data-tab="data"
+              >
+                Data Collection
+              </button>
+              <button
+                class="wuj__tab"
+                role="tab"
+                aria-selected="false"
+                data-tab="reco"
+              >
+                Recommendation
+              </button>
+              <button
+                class="wuj__tab"
+                role="tab"
+                aria-selected="false"
+                data-tab="review"
+              >
+                Review
+              </button>
+              <button
+                class="wuj__tab"
+                role="tab"
+                aria-selected="false"
+                data-tab="submit"
+              >
+                Submission
+              </button>
+            </nav>
+
+            <!-- Carousel -->
+            <div class="wuj__carousel" aria-label="Workflow image carousel">
+              <div class="wuj__viewport" tabindex="0">
+                <div class="wuj__track">
+                  <!-- =========================
+                      ENTRY (one image per slide)
+                  ========================== -->
+                  <article
+                    class="wuj__slide"
+                    data-group="entry"
+                    aria-label="Entry 1"
+                  >
+                    <div class="wuj__label">Log In</div>
+                    <figure class="wuj__frame">
+                      <img
+                        class="wuj__img"
+                        data-low="/assets/LoanApplicationRedesign/low-fi/Wireframe - 1440_1024-SignIn.jpg"
+                        data-mid="/assets/LoanApplicationRedesign/mid-fi/Wireframe - 1440_1024-SignIn-mid.png"
+                        alt="Entry - Sign in"
+                        loading="lazy"
+                      />
+                    </figure>
+                  </article>
+
+                  <article
+                    class="wuj__slide"
+                    data-group="entry"
+                    aria-label="Entry 2"
+                  >
+                    <div class="wuj__label">Dashboard</div>
+                    <figure class="wuj__frame">
+                      <img
+                        class="wuj__img"
+                        data-low="/assets/LoanApplicationRedesign/low-fi/Wireframe - 1440_1024-Dashboard.png"
+                        data-mid="/assets/LoanApplicationRedesign/mid-fi/Wireframe - 1440_1024-Dashboard.jpg"
+                        alt="Entry - Dashboard"
+                        loading="lazy"
+                      />
+                    </figure>
+                  </article>
+
+                  <!-- =========================
+                      DATA COLLECTION
+                  ========================== -->
+                  <article
+                    class="wuj__slide"
+                    data-group="data"
+                    aria-label="Data 1"
+                    hidden
+                  >
+                    <div class="wuj__label">Business Information</div>
+                    <figure class="wuj__frame">
+                      <img
+                        class="wuj__img"
+                        data-low="/assets/LoanApplicationRedesign/low-fi/Wireframe - 1440_1024-01 – Business Info & CRO Lookup.png"
+                        data-mid="/assets/LoanApplicationRedesign/mid-fi/Wireframe - 1440_1024-Business Information Form.png"
+                        alt="Data Collection - Business info"
+                        loading="lazy"
+                      />
+                    </figure>
+                  </article>
+
+                  <article
+                    class="wuj__slide"
+                    data-group="data"
+                    aria-label="Data 2"
+                    hidden
+                  >
+                    <div class="wuj__label">Loan Request Details</div>
+                    <figure class="wuj__frame">
+                      <img
+                        class="wuj__img"
+                        data-low="/assets/LoanApplicationRedesign/low-fi/Wireframe - 1440_1024-02 – Loan Request Details.png"
+                        data-mid="/assets/LoanApplicationRedesign/mid-fi/Wireframe - 1440_1024-01 – Business Info & CRO Lookup.jpg"
+                        alt="Data Collection - Loan request"
+                        loading="lazy"
+                      />
+                    </figure>
+                  </article>
+
+                  <!-- =========================
+                      RECOMMENDATION
+                  ========================== -->
+                  <article
+                    class="wuj__slide"
+                    data-group="reco"
+                    aria-label="Recommendation 1"
+                    hidden
+                  >
+                    <div class="wuj__label">Recommended Product</div>
+
+                    <figure class="wuj__frame">
+                      <img
+                        class="wuj__img"
+                        data-low="/assets/LoanApplicationRedesign/low-fi/Wireframe - 1440_1024-Recommended Finance Product.png"
+                        data-mid="/assets/LoanApplicationRedesign/mid-fi/Wireframe - 1440_1024-Recommended Finance Product-Mid-fi.jpg"
+                        alt="Recommendation - Product"
+                        loading="lazy"
+                      />
+                    </figure>
+                  </article>
+
+                  <!-- =========================
+                      REVIEW (one image per slide)
+                  ========================== -->
+                  <article
+                    class="wuj__slide"
+                    data-group="review"
+                    aria-label="Review 1"
+                    hidden
+                  >
+                    <div class="wuj__label">Business Information</div>
+
+                    <figure class="wuj__frame">
+                      <img
+                        class="wuj__img"
+                        data-low="/assets/LoanApplicationRedesign/low-fi/Wireframe - 1440_1024-Business Info.png"
+                        data-mid="/assets/LoanApplicationRedesign/mid-fi/Wireframe - 1440_1024-Business Identity Verification-V2.jpg"
+                        alt="Review - Business info"
+                        loading="lazy"
+                      />
+                    </figure>
+                  </article>
+                  <article
+                    class="wuj__slide"
+                    data-group="review"
+                    aria-label="Review 1"
+                    hidden
+                  >
+                    <div class="wuj__label">Know Your Client & Business</div>
+                    <figure class="wuj__frame">
+                      <img
+                        class="wuj__img"
+                        data-low="/assets/LoanApplicationRedesign/low-fi/Wireframe - 1440_1024-Know Your Client.png"
+                        data-mid="/assets/LoanApplicationRedesign/mid-fi/Wireframe - 1440_1024-Director Verification-kyc.jpg"
+                        alt="Review - Business info"
+                        loading="lazy"
+                      />
+                    </figure>
+                  </article>
+
+                  <article
+                    class="wuj__slide"
+                    data-group="review"
+                    aria-label="Review 2"
+                    hidden
+                  >
+                    <div class="wuj__label">Compliance Check</div>
+                    <figure class="wuj__frame">
+                      <img
+                        class="wuj__img"
+                        data-low="/assets/LoanApplicationRedesign/low-fi/Wireframe - 1440_1024-Compliance Check.png"
+                        data-mid="/assets/LoanApplicationRedesign/mid-fi/Wireframe - 1440_1024-Business Compliance Check.jpg"
+                        alt="Review - Compliance check"
+                        loading="lazy"
+                      />
+                    </figure>
+                  </article>
+
+                  <article
+                    class="wuj__slide"
+                    data-group="review"
+                    aria-label="Review 3"
+                    hidden
+                  >
+                    <div class="wuj__label">Financial Assessment</div>
+                    <figure class="wuj__frame">
+                      <img
+                        class="wuj__img"
+                        data-low="/assets/LoanApplicationRedesign/low-fi/Wireframe - 1440_1024-Financial Assessment.png"
+                        data-mid="/assets/LoanApplicationRedesign/low-fi/Wireframe - 1440_1024-Financial Assessment.png"
+                        alt="Review - Financial assessment"
+                        loading="lazy"
+                      />
+                    </figure>
+                  </article>
+
+                  <!-- =========================
+                      SUBMISSION
+                  ========================== -->
+                  <article
+                    class="wuj__slide"
+                    data-group="submit"
+                    aria-label="Submission 1"
+                    hidden
+                  >
+                    <figure class="wuj__frame">
+                      <img
+                        class="wuj__img"
+                        data-low="/assets/LoanApplicationRedesign/low-fi/Wireframe - 1440_1024-Submission.png"
+                        data-mid="/assets/LoanApplicationRedesign/mid-fi/Wireframe - 1440_1024-Submission-mid.png"
+                        alt="Submission - Final"
+                        loading="lazy"
+                      />
+                    </figure>
+                  </article>
+                </div>
+              </div>
+
+              <!-- Controls bottom-right -->
+              <div class="wuj__controls" aria-label="Carousel controls">
+                <button
+                  type="button"
+                  class="wuj__nav"
+                  data-dir="prev"
+                  aria-label="Previous slide"
+                >
+                  <span aria-hidden="true">‹</span>
+                </button>
+                <button
+                  type="button"
+                  class="wuj__nav"
+                  data-dir="next"
+                  aria-label="Next slide"
+                >
+                  <span aria-hidden="true">›</span>
+                </button>
+              </div>
+            </div>
+          </div>
+          <p class="span-9 cs-lead">
+            The transition from low to mid fidelity did not involve changing the
+            workflow itself. Instead, it focused on making the proposed flow
+            concrete and testable by introducing clearer information hierarchy,
+            design-system components, and system feedback.
+          </p>
+        </div>
+        <div class="span-9 cs-subsection" id="Iteration">
+          <h4 class="cs-h2">Component & Layout Iteration</h4>
+          <h5 class="cs-h3">Improvements Based on Mid-Fidelity Testing</h5>
+          <p class="cs-lead">
+            Mid-fidelity testing focused on how brokers interpret system
+            feedback, resolve detected data changes, and progress through review
+            stages. Testing highlighted issues around clarity, visual hierarchy,
+            and action placement rather than task order.
+          </p>
+          <div>
+            <h6 class="cs-h4">Refining the Recommended Product Interaction</h6>
+            <p>
+              This iteration focused on improving the discoverability of
+              additional product details while preserving clarity between
+              borrowing details and the system-recommended option.
+            </p>
+            <div class="">
+              <figure class="cs-figure">
+                <figcaption class="cs-figure__label ">
+                  Before (Initial version)
+                </figcaption>
+                <img
+                  src="/assets/LoanApplicationRedesign/mid-fi-testing/Wireframe - 1440_1024-Recommended Finance Product-V2.jpg"
+                  alt="Recommended product – initial version"
+                />
+              </figure>
+
+              <p class="cs-lead">
+                The expand control for the recommended product was visually
+                understated, causing users to overlook the availability of
+                additional product details. While the recommendation itself was
+                clear, accessing deeper information required extra scanning.
+              </p>
+            </div>
+            <div class="">
+              <figure class="cs-figure">
+                <figcaption class="cs-figure__label ">
+                  After (Iterated version)
+                </figcaption>
+                <img
+                  src="/assets/LoanApplicationRedesign/mid-fi-testing/Wireframe - 1440_1024-Recommended Finance Product-V3.jpg"
+                  alt="Recommended product – initial version"
+                />
+              </figure>
+              <p style="padding-top: 1rem">
+                The expand affordance was made more discoverable and aligned
+                more closely with the recommended product content. Additional
+                finance information was surfaced in a clearer, more intentional
+                way, supporting partners who needed to explain the
+                recommendation in greater detail to clients.
+              </p>
+            </div>
+            <article class="card" role="group" aria-labelledby="card-title-1">
+              <header class="card__header">
+                <span class="chip chip--evidence">Evidence</span>
+              </header>
+              <p class="card__body">
+                The iteration reduced hesitation around accessing extended
+                details while maintaining a clear visual link between client
+                inputs and the system-recommended product.
+              </p>
+              <ol class="card__body">
+                <li>
+                  <i
+                    class="fa-solid fa-circle bullet "
+                 
+                    aria-hidden="true"
+                  ></i>
+                  Improved visibility of the expand/extend affordance
+                </li>
+                <li>
+                  <i 
+                    class="fa-solid fa-circle bullet"
+             
+                    aria-hidden="true"
+                  ></i>
+                  Preserved side-by-side alignment to maintain data →
+                  recommendation connection
+                </li>
+                <li>
+                  <i
+                    class="fa-solid fa-circle bullet"
+                    
+                    aria-hidden="true"
+                  ></i
+                  >Used progressive disclosure to avoid overwhelming users
+                </li>
+                <li>
+                  <i
+                    class="fa-solid fa-circle bullet"
+                  
+                    aria-hidden="true"
+                  ></i
+                  >Supported partner needs for deeper explanation, not just
+                  quick selection
+                </li>
+              </ol>
+            </article>
+          </div>
+          <div class="cs-subsection">
+            <h6 class="cs-h4">Preparing the Interface for High Fidelity</h6>
+            <p class="cs-lead">
+              As the design moved toward high fidelity, refinements focused on
+              visual hierarchy, semantic colour usage, and accessibility—without
+              changing component behaviour or workflow.
+            </p>
+            <div class="span-9">
+              <div class="">
+                <figure class="cs-figure">
+                  <figcaption class="cs-label">
+                    Before (Initial version)
+                  </figcaption>
+                  <img
+                    src="/assets/LoanApplicationRedesign/mid-fi-testing/Wireframe - 1440_1024-Business Identity Verification.png"
+                    alt=""
+                  />
+                </figure>
+              </div>
+              <div class="">
+                <figure class="cs-figure">
+                  <figcaption class="cs-label">
+                    After (Iterated version)
+                  </figcaption>
+                  <img
+                    src="/assets/LoanApplicationRedesign/mid-fi-testing/Wireframe - 1440_1024-Business Identity Verification-V2.jpg"
+                    alt=""
+                  />
+                </figure>
+              </div>
+            </div>
+            <ul class="card__body" style="padding-top: 1rem">
+              <li>
+                <strong>Semantic colour correction: </strong>Alert colour usage
+                was refined so that tags, headers, and notifications each map to
+                a single semantic role, improving contrast and reducing visual
+                competition.
+              </li>
+              <li>
+                <strong> Header vs notification separation: </strong> Accordion
+                headers were returned to a neutral surface, reserving alert
+                colour for notification and resolution content.
+              </li>
+              <li>
+                <strong>Value layout clarity: </strong>Spacing and alignment of
+                previous vs updated values were refined to support faster
+                comparison and confident decision-making.
+              </li>
+            </ul>
+          </div>
+          <div class="cs-subsection">
+            <h6 class="cs-h4">
+              Proposed Interaction Pattern: Contextual Drawer for KYC
+            </h6>
+            <p class="cs-lead">
+              This interaction was explored as a proposed solution to manage
+              complex KYC tasks without breaking table context.
+              <br />
+              It was lightly tested with a small number of users to assess
+              discoverability and basic usability. Participants were able to
+              locate the overflow menu and complete document uploads via the
+              drawer, indicating that the interaction was understandable, though
+              not fully validated at scale.
+            </p>
+            <div class="span-9">
+              <div>
+                <img
+                  style="border: 1.5px solid #e6eaf0"
+                  src="/assets/LoanApplicationRedesign/mid-fi-testing/IEFiance - high-fi-ibm - Figma 2025-12-29 06-47-20.gif"
+                  alt=""
+                />
+              </div>
+            </div>
+            <ul class="card__body" style="padding-top: 1rem">
+              <li>
+                <strong>Semantic colour correction: </strong>Alert colour usage
+                was refined so that tags, headers, and notifications each map to
+                a single semantic role, improving contrast and reducing visual
+                competition.
+              </li>
+              <li>
+                <strong> Header vs notification separation: </strong> Accordion
+                headers were returned to a neutral surface, reserving alert
+                colour for notification and resolution content.
+              </li>
+              <li>
+                <strong>Value layout clarity: </strong>Spacing and alignment of
+                previous vs updated values were refined to support faster
+                comparison and confident decision-making.
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="prototype">
+      <div class="container--small">
+      <header class="fidelity__head">
+      <h3 class="span-9 cs-h">Prototype</h3>
+      </header>
+      <div>
+  
+          <img class="backgroundMVP2" style=" border: 1.5px solid #e6eaf0" src="/assets/LoanApplicationRedesign/Final/IEFiance - high-fi-ibm - Figma 2025-12-29 12-32-29.gif" alt="">
+        <p style="padding-top: 1rem;">The final prototype demonstrates how brokers can progress through complex loan applications with greater clarity, reduced manual effort, and clear system feedback—while maintaining compliance and auditability.</p>
+
+      </div>
+ 
+   
+    </section>
+    <section id="iWould">
+      <div class="container--small">
+      <header class="fidelity__head">
+      <h3 class="span-9 cs-h">What I would do differently</h3>
+      </header>
+      <div>
+        <h6 class="cs-h4">Earlier access to broker partners  </h6>
+        <p class="cs-lead">
+          In this B2B project, limited access meant relying on exploratory research,
+          informed assumptions, and AI-assisted surveys. While directionally validated,
+          direct broker input would have strengthened confidence in user and loyalty flows.
+        </p>
+      </div>
+      <div>
+        <h6 class="cs-h4">Testing with real users and metrics  </h6>
+        <p class="cs-lead">
+          Usability testing was conducted with participants close to the target context.
+          With real brokers, I would measure task completion time, error rates, and
+          drop-off to quantify improvements.
+        </p>
+      </div>
+      <div>
+        <h6 class="cs-h4">Broader UI exploration </h6>
+        <p class="cs-lead">
+         Time constraints focused UI work on adapting the IBM Carbon Design System.
+          With more time, I would further refine the UI and explore alternative systems
+          while maintaining Carbon for enterprise consistency.
+        </p>
+      </div>
+
+
+ 
+   
+    </section>
+    <section id="Next">
+      <div class="container--small">
+      <header class="fidelity__head">
+      <h3 class="span-9 cs-h">Next Steps</h3>
+      </header>
+      <div>
+          <ol class="card__body">
+            <li>
+              <i class="fa-solid fa-circle bullet " aria-hidden="true"></i>Integrate AI-assisted data detection to identify missing, inconsistent, or risky inputs earlier in the flow
+            </li>
+            <li>
+            <i class="fa-solid fa-circle bullet" aria-hidden="true"></i>Document data-detection states (missing, matched, risk) and pack-status variations within the design system
+            </li>
+            <li>
+              <i class="fa-solid fa-circle bullet" aria-hidden="true"></i>Evolve the compliance workflow by standardising how tax returns and annual accounts are evaluated and surfaced
+            </li>
+          </ol>
+      </div>
+
+    </section>
+    
+    <section class="certifications">
+      <div class="container--small">
+        <h3 class="certifications__title">Certifications & Acknowledgement</h3>
+        <div>
+          <p class="certifications__thanks">Working on this project through the UX Tree mentorship programme was a genuinely rewarding experience, and I’m grateful for the support and encouragement throughout the process.
+            <br> <strong>To my mentor, Alessia Rossini</strong>, I’m very glad I had the opportunity to work with you. You dedicated a great amount of time to supporting me on a complex project focused on redesigning a loan application. I truly appreciate your guidance and experience, which helped me stay focused and expand my UX design methodologies—incorporating more up-to-date, technology-aligned approaches.
+<br>
+Thank you as well to the mentors and mentees who shared feedback, tested the designs, and offered thoughtful insights along the way. Your input strengthened the project and gave me valuable perspectives throughout the process.
+
+<br>
+Thank you!</p>
+        </div>
+
+        <div class="certifications__grid">
+          <figure class="cert-item">
+            <div class="cert-item__frame">
+              <img
+                src="../assets/LoanApplicationRedesign/251229_Certification_00.jpg"
+                alt="UX Tree Mentorship Certification"
+                loading="lazy"
+              />
+            </div>
+            <figcaption class="cert-item__label">UX Tree Mentorship Programme</figcaption>
+          </figure>
+
+          <figure class="cert-item">
+            <div class="cert-item__frame">
+              <img
+                src="../assets/LoanApplicationRedesign/251229_Certification_Best-DuoMentee.jpg"
+                alt="UX Tree Case Study Certification"
+                loading="lazy"
+              />
+            </div>
+            <figcaption class="cert-item__label">UX Tree Case Study Certification</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <footer class="site-footer">
+      <div class="grid-9 footer-grid">
+        <!-- Left: closing message -->
+        <div class="span-5 footer-content">
+          <p class="footer-eyebrow">LET’S WORK TOGETHER</p>
+
+          <h2 class="footer-heading">
+            Have a project or opportunity<br />
+            you’d like to discuss?
+          </h2>
+
+          <a
+            class="footer-email"
+            href="mailto:meliskonez@gmail.com"
+            aria-label="Email Melis Konez"
+          >
+            <span>Get in touch</span>
+
+            <svg
+              class="footer-email-icon"
+              aria-hidden="true"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M5 19 19 5M9 5h10v10"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.8"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </a>
+        </div>
+
+        <!-- Right: professional links -->
+        <nav class="span-4 footer-actions" aria-label="Professional links">
+          <p class="footer-eyebrow">FIND ME ONLINE</p>
+
+          <ul class="footer-links">
+            <li>
+              <a href="mailto:meliskonez@gmail.com">
+                <span class="footer-link-number">01</span>
+
+                <span class="footer-link-label">
+                  <i class="fa-solid fa-envelope" aria-hidden="true"></i>
+                  Email
+                </span>
+
+                <svg
+                  class="footer-link-arrow"
+                  aria-hidden="true"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M5 19 19 5M9 5h10v10"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.8"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </a>
+            </li>
+
+            <li>
+              <a
+                href="https://www.linkedin.com/in/meliskonez/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Visit Melis Konez on LinkedIn"
+              >
+                <span class="footer-link-number">02</span>
+
+                <span class="footer-link-label">
+                  <i class="fa-brands fa-linkedin-in" aria-hidden="true"></i>
+                  LinkedIn
+                </span>
+
+                <svg
+                  class="footer-link-arrow"
+                  aria-hidden="true"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M5 19 19 5M9 5h10v10"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.8"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </a>
+            </li>
+
+            <li>
+              <a
+                href="https://www.behance.net/meliskonez"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Visit Melis Konez on Behance"
+              >
+                <span class="footer-link-number">03</span>
+
+                <span class="footer-link-label">
+                  <i class="fa-brands fa-behance" aria-hidden="true"></i>
+                  Behance
+                </span>
+
+                <svg
+                  class="footer-link-arrow"
+                  aria-hidden="true"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M5 19 19 5M9 5h10v10"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.8"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </a>
+            </li>
+
+            <li>
+              <a
+                href="https://github.com/audralix/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Visit Melis Konez on GitHub"
+              >
+                <span class="footer-link-number">04</span>
+
+                <span class="footer-link-label">
+                  <i class="fa-brands fa-github" aria-hidden="true"></i>
+                  GitHub
+                </span>
+
+                <svg
+                  class="footer-link-arrow"
+                  aria-hidden="true"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M5 19 19 5M9 5h10v10"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.8"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </nav>
+
+        <!-- Bottom row -->
+        <div class="span-9 footer-bottom">
+          <p>
+            © <span id="current-year">2026</span> · Designed &amp; developed by
+            <strong>Melis Konez</strong>
+          </p>
+
+          <p class="footer-location">Dublin, Ireland</p>
+
+          <a class="footer-top-link" href="#home">
+            <span>Back to top</span>
+
+            <svg aria-hidden="true" viewBox="0 0 24 24">
+              <path
+                d="M12 19V5M6 11l6-6 6 6"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.8"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </a>
+        </div>
+      </div>
+    </footer>
+    <script src="../js/slideshow.js"></script>
+    <script src="../js/lightboxImageGallery.js"></script>
+    <script src="../js/sideNav.js"></script>
+    <script src="../js/designsytem.js"></script>
+  </body>
+</html>

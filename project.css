@@ -1,0 +1,746 @@
+/* Font */
+@import url("https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&subset=devanagari,latin-ext");
+
+@import url("/Assets/font/stylesheet.css");
+/* #Primary
+================================================== */
+:root {
+  --primary-color: #ff6c20;
+  --secondary-color: #fd9d21;
+  --light-color: #e8e9eb;
+  --dark-color: #333;
+  --max-width: 1100px;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  font-weight: 400;
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+img {
+  width: 100%;
+}
+
+.sideNav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.menuContainer {
+  height: auto;
+  position: relative;
+  width: 100%;
+}
+
+.menu-toggle {
+  display: none; /* Hide by default */
+  position: fixed;
+  top: 15px;
+  left: 15px;
+  font-size: 24px;
+  cursor: pointer;
+  z-index: 1000; /* Ensure it is above other elements */
+}
+
+.leftNav {
+  left: 0;
+  position: fixed;
+  top: 0;
+  max-width: 240px;
+  display: block; /* Show menu by default */
+  padding: 15px;
+}
+
+.sideNav {
+  margin-top: 100px;
+  padding-left: 10px;
+  color: #333;
+  z-index: 1;
+  text-decoration: none;
+}
+
+.sideNav ul {
+  background-color: var(--light-color);
+  border-radius: 5px;
+}
+
+.sideNav li {
+  /* padding: 0 12px 5px 26px; */
+  color: var(--dark-color) !important;
+  font-weight: 600;
+  transition: all 200ms linear;
+  align-items: center;
+}
+
+.sideNav li a i {
+  padding-right: 5px;
+  color: var(--secondary-color);
+}
+
+.sideNav .sub-menu li {
+  padding-left: 2rem;
+  opacity: 0.5;
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+}
+
+.content1 li,
+.content2 li {
+  padding: 0.25rem 0;
+}
+
+.fa-circle,
+.fa-solid {
+  transition: all 0.3s ease-in-out;
+}
+
+.sub-menu {
+  display: none;
+  list-style: none;
+  padding-left: 20px;
+}
+
+.sub-menu.active {
+  display: block;
+}
+
+.sub-menu li {
+  margin-bottom: 5px;
+  font-weight: 550;
+  font-size: 14px;
+}
+
+.sub-menu li a {
+  text-decoration: none;
+  color: #666;
+}
+
+.triangle-icon {
+  display: inline-block;
+  transition: transform 0.3s ease; /* Smooth transition */
+}
+
+.triangle-icon.rotated {
+  transform: rotate(90deg); /* Rotate 90 degrees */
+}
+
+/* Default styles */
+.leftNav {
+  display: block; /* Show menu by default */
+}
+
+/* CSS for menu toggle button */
+.menu-toggle {
+  display: none; /* Hide by default */
+  position: fixed;
+  top: 200px;
+  left: 200px;
+  font-size: 24px; /* Adjust icon size here */
+  color: #333; /* Icon color */
+  cursor: pointer;
+  z-index: 1000; /* Ensure it is above other elements */
+}
+
+#comp-koyftdoo {
+  justify-self: start;
+  margin-left: 8px;
+  align-self: center;
+  margin-top: 60px;
+  position: absolute;
+  grid-area: 1 / 1 / 2 / 2;
+  pointer-events: auto;
+}
+
+.sideNav .zo49IZ {
+  fill: black;
+  stroke: black;
+  stroke-width: 10px;
+  cursor: pointer;
+  height: 1px;
+  transition: inherit;
+  width: 12px;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+/* =====MAJOR WORK =====*/
+.heroContent img {
+  width: 100%;
+  height: auto;
+  padding: 0;
+}
+
+.content1 {
+  /* min-height: 50vh; */
+  width: 100vw;
+  max-width: 1000px;
+  margin: auto;
+  overflow: hidden;
+  /* padding: 0 1rem; */
+  display: flex;
+  flex-direction: column;
+}
+
+.content2 {
+  max-width: 800px;
+
+  margin: auto !important;
+  overflow: hidden;
+  /* padding: 0 1rem; */
+  display: flex;
+  flex-direction: column;
+}
+/* =====MAJOR WORK - Headers =====*/
+/* Header Styles */
+/* .header {
+  margin: 75px 0 0 0;
+  padding: 20px 0;
+  text-align: center !important;
+  font-size: 2.5em;
+  font-weight: 600;
+  color: var(--dark-color);
+}
+
+h2 {
+  font-size: 2em;
+  font-weight: bold;
+  margin: 20px 0px !important;
+}
+
+h4 {
+  font-size: 16px !important;
+  font-weight: 650 !important;
+}
+
+h5 i {
+  padding-right: 8px;
+}
+
+h5 {
+  font-size: 1.5em;
+  font-weight: 500;
+  color: rgb(251, 247, 25);
+}
+
+p {
+  margin: 10px 0;
+  font-size: 1em;
+  line-height: 1.75;
+}
+ */
+.wavy {
+  text-decoration-line: underline;
+  text-decoration-style: wavy;
+  text-decoration-color: var(--light-color);
+}
+
+footer p {
+  margin: 0;
+  font-size: 0.9em;
+}
+
+.text span {
+  font-weight: bold;
+  color: var(--dark-color);
+}
+
+.style-light {
+  color: #f3f3f3;
+  text-align: center;
+  font-size: 20px;
+
+  padding: 1rem 0 1rem 0;
+}
+
+.style-light2 {
+  color: #303133;
+  text-align: center;
+  font-size: 20px;
+
+  padding: 1rem 0 1rem 0;
+}
+
+/* =====MAJOR WORK =====*/
+
+/*Flex-items*/
+.table2 {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  justify-content: space-around;
+  height: 100%;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+
+.table1 {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  grid-gap: 4rem;
+  margin-top: 2rem;
+}
+
+/* FLEX CONTAINERS  */
+
+.flex-container1 {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 10px 0px 10px 0px;
+}
+
+.flex-container1 .item {
+  text-align: center;
+  min-width: 100px;
+}
+
+.flex-container2 {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 1rem 0 1rem 0;
+}
+
+/* .flex-container2 .item1 {
+ flex-grow: 10;
+} */
+
+.item2 {
+  max-width: 400px;
+  padding: 1rem 0 1rem 0;
+  flex-grow: 1;
+}
+
+.item2 ul,
+.box2 {
+  background-color: #333;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.item2 ul li {
+  color: var(--light-color);
+  font-weight: 500;
+  padding-left: 30px;
+  line-height: 1.75;
+}
+
+.flex-container2 .item3 {
+  align-items: center;
+}
+
+.flex-container2 .item3 img {
+  flex-grow: 7;
+  max-width: 500px;
+}
+
+.flex-container3 {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem; /* gap is now supported in flexbox as well */
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+
+.flex-container3 > * {
+  flex: 1 1 calc(50% - 1rem); /* 1fr - gap/2 for each item */
+  box-sizing: border-box; /* ensures padding and border are included in the width calculation */
+}
+
+/* .row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+  padding: 0 !important;
+} */
+
+.column {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 100%;
+  flex: 1;
+}
+
+.border {
+  border-width: 5px !important;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.alignCenter {
+  text-align: center;
+  padding: 1rem;
+}
+
+.flex-container4 {
+  display: flex;
+  flex-direction: row;
+  margin-top: 2rem;
+  flex-wrap: wrap;
+}
+
+.flex-container4 .flex-item {
+  width: 275px;
+  padding-top: 1rem;
+}
+
+.flex-container4 .item1,
+.flex-container4 .item3 {
+  width: 275px;
+  flex-shrink: 0;
+}
+
+.flex-container4.item2,
+.flex-container4 .item4 {
+  flex-grow: 1;
+}
+
+.gridTesting {
+  display: grid;
+  /* grid-template-columns: 100px 100px; */
+  /* grid-template-columns: 200px auto 200px; */
+  /* grid-template-columns: auto auto auto; */
+  grid-template-columns: repeat(2, auto);
+  /* grid-template-columns: 1fr 2fr 1fr; */
+  grid-gap: 1rem;
+  background-color: #f5f5f5;
+  place-items: center;
+  padding: 1rem;
+  margin-top: 1rem;
+}
+
+.backgroundMVP2 {
+  width: 300px;
+  border: #f5f5f5 solid 5px;
+}
+
+/* Hide the dropdown by default */
+.dropdown-container {
+  display: none;
+  padding-left: 15px;
+  padding-right: 10px;
+}
+
+/* Show the dropdown when the 'show' class is added */
+.show {
+  display: block;
+}
+
+/* Rotate the triangle icon when active */
+.dropdown-btn.active .triangle-icon {
+  transform: rotate(180deg);
+  transition: transform 0.3s ease;
+}
+
+.widthPhone {
+  max-width: 250px;
+  align-items: center;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.imagePadding {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.table9 {
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  grid-gap: 1rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.table10 {
+  display: grid;
+  grid-template-columns: repeat(4, auto);
+  grid-gap: 1rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+/* Styling for project container */
+
+.iframe-container {
+  margin: 0 auto;
+  position: relative;
+  /*   overflow: hidden; */
+  padding-top: 56.25%; /* 16:9 aspect ratio */
+  display: flex;
+  align-items: center; /* Center iframe vertically */
+  justify-content: center; /* Center iframe horizontally */
+}
+
+.iframe-container iframe {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0.5); /* Center and scale down to 50% */
+  transform-origin: center; /* Scale from the center */
+  width: 200%; /* Ensure proper scaling */
+  height: 200%; /* Ensure proper scaling */
+  border: 1px solid black;
+}
+
+.graphics {
+  width: auto; /* Keeps the image's original width */
+  max-width: 80%; /* Prevents the image from exceeding 80% of its container */
+  height: auto; /* Maintains the aspect ratio */
+  border: 1px solid var(--dark-color);
+  margin: 10px 0px 10px 0;
+}
+
+.table15 {
+  display: flex;
+  flex-direction: row;
+}
+
+.overview-section {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+  border: 2px solid #e8e9eb;
+  border-radius: 8px;
+}
+
+.overview-table {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.overview-row {
+  display: flex;
+  flex-wrap: wrap;
+  border-bottom: 1px solid #e8e9eb;
+  padding: 10px 0;
+}
+
+.overview-label {
+  flex: 1 1 150px;
+  font-weight: bold;
+  color: #555;
+}
+
+.overview-value {
+  flex: 2 1 300px;
+  color: #333;
+}
+
+/* Remove border-bottom for the last row */
+.overview-row:last-child {
+  border-bottom: none;
+}
+
+.details-table {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.details-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 20px;
+  padding: 10px 0;
+}
+
+.details-column {
+  padding: 20px;
+  flex: 1; /* Each column takes up equal space */
+  text-align: left;
+  border: 2px solid #e8e9eb;
+  border-radius: 8px;
+  min-height: 130px;
+}
+
+.details-column strong {
+  display: block;
+  font-weight: bold;
+  color: #555;
+  margin-bottom: 5px;
+}
+
+.details-column p {
+  color: #333;
+  margin: 0;
+}
+
+.table-container {
+  display: flex;
+  gap: 24px; /* Adds space between columns */
+  margin: 2rem 0;
+}
+
+.user,
+.client {
+  flex: 1; /* Ensures equal column width */
+  padding: 1rem;
+  border: 2px solid #e8e9eb;
+  border-radius: 8px;
+}
+
+.column h3 {
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+  color: var(--dark-color); /* Darker font for titles */
+  text-align: left;
+}
+
+.column .title {
+  display: flex;
+  align-items: center;
+  text-align: left;
+  margin-bottom: 0.5rem;
+}
+
+.column .icon {
+  margin-left: 0.5rem;
+  font-size: 1.2rem; /* Slightly larger icons */
+}
+
+.icon {
+  font-size: 1rem;
+  margin-right: 1rem;
+}
+
+strong {
+  font-weight: bold;
+}
+
+.highlighted-part {
+  background-color: #03318c;
+  margin: auto;
+  padding: 1rem;
+  margin: 1rem 0;
+  color: var(--light-color);
+}
+
+.site-map ul {
+  list-style: circle !important;
+  list-style-type: circle !important;
+  padding-left: 32px;
+}
+
+/* Individual Column */
+/* Flexbox Container */
+
+/* Individual Column */
+
+/* Column Image */
+.column-image {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 1rem; /* Space between image and description */
+}
+
+/* Description Text */
+.description {
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.5;
+}
+
+.low-fidelity-list ul {
+  padding: 0px !important;
+}
+
+.low-fidelity-list ul li {
+  padding: 0 0 0 5px !important ;
+
+  list-style: none;
+}
+
+.bento-container {
+  display: grid;
+  grid-template-columns: 3fr 3fr;
+  grid-template-rows: auto auto;
+  gap: 10px;
+}
+
+.bento-item {
+  background-color: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.bento-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Optional: Make some divs bigger for layout variety */
+.bento-item:nth-child(1) {
+  grid-column: span 1;
+  grid-row: span 1;
+}
+
+.bento-item:nth-child(2) {
+  grid-column: span 1;
+  grid-row: span 2;
+}
+
+.bento-item:nth-child(4) {
+  grid-column: span 2;
+  grid-row: span 1;
+}
+
+.persona-a4-image {
+  max-width: 100%; /* Responsive scaling */
+  height: auto; /* Maintain aspect ratio */
+  width: 400px; /* Adjust as needed */
+  object-fit: contain; /* Ensure full image fits without cropping */
+  margin: 0 auto; /* Center the image if needed */
+  display: block; /* Ensure proper alignment in its container */
+}
+
+/* Responsive layout for smaller screens---------------------------------------------- */
+@media (max-width: 768px) {
+  .content2 {
+    padding: 0 1rem 0 1rem;
+  }
+
+  .bento-container {
+    grid-template-columns: repeat(1, 1fr); /* Single column layout */
+  }
+
+  .bento-item:nth-child(2),
+  .bento-item:nth-child(4) {
+    grid-column: span 1; /* Reset spans for single-column layout */
+    grid-row: auto; /* Reset row spans */
+  }
+}
+
+/* Hide menu and show toggle button on smaller screens */
+@media screen and (max-width: 1024px) {
+  .leftNav {
+    display: none; /* Hide menu */
+  }
+
+  .menu-toggle {
+    display: block; /* Show toggle button */
+    cursor: pointer;
+  }
+
+  .menu-toggle i {
+    font-size: 24px;
+  }
+}

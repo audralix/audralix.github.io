@@ -1,0 +1,677 @@
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Melis Portfolio</title>
+    <!-- NAVIGATION  -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <!-- External CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" 
+      href="../style/ipad.css" 
+      media="screen and (min-width: 744px) and (max-width: 1023px)">
+    <!-- jQuery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script
+      src="https://kit.fontawesome.com/ed552a7faf.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- CSS-STYLE -->
+   <!--  <link rel="stylesheet" href="../style.css" /> -->
+    <link rel="stylesheet" href="../project.css" />
+    <link rel="stylesheet" href="../style/slideshow.css" />
+   
+    <link rel="stylesheet" href="../style/carousel.css">
+   <link rel="stylesheet" href="../style/designstyle.css">
+     <link rel="stylesheet" href="../style/racketStyle.css">
+       <link rel="stylesheet" href="../style/lightboxImageGallery.css" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="../favicon-32x32.png"
+    />
+     <link
+    rel="stylesheet"
+    href="../style/phone.css"
+    media="screen and (max-width: 744px)"
+    />
+  </head>
+  <body>
+        <!-- ===== NAVBAR ===== -->
+    <header class="site-header" data-nav>
+      <div class="nav-wrap">
+        <a class="brand" href="/index.html" aria-label="Home">
+          <img style="height: 28px" src="/favicon-32x32.png" alt="" />
+        </a>
+
+        <!-- Mobile toggle -->
+        <button
+          class="nav-toggle"
+          aria-expanded="false"
+          aria-controls="site-menu"
+          aria-label="Open menu"
+        >
+          <span class="nav-toggle__bar"></span>
+          <span class="nav-toggle__bar"></span>
+          <span class="nav-toggle__bar"></span>
+        </button>
+
+        <nav class="nav" id="site-menu" aria-label="Primary">
+          <ul class="nav__list">
+            <!-- add .is-active to the current page -->
+            <li><a class="nav__link " href="/">Home</a></li>
+            <li><a class="nav__link is-active"  href="/index.html#mywork">Case Studies</a></li>
+            <!--  <li><a class="nav__link" href="/experiments">Experiments</a></li> -->
+            <li><a class="nav__link" href="/index.html#about">About</a></li>
+            <!--      <li><a class="nav__link" href="/contact">Contact</a></li> -->
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <!-- ==== PROCESS MENU (left) ==== -->
+    <nav class="process-nav" aria-label="Case study process">
+      <ol class="process-list">
+        <li><a href="#overview">Overview</a></li>
+          <!-- Collapsible parent -->
+        <li class="has-children" data-group="research">
+          <div class="item-row">
+            <a href="#userResearch" class="parent-link">User Research</a>
+            <button class="toggle" aria-expanded="false" aria-controls="sub-research" title="Expand">
+              <span class="visually-hidden">Toggle User Research</span>
+              ▾
+            </button>
+          </div>
+
+          <ol id="sub-research" class="sublist" hidden>
+            <li><a href="#persona">Persona</a></li>
+            <li><a href="#competitive-analysis">Competitive Analysis</a></li>
+            <!-- add more: <li><a href="#surveys">Surveys</a></li> etc. -->
+          </ol>
+        </li>
+        <li class="has-children" data-group="ideation">
+          <div class="item-row">
+            <a href="#ideation" class="parent-link">Ideation</a>
+            <button class="toggle" aria-expanded="false" aria-controls="sub-research" title="Expand">
+              <span class="visually-hidden">Toggle User Research</span>
+              ▾
+            </button>
+          </div>
+
+          <ol id="sub-research" class="sublist" hidden>
+            <li><a href="#site-map">Site Map</a></li>
+            <li><a href="#card-sorting">Card Sorting</a></li>
+            <!-- add more: <li><a href="#surveys">Surveys</a></li> etc. -->
+          </ol>
+        </li>
+        <li class="has-children" data-group="design">
+          <div class="item-row">
+            <a href="#design" class="parent-link">Design</a>
+            <button class="toggle" aria-expanded="false" aria-controls="sub-research" title="Expand">
+              <span class="visually-hidden">Toggle User Research</span>
+              ▾
+            </button>
+          </div>
+          <ol id="sub-research" class="sublist" hidden>
+            <li><a href="#low-Fi">Low-Fi Wireframe</a></li>
+            <li><a href="#UIConcept">UI Concept</a></li>
+            <li><a href="#Hi-Fi">Mid-Fi Wireframe</a></li>
+        
+          </ol>
+        </li>
+
+  
+        <li class="has-children" data-group="delivery">
+          <div class="item-row">
+            <a href="#v" class="parent-link">Delivery</a>
+            <button class="toggle" aria-expanded="false" aria-controls="sub-research" title="Expand">
+              <span class="visually-hidden">Toggle User Research</span>
+              ▾
+            </button>
+          </div>
+
+          <ol id="sub-research" class="sublist" hidden>
+            <li><a href="#development">Development</a></li>
+            <li><a href="#MPV">MPV - Video</a></li>
+          </ol>
+        </li>
+
+      </ol>
+    </nav>
+
+    <section data-theme="white">
+      <div class="heroContent">
+     <img
+            src="../assets/241119_UX_Hastac_Website/241120_Mock_Up- LandingImg.png"
+            alt=""
+            class="main-image"
+          />
+      </div>
+ 
+    </section>
+    <section id="overview" class="">
+      <div class="container--small grid-9">
+        <h2 class=" span-9">Hastaç Makine</h2>
+        <h3 class="span-9">
+          Project Overview
+        </h3>
+         <div class="overview-table span-9 ">
+            <div class="overview-row">
+              <div class="overview-label">Client:</div>
+              <div class="overview-value">Hastaç Makina</div>
+            </div>
+            <div class="overview-row">
+              <div class="overview-label">Industry:</div>
+              <div class="overview-value">Manufacturing</div>
+            </div>
+            <div class="overview-row">
+              <div class="overview-label">Project Goal:</div>
+              <div class="overview-value">To design a professional website that showcases Hastaç Makina's expertise, services, and over 30 years of experience in precision machining.</div>
+            </div>
+            <div class="overview-row">
+              <div class="overview-label">Target Audience:</div>
+              <div class="overview-value">Businesses seeking machining solutions for metal, plastic, or wood parts.</div>
+            </div>
+          </div>
+          <p></p>
+          <!-- 3-up facts row: 3 × 3-col blocks -->
+          <div class="facts span-9 grid-9">
+            <div class="span-3">
+              <h4>My Role</h4>
+              <p class="">
+                Sole UX/UI and Development
+              </p>
+            </div>
+            <div class="span-3">
+              <h4>Tools</h4>
+              <p class="">Figma, Visual Studio Code,Ionic Framework, Angular, MYSQL</p>
+            </div>
+            <div class="span-3">
+              <h4>Timeline</h4>
+              <p class="">6 months</p>
+            </div>
+          </div>
+      </div>
+    </section>
+    <section id="userResearch">
+       <div class="container--small grid-9">
+          <h3 class="span-9">User Persona</h3>
+          <p class="span-9">
+            To design a user-centered experience for Hastaç Makine, I developed user personas based on user research and client input. These personas represent the core audience groups who would interact with the website. The goal was to identify their needs, behaviors, and goals to ensure the design aligns with their expectations.
+          </p>
+          <div class="span-9 grid-9">
+             <h4 class="span-9">Primary User Types</h4>
+                       <div class="lightbox-gallery span-9">
+            <div class="lightbox-gallery__track">
+              <button class="lightbox-gallery__item" type="button">
+                <img
+                  src="/assets/LoanApplicationRedesign/251223_persona-alex.jpg"
+                  alt="Persona Alex"
+                  class="lightbox-gallery__thumbnail"
+                />
+              </button>
+              <button class="lightbox-gallery__item" type="button">
+                <img
+                  src="/assets/LoanApplicationRedesign/251223_persona-catherine.jpg"
+                  alt="Persona Catherine"
+                  class="lightbox-gallery__thumbnail"
+                />
+              </button>
+            </div>
+          </div>
+          <!-- Lightbox -->
+          <div class="lightbox" id="lightbox-modal" aria-hidden="true">
+            <div class="lightbox__content" role="dialog" aria-modal="true">
+              <button class="lightbox__close" aria-label="Close">
+                &times;
+              </button>
+              <img class="lightbox__image" alt="" />
+            </div>
+          </div>
+                <div class="wrapper span-4 card">
+                    <img class="persona-a4-image card-image img-fluid" src="../assets/241119_UX_Hastac_Website/241121_UX_Persona_00.png" alt="Persona Image">
+                </div>
+                <div class="span-5">
+                    <ul>
+                      <li>The website must balance technical depth with accessibility for users who may not have a technical background.</li>
+                      <li>Visual elements like case studies, before-and-after project galleries, and client testimonials are crucial to building trust and conveying expertise.</li>
+                      <li>Navigation should be intuitive, with clearly labeled sections for services and contact options.</li>
+                    </ul>
+                </div>
+          </div>        
+        </div>
+        <div class="container--small grid-9" id="competitive-analysis">
+          <h3 class="span-9">Competitive Analysis</h3>
+          <div class="span-9">
+            <p>Analyzing two competitors in the machining solutions industry highlighted their focus on technical specifications and customer trust, providing insights into how Hastaç Makine can enhance its UX by simplifying navigation and emphasizing its craftsmanship.</p>
+          </div>
+          <div class="competitor-analysis span-9">
+            <div class="scroll-container">
+              <div class="card" id="competitor1">
+                <img
+                  src="/assets/241119_UX_Hastac_Website/211121_CompetitiveAnalysis_1.png"
+                  alt="Competitor 1 Image"
+                  class="card-image"
+                />
+              </div>
+              <div class="card" id="competitor2">
+                <img
+                  src="/assets/241119_UX_Hastac_Website/211121_CompetitiveAnalysis_2.png"
+                  alt="Competitor 2 Image"
+                  class="card-image"
+                />
+              </div>
+              <!-- Add more cards as needed -->
+            </div>
+          </div>
+
+          <!-- Modal Overlay -->
+          <div class="modal hidden">
+            <div class="modal-content">
+              <span class="close-button">&times;</span>
+              <img src="" alt="Competitor Image" class="modal-image" />
+            </div>
+          </div>
+       </div>
+    </section>
+    <section id="UXStrategy">
+      <div class="container--small grid-9">
+      <h2 id="UX-Strategy" class="span-9">UX Strategy</h2>
+      <p class="span-9">Dividing the strategy into User's Perspective and Client's Perspective to ensure for addressing the needs and expectations of both sides effectively. 
+      <br>The insights gained from meetings with the company further informed the business objectives, allowing me to align the website design with both the company's goals and the needs of their target users, ensuring a solution that supports their vision and market demands.</p>
+      </div>
+      <div class="table-container container--small" style="padding-top: 24px;">
+        <div class="column user">
+          <h3>User's Perspective</h3>
+          <div>
+            <div class="title">
+              <strong>Service Descriptions</strong><span class="icon">✨</span>
+            </div>
+            <div class="text">
+              Clear, detailed service descriptions tailored to user needs.
+            </div>
+          </div>
+          <div>
+            <div class="title">
+              <strong>Trust Elements</strong><span class="icon">🛡️</span>
+            </div>
+            <div class="text">
+              Testimonials, certifications, and trust-building elements.
+            </div>
+          </div>
+          <div>
+            <div class="title">
+              <strong>Visual Proof</strong><span class="icon">📸</span>
+            </div>
+            <div class="text">
+              High-quality photos or videos showing machinery and processes.
+            </div>
+          </div>
+          <div>
+            <div class="title">
+              <strong>Ease of Navigation</strong><span class="icon">⬆️</span>
+            </div>
+            <div class="text">
+              Simple layout for quick access to information.
+            </div>
+          </div>
+        </div>
+      
+        <div class="column client">
+          <h3>Client's Perspective</h3>
+          <div>
+            <div class="title">
+              <strong>Expertise</strong><span class="icon">💡</span>
+            </div>
+            <div class="text">
+              Highlight 30+ years of machining expertise to establish authority.
+            </div>
+          </div>
+          <div>
+            <div class="title">
+              <strong>Capabilities</strong><span class="icon">🏆</span>
+            </div>
+            <div class="text">
+              Showcase technical abilities with visuals and details on machining.
+            </div>
+          </div>
+          <div>
+            <div class="title">
+              <strong>Customer Focus</strong><span class="icon">❤️</span>
+            </div>
+            <div class="text">
+              Demonstrate adaptability to different industries' needs.
+            </div>
+          </div>
+          <div>
+            <div class="title">
+              <strong>Lead Generation</strong><span class="icon">📈</span>
+            </div>
+            <div class="text">
+              Prominent CTAs like “Request a Quote” to convert visitors into leads.
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="highlighted-part" data-theme="dark">
+          <div class="">
+            <div class="sound-of-website container--small" style="padding-top: 16px;">
+              <h3 style="color: #fff;">Sound of the Website</h3>
+              <ul>
+                <li><strong class="wavy">Informative:</strong> The website offers clear, precise, and accessible information, allowing visitors to quickly grasp the services, products, and solutions offered by the company.</li>
+                <li><strong class="wavy">Technically Sound:</strong> Professional and technical language is used to demonstrate the company's deep expertise in machining and engineering, while maintaining an approachable tone.</li>
+                <li><strong class="wavy">Highlights Expertise and Ability:</strong> The content emphasizes the company’s years of experience, technical capabilities, and successful projects, fostering trust and positioning the company as a leader in the industry.</li>
+                <li><strong class="wavy">Custom Solutions:</strong> The website showcases the company’s ability to provide tailored solutions, addressing the unique needs and challenges of each client.</li>
+                <li><strong class="wavy">Strong Customer Service:</strong> A customer-first approach is emphasized, with a focus on providing responsive support and guidance to ensure customer satisfaction.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      
+    
+
+
+    </section>
+    <section id="ideation">
+         <div class="container--small site-map span-9">
+          <h2 class="span-9">Ideation</h2>
+         <h3 class="span-9">Site Map</h3>
+         <p class="span-9">Based on user research and the client’s perspective, I developed the following site map for Hastaç Makine. This structure ensures a clear, user-centered navigation system aligned with both the users' needs and business goals:</p>
+          <ul>
+            <li>Home</li>
+            <li>Machining ( Services )
+              <ul>
+                <li>CNC Machining</li>
+                <li>Deep Holing</li>
+                <li>Custom Projects</li>
+              </ul>
+            </li>
+            <li>Machine Park</li>
+            <li>About Us</li>
+            <li>Contact</li>
+          </ul>
+         </div>
+         <div class="card-sorting container--small " id="card-sorting">
+            <h3 style="text-align: left;">Card Sorting Method</h3>
+            <p>
+              To further refine the website’s structure, I utilized card sorting techniques. This brainstorming method helped me organize the content, identify logical connections between sections, and ensure a cohesive user experience across the website. The process was integral in aligning each section of content with the overall UX strategy and improving navigation between related pages.                    </p>
+              <div class="">
+                <div class="competitor-analysis">
+                  <div class="scroll-container">
+                    <div class="card card-sorting-card" id="competitor1">
+                      <img
+                        src="/assets/241119_UX_Hastac_Website/241114_ Card Sorting _Home.PNG"
+                        alt="Competitor 1 Image"
+                        class="card-image"
+                      />
+                
+                    </div>
+                    <div class="card card-sorting-card" id="competitor2">
+                      <img
+                        src="/assets/241119_UX_Hastac_Website/241114_ Card Sorting _Machining.PNG"
+                        alt="Competitor 2 Image"
+                        class="card-image"
+                      />
+                
+                    </div>
+                    <div class="card card-sorting-card" id="competitor2">
+                      <img
+                        src="/assets/241119_UX_Hastac_Website/241114_ Card Sorting _ MachinePark.PNG"
+                        alt="Competitor 2 Image"
+                        class="card-image"
+                      />
+                
+                    </div>
+                    <div class="card card-sorting-card" id="competitor2">
+                      <img
+                        src="/assets/241119_UX_Hastac_Website/241114_ Card Sorting _ About.PNG"
+                        alt="Competitor 2 Image"
+                        class="card-image"
+                      />
+                
+                    </div>
+                    <div class="card card-sorting-card" id="competitor2">
+                      <img
+                        src="/assets/241119_UX_Hastac_Website//241114_ Card Sorting _ Contact.PNG"
+                        alt="Competitor 2 Image"
+                        class="card-image"
+                      />
+                
+                    </div>
+                    <!-- Add more cards as needed -->
+                  </div>
+                </div>
+            
+                <!-- Modal Overlay -->
+                <div class="modal hidden">
+                  <div class="modal-content">
+                    <span class="close-button">&times;</span>
+                    <img src="" alt="Competitor Image" class="modal-image " />
+                  </div>
+                </div>
+              </div>
+          </div>
+     </section>
+     <section>
+      <div class="container--small grid-9">
+        <h2 class="span-9">Design</h2>
+        <h3 class="span-9" style="text-align: left;">Low-Fidelity Wireframe</h3>
+        <div  class="low-fidelity-list span-9">
+          <ul>
+            <li>   <strong>Navigation:</strong>
+              <ul>
+                <li>Sticky and streamlined top navigation ensures quick access to key sections.
+                </li>
+                <li> Top Bars: Ideal for simple sites with only a few main sections.
+                </li>
+                <li>  Dropdown Menus: Organized structure to group similar items together.
+                </li>
+              </ul>
+            </li>
+            <li><strong>Call-to-Action (CTA) Placement:</strong>
+              <ul>
+                <li>Strategically positioned CTAs guide users through the pages seamlessly.</li>
+                <li>Ensured CTAs are visually prominent, encouraging interaction and page navigation.</li>
+                <li>Key CTAs direct users to essential sections like Contact Us, Services, and Case Studies.</li>
+              </ul>
+            </li>
+
+            <li><strong>Content Demonstration:</strong>
+              <ul>
+                <li>Implemented card components to showcase services and machines effectively.</li>
+                <li>Cards provide a clean, modular structure that highlights individual offerings.</li>
+                <li>Focused on responsiveness, ensuring the card layout adapts to various screen sizes.</li>
+              </ul>
+            </li>
+           </ul>
+        </div>
+      </div>
+        <div class="container--small span-9 grid-9" id="low-Fi">
+            <figure class=" span-3">
+            <figcaption>Low-fi-Home</figcaption>
+            <img
+              class="img img--low"
+              src="/assets/241119_UX_Hastac_Website/Website-low-fi-home_00.png"
+              width="1920"
+              height="1080"
+              alt="Low-fi desktop layout"
+              loading="lazy"
+              decoding="async"
+            />
+   
+          </figure>
+          <figure class=" span-3">
+            <figcaption>Low-fi-Machine Park</figcaption>
+            <img
+              class="img img--low"
+              src="/assets/241119_UX_Hastac_Website/Website-low-fi-machinePark_00.png"
+              width="744"
+              height="1133"
+              alt="Low-fi tablet layout"
+              loading="lazy"
+              decoding="async"
+            />
+          </figure>
+          <figure class=" span-3">
+            <figcaption>Low-fi-About</figcaption>
+            <img
+              class="img img--low"
+              src="/assets/241119_UX_Hastac_Website/Website-low-fi-about_00.png"
+              width="744"
+              height="1133"
+              alt="Low-fi tablet layout"
+              loading="lazy"
+              decoding="async"
+            />
+          </figure>
+
+        </div>
+        <div class="container--small grid-9" id="UIConcept">
+          <h3 class="span-9" >UI Concept</h3>
+          <div class="bento-container content1">
+                  <div class="bento-item">
+                    <img src="/assets/241119_UX_Hastac_Website/241123_MoodBoard_00.png" alt="Image 1" />
+                  </div>
+                  <div class="bento-item">
+                    <img src="/assets/241119_UX_Hastac_Website/241123_MoodBoard_03.png" alt="Image 2" />
+                  </div>
+                  <div class="bento-item">
+                    <img src="/assets/241119_UX_Hastac_Website/241123_MoodBoard_01.png" alt="Image 3" />
+                  </div>
+            
+                  <div class="bento-item">
+                    <img src="/assets/241119_UX_Hastac_Website/241123_MoodBoard_04.png" alt="Image 4" />
+                  </div>
+                </div>
+        </div>
+        <div class="container--small span-9 grid-9" id="Hi-Fi">
+          <h3 class="span-9" style="text-align: left;">Mid-Fidelity Wireframe</h3>
+            <figure class=" span-3">
+            <figcaption>Mid-fi-Home</figcaption>
+            <img
+              class="img img--low"
+              src="/assets/241119_UX_Hastac_Website/Home-Desktop - 1 XX-Large - About≥1400px.png"
+              width="1920"
+              height="1080"
+              alt="Low-fi desktop layout"
+              loading="lazy"
+              decoding="async"
+            />
+   
+          </figure>
+          <figure class=" span-3">
+            <figcaption>Mid-fi-Machine Park</figcaption>
+            <img
+              class="img img--low"
+              src="/assets/241119_UX_Hastac_Website/Desktop - 1 XX-Large ≥1400px.png"
+              width="744"
+              height="1133"
+              alt="Low-fi tablet layout"
+              loading="lazy"
+              decoding="async"
+            />
+          </figure>
+          <figure class=" span-3">
+            <figcaption>Low-fi-About</figcaption>
+            <img
+              class="img img--low"
+              src="http://127.0.0.1:5502/assets/241119_UX_Hastac_Website/Website-high-fi-about_00.png"
+              width="744"
+              height="1133"
+              alt="Low-fi tablet layout"
+              loading="lazy"
+              decoding="async"
+            />
+          </figure>
+        </div>
+     </section>
+     <section  id="delivery">
+      <div class="container--small grid-9">
+        <!-- Development -->
+        <h2 class="span-9">Delivery</h2>
+        <h3 class="span-9" id="development">Technologies Used:</h3>
+        <ul class="span-9" >
+          <li style="padding-bottom: 0;"><strong>HTML:</strong>  Structured the content using semantic elements for better accessibility and SEO.</li>
+          <li style="padding-bottom: 0;"><strong>CSS:</strong> Designed custom styles to complement the Bootstrap framework</li>
+          <li style="padding-bottom: 0;"><strong>JavaScript:</strong> Added interactive elements and dynamic behaviors, such as animations, carousels, and form.</li>
+          <li style="padding-bottom: 0;"><strong>Bootstrap 5: </strong> Used the responsive grid system and components for faster development and mobile-first design.</li>
+          <li style="padding-bottom: 0;"><strong>JSON for Multilingual Support:</strong>  Enabled language switching functionality by storing and dynamically loading text content in different languages.</li>
+        </ul>
+      </div>
+       <!--the First MVP -->
+      <div id="MPV" class="container--small grid-9 container--small grid-9">
+          <h3 class="span-9">The Minimum Viable Product</h3>
+          <video class="video1  media-column span-9" controls>
+                <source
+                  src="../assets/241119_UX_Hastac_Website/Bootstrap Navbar - Google Chrome 2024-11-24 23-48-53.mp4"
+                  type="video/mp4"
+                />
+          </video>
+     
+      </div>
+      <div  class="container--small media-column">
+           <a class="cta-btn "  style="align-items: center;"
+              href="https://hastacmakina-mvp.netlify.app/"   
+              target="_blank">
+              Website Link
+          </a>
+      </div>
+
+     </section>
+    <!-- ==== FOOTER (grid-9) ==== -->
+    <footer class="site-footer">
+      <div class="grid-9 footer-grid">
+        <!-- left -->
+        <div class="span-5 footer-meta">
+          <p>© 2025 · Designed & Developed by <strong>Melis Konez</strong></p>
+          <p class="footer-tag">Crafting digital experiences with design & code</p>
+        </div>
+
+        <!-- right -->
+        <nav class="span-4 footer-actions" aria-label="Footer links">
+          <ul class="footer-links">
+            <li><a href="mailto:meliskonez@gmail.com" aria-label="Email">
+              <i class="fa-solid fa-envelope"></i><span>Email</span></a></li>
+            <li><a href="https://www.linkedin.com/in/meliskonez/" target="_blank" rel="noreferrer" aria-label="LinkedIn">
+              <i class="fa-brands fa-linkedin"></i><span>LinkedIn</span></a></li>
+            <li><a href="https://github.com/audralix/" target="_blank" rel="noreferrer" aria-label="GitHub">
+              <i class="fa-brands fa-github"></i><span>GitHub</span></a></li>
+            <li><a href="https://www.behance.net/meliskonez" target="_blank" rel="noreferrer" aria-label="Behance">
+              <i class="fa-brands fa-behance"></i><span>Behance</span></a></li>
+            <li><a href="https://www.instagram.com/audrainshift/" target="_blank" rel="noreferrer" aria-label="Instagram (audraishift)">
+              <i class="fa-brands fa-instagram"></i><span>Instagram</span></a></li>
+          </ul>
+        </nav>
+      </div>
+    </footer>
+
+    
+    <script src="../script.js"></script>
+    <script src="../js/cardStyle.js"></script>
+
+    
+      <script src="../js/sideNav.js"></script>
+        <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <!-- Popper.js (for Bootstrap 4) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
+
+    <!-- Bootstrap JS -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="/js/designsytem.js"></script>
+       <script src="../js/lightboxImageGallery.js"></script>
+  </body>
+</html>
+</body>

@@ -1,0 +1,448 @@
+/* ================================
+   GALLERY
+================================ */
+.lightbox-gallery {
+  display: flex;
+  justify-content: center;
+}
+
+.lightbox-gallery__track {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  padding: 2rem;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.lightbox-gallery__track::-webkit-scrollbar {
+  display: none;
+}
+
+/* ================================
+   IMAGE CARD
+================================ */
+.lightbox-gallery__item {
+  flex: 0 0 420px;
+  max-width: 420px;
+  background: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  padding: 0;
+  cursor: pointer;
+  scroll-snap-align: start;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.08);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.lightbox-gallery__item:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 14px rgba(0, 0, 0, 0.15);
+}
+
+.lightbox-gallery__thumbnail {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  border-radius: 12px;
+}
+
+/* ================================
+   LIGHTBOX (MODAL)
+================================ */
+.lightbox {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.85);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.25s ease, visibility 0.25s ease;
+}
+
+/* Visible state */
+.lightbox.is-open {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* ================================
+   MODAL CONTENT
+================================ */
+.lightbox__content {
+  position: relative;
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 1rem;
+  max-width: 90vw;
+  max-height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Enlarged image */
+.lightbox__image {
+  max-width: 100%;
+  max-height: 85vh;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  display: block;
+}
+
+/* ================================
+   CLOSE BUTTON
+================================ */
+.lightbox__close {
+  position: absolute;
+  top: 0.75rem;
+  right: 0.75rem;
+  background: #ffffff;
+  border: none;
+  border-radius: 999px;
+  font-size: 1.25rem;
+  line-height: 1;
+  padding: 0.25rem 0.55rem;
+  cursor: pointer;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.lightbox__close:hover {
+  background: #f2f2f2;
+}
+
+/* ================================
+   RESPONSIVE
+================================ */
+@media (max-width: 768px) {
+  .lightbox-gallery__track {
+    flex-wrap: wrap;
+    justify-content: center;
+    overflow-x: visible;
+    padding: 1rem;
+  }
+
+  .lightbox-gallery__item {
+    flex: 1 1 calc(50% - 1rem);
+    max-width: calc(50% - 1rem);
+  }
+}
+
+.js-carousel .viewport {
+  overflow: hidden;
+}
+
+.js-carousel .track {
+  display: flex;
+  gap: 16px;
+  transition: transform 280ms ease;
+  will-change: transform;
+}
+
+.js-carousel .slide {
+  flex: 0 0 auto;
+}
+
+.js-carousel .slide img {
+  display: block;
+  width: 100%; /* IMPORTANT */
+  height: auto;
+}
+
+/* Container */
+.phase-carousel {
+  position: relative;
+  max-width: 1000px;
+}
+
+/* Header row */
+/* Main header row */
+.phases-header {
+  display: flex;
+  justify-content: space-between; /* title left, controls right */
+  align-items: flex-start; /* allows stacked controls */
+  gap: 16px;
+  margin-bottom: 12px;
+}
+
+/* Right-side column */
+.phases-controls {
+  display: flex;
+  flex-direction: column; /* arrows on top, peek below */
+  align-items: flex-end;
+  gap: 8px;
+}
+
+/* Arrow buttons row */
+.phases-nav {
+  display: flex;
+  gap: 6px;
+}
+
+.phases-prev,
+.phases-next {
+  width: 32px;
+  height: 32px;
+  border-radius: 6px;
+  border: 1px solid #e2e8f0;
+  background: #fff;
+  cursor: pointer;
+}
+
+/* Peek button */
+.peek-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 14px;
+  border-radius: 999px;
+  border: 1px solid #e2e8f0;
+  background: #fff;
+  font-size: 14px;
+  font-weight: 600;
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+.peek-btn:hover {
+  background: #f8fafc;
+}
+
+/* Info icon */
+.peek-btn__icon {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 1px solid #cbd5e1;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  font-weight: 700;
+  color: #475569;
+}
+
+.main-wrap {
+  position: relative;
+  display: inline-block;
+}
+
+.peek-overlay {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  opacity: 0; /* ✅ hidden by default */
+  transition: opacity 180ms ease;
+  pointer-events: none;
+}
+
+/* ✅ show overlay only when peek is active */
+.js-carousel.is-peek-hover .peek-overlay,
+.js-carousel.is-peek-pinned .peek-overlay {
+  opacity: 1;
+}
+
+.slide-info {
+  padding: 8px 0;
+}
+
+/* ========= Base ========= */
+/* ========= Base ========= */
+.wuj {
+  --line: #e5e7eb;
+  --text: #111827;
+  --muted: #6b7280;
+  --accent: #b91c1c;
+
+  /* set by JS */
+  --slideW: 720px;
+
+  max-width: 1080px;
+  width: 100%;
+  margin: 0 auto;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  padding: 18px;
+  background: #fff;
+  box-sizing: border-box;
+  margin: 2rem 0rem;
+}
+.wuj * {
+  box-sizing: border-box;
+}
+
+.wuj__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+.phase__title {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--text);
+}
+
+.wuj__toggle {
+  display: inline-flex;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: 3px;
+  background: #fff;
+}
+.wuj__pill {
+  border: 0;
+  background: transparent;
+  padding: 6px 10px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--muted);
+  cursor: pointer;
+}
+.wuj__pill.is-active {
+  background: var(--accent);
+  color: #fff;
+}
+
+.wuj__tabs {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  border-bottom: 1px solid var(--line);
+  margin-bottom: 12px;
+}
+.wuj__tab {
+  border: 0;
+  background: transparent;
+  padding: 12px 10px;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--muted);
+  cursor: pointer;
+  position: relative;
+}
+.wuj__tab.is-active {
+  color: var(--text);
+}
+.wuj__tab.is-active::after {
+  content: "";
+  position: absolute;
+  left: 10px;
+  right: 10px;
+  bottom: -1px;
+  height: 2px;
+  background: var(--accent);
+  border-radius: 2px;
+}
+
+/* ✅ no outer border: only images have borders */
+.wuj__carousel {
+  position: relative;
+  padding: 16px 16px 56px;
+  overflow: hidden;
+  width: 100%; /* ✅ stable width */
+  min-height: 420px; /* ✅ prevents height jump between tabs */
+}
+
+/* ✅ stable viewport area */
+.wuj__viewport {
+  width: 100%;
+  overflow-x: auto;
+  overflow-y: hidden;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none;
+}
+.wuj__viewport::-webkit-scrollbar {
+  display: none;
+}
+
+.wuj__track {
+  display: flex !important;
+  flex-direction: row !important;
+  flex-wrap: nowrap !important;
+  gap: 16px;
+  align-items: flex-start;
+}
+
+/* ✅ stable slide width from JS (same in every tab) */
+.wuj__slide {
+  flex: 0 0 var(--slideW);
+  max-width: var(--slideW);
+  scroll-snap-align: start;
+}
+
+/* left aligned, max 600 */
+.wuj__frame {
+  margin: 0;
+  width: min(600px, 100%);
+  border: 1px solid var(--line);
+  background: #fff;
+  overflow: hidden;
+}
+.wuj__img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: contain;
+  background: #fff;
+}
+
+/* controls */
+.wuj__controls {
+  position: absolute;
+  right: 14px;
+  bottom: 14px;
+  display: flex;
+  gap: 10px;
+}
+.wuj__nav {
+  width: 36px;
+  height: 30px;
+  border-radius: 8px;
+  border: 1px solid var(--line);
+  background: #fff;
+  color: var(--text);
+  cursor: pointer;
+  display: grid;
+  place-items: center;
+  font-size: 18px;
+  line-height: 1;
+}
+.wuj__nav[disabled] {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+/* ✅ optional: hide buttons if only 1 image in active tab */
+.wuj.is-single .wuj__controls {
+  opacity: 0.35;
+}
+
+@media (max-width: 900px) {
+  .wuj__tabs {
+    grid-template-columns: 1fr;
+  }
+  .wuj__tab {
+    text-align: left;
+  }
+}
+
+.wuj__label {
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #6b7280;
+  margin-bottom: 6px;
+  font-family: "Roboto", sans-serif;
+}

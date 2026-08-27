@@ -1,0 +1,192 @@
+/* Shrink the global margin token used by .container */
+:root {
+  /* tweak if you want tighter/wider edges */
+  --grid-margin: clamp(12px, 4vw, 18px);
+}
+
+/* Container: full width + safe-area padding */
+.container {
+  width: 100%; /* override width: min(var(--maxw), 100%) if needed */
+  padding-left: max(var(--grid-margin), env(safe-area-inset-left));
+  padding-right: max(var(--grid-margin), env(safe-area-inset-right));
+}
+
+.project-feature {
+  padding: 16px;
+}
+.project-feature .meta {
+  grid-template-columns: 1fr;
+}
+
+h3 {
+  font-size: 24px;
+}
+
+p {
+  line-height: normal;
+}
+
+.project-feature__content {
+  padding: 0;
+}
+
+.project-feature--half {
+  grid-column: 1 / -1 !important; /* spans all columns in any grid */
+  grid-template-columns: 1fr; /* keep media above content style */
+}
+
+/* Put both footer columns on one line (full width, stacked) */
+.footer-grid {
+  display: grid;
+  grid-template-columns: repeat(9, minmax(0, 1fr));
+  gap: var(--container-small-gap, 16px);
+}
+.footer-meta,
+.footer-actions {
+  grid-column: 1 / -1; /* full width */
+  min-width: 0; /* prevent overflow */
+}
+
+/* Right block: make the list wrap + center */
+.footer-actions {
+  margin-top: 8px;
+  justify-self: stretch;
+}
+.footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* center the row(s) */
+  gap: 10px 14px; /* row/column gaps */
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+.footer-links li {
+  flex: 0 1 auto;
+}
+.footer-links li a {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px; /* icon ↔ label */
+  padding: 0.55rem 0.8rem; /* touch target */
+  border-radius: 999px;
+  text-decoration: none;
+  white-space: nowrap; /* keep icon + text together */
+}
+
+/* Icons scale a touch on mobile */
+.footer-links i {
+  font-size: 1rem;
+  line-height: 1;
+}
+
+/* Global fix */
+.row {
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+}
+/* Re-add a small inner gutter on columns/elements inside .row */
+.row > [class^="col"],
+.row > [class*=" col"],
+.row > * {
+  padding-left: 12px;
+  padding-right: 12px;
+  min-width: 0; /* prevents overflow in flex/grid */
+}
+
+/* Container edges with safe areas */
+.container,
+.container-fluid {
+  padding-left: max(16px, env(safe-area-inset-left));
+  padding-right: max(16px, env(safe-area-inset-right));
+}
+
+.container--small {
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
+facts.grid-9 {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+.facts.grid-9 > .span-3 {
+  grid-column: 1 / -1 !important;
+} /* stack */
+
+.process__grid {
+  display: grid;
+  grid-template-columns: 1fr; /* single column */
+  grid-auto-rows: auto;
+  gap: 12px;
+  align-items: start;
+  --step: 0px !important; /* kill any vertical stagger */
+}
+
+/* Make every card start at column 1 and remove custom offsets */
+.process__grid .process-card {
+  grid-column: 1 / -1 !important;
+  margin: 0 !important;
+  min-width: 0; /* avoid overflow in grid */
+}
+
+/* If you used nth-child placements on desktop, neutralize them */
+.process__grid .process-card:nth-child(n) {
+  grid-column: 1 / -1 !important;
+  margin-top: 0 !important;
+}
+
+/* Comfortable inner spacing on small screens */
+.process-card__body {
+  padding: 12px;
+}
+
+/* If the step number is absolutely positioned on desktop,
+     make it inline on mobile so it doesn't overlap. */
+.process-card__step {
+  position: static;
+  display: inline-block;
+  margin-bottom: 6px;
+  font-weight: 700;
+}
+
+.process-card__body {
+  margin-top: 1rem;
+}
+
+.grid-9.facts,
+.grid-9 {
+  display: grid;
+  grid-template-columns: 1fr; /* single column */
+  row-gap: 12px;
+}
+.grid-9.facts .item {
+  grid-column: 1 / -1 !important; /* each item = full width */
+  display: flex; /* icon + text on one line */
+  align-items: center;
+  gap: 10px;
+  min-width: 0;
+}
+.grid-9.facts .item i {
+  font-size: 1.2rem;
+  flex: 0 0 auto;
+}
+.grid-9.facts .text {
+  margin: 0;
+}
+
+.media-column {
+  max-width: auto;
+}
+
+.grid {
+  grid-template-columns: 1fr; /* single column */
+}
+.grid > [class*="span-"] {
+  grid-column: 1 / -1; /* each item full width */
+}
+
+/* Optional: show the scene card ABOVE the text when stacked */
+/* remove this block if you want text first */
+.grid > .span-6:last-child {
+  order: -1;
+}
