@@ -46,6 +46,8 @@
     <link rel="stylesheet" href="canvas.css" />
     <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png" />
     <link rel="stylesheet" href="/style/designstyle.css" />
+    <link rel="stylesheet" href="style/designsystem2026.css" />
+    <link rel="stylesheet" href="style/layout2026.css" />
     <link rel="stylesheet" href="/style/about.css" />
     <link
       rel="stylesheet"
@@ -111,58 +113,47 @@
         </nav>
       </div>
     </header>
-
-    <!-- --- Hero --- -->
-
-    <section id="home" class="info-section">
-      <div class="hero">
-        <div class="container grid" style="height: 100vh">
-          <div class="span-6 align-items-center">
-            <div class="">
-              <div class="hero-content">
-                <h1 class="hero-heading">Hi, I'm <strong>Melis.</strong></h1>
-                <h3 class="hero-tagline">
-                  Unraveling complex enterprise logic into simple, scalable
-                  digital products.
-                </h3>
-                <p class="hero-description">
-                  I am <strong>a Product Designer</strong> based in Dublin,
-                  specializing in high-density B2B workflows, multi-role design
-                  systems, and WCAG-compliant accessibility.
-                </p>
-
-                <!-- Primary CTA (only the featured card uses a loud button) -->
-                <div class="cta-row">
-                  <a
-                    class="cta-btn"
-                    href="#mywork"
-                    style="margin-right: 24px"
-                    data-toggle-cube
-                  >
-                    <span>View My Work </span>
-                  </a>
-                  <a
-                    class="cta-btn cta--secondary"
-                    href="https://www.linkedin.com/in/meliskonez/"
-                    data-toggle-cube
-                  >
-                    <span>Get in Touch</span
-                    ><span class="arrow"
-                      ><i class="fa-solid fa-arrow-right"></i
-                    ></span>
-                  </a>
-                </div>
-              </div>
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="container">
+        <div class="hero-layout">
+          <div class="hero-content">
+            <h1 class="tagline text-h1" id="hero-title">
+              Hi, I'm <span class="tagline__accent">Melis.</span>
+            </h1>
+            <p class="tagline-description text-h3">
+              Unraveling complex enterprise logic into simple, scalable digital
+              products.
+            </p>
+            <p class="hero-description text-body-large">
+              I am a
+              <span class="hero-description__accent tagline__accent"
+                >Product Designer</span
+              >
+              based in Dublin, specializing in high-density B2B workflows,
+              multi-role design systems, and WCAG-compliant accessibility.
+            </p>
+            <div class="cta-row">
+              <a
+                class="cta-btn"
+                href="#mywork"
+                style="margin-right: 24px"
+                data-toggle-cube
+              >
+                <span>View My Work </span>
+              </a>
+              <a
+                class="cta-btn cta--secondary"
+                href="https://www.linkedin.com/in/meliskonez/"
+                data-toggle-cube
+              >
+                <span>Get in Touch</span
+                ><span class="arrow"
+                  ><i class="fa-solid fa-arrow-right"></i
+                ></span>
+              </a>
             </div>
-            <div class="hero-home"></div>
           </div>
         </div>
-      </div>
-    </section>
-    <canvas id="hero"></canvas>
-    <!-- --- capabilities panel --- -->
-    <section class="capabilities-section" aria-labelledby="capabilities-title">
-      <div class="container">
         <div class="capabilities-panel">
           <h2 id="capabilities-title" class="sr-only">Design Capabilities</h2>
 
@@ -270,8 +261,56 @@
         </div>
       </div>
     </section>
+    <canvas id="hero"></canvas>
 
-    <section class="container">
+    <!--     <section id="home" class="info-section">
+      <div class="hero">
+        <div class="container grid" style="height: 100vh">
+          <div class="span-6 align-items-center">
+            <div class="">
+              <div class="hero-content">
+                <h1 class="hero-heading">Hi, I'm <strong>Melis.</strong></h1>
+                <h3 class="hero-tagline">
+                  Unraveling complex enterprise logic into simple, scalable
+                  digital products.
+                </h3>
+                <p class="hero-description">
+                  I am <strong>a Product Designer</strong> based in Dublin,
+                  specializing in high-density B2B workflows, multi-role design
+                  systems, and WCAG-compliant accessibility.
+                </p>
+
+            
+                <div class="cta-row">
+                  <a
+                    class="cta-btn"
+                    href="#mywork"
+                    style="margin-right: 24px"
+                    data-toggle-cube
+                  >
+                    <span>View My Work </span>
+                  </a>
+                  <a
+                    class="cta-btn cta--secondary"
+                    href="https://www.linkedin.com/in/meliskonez/"
+                    data-toggle-cube
+                  >
+                    <span>Get in Touch</span
+                    ><span class="arrow"
+                      ><i class="fa-solid fa-arrow-right"></i
+                    ></span>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="hero-home"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <canvas id="hero"></canvas> -->
+
+    <section class="container work-section">
       <div class="grid">
         <div class="span-8 work-section-header__container">
           <p class="work-section-header__eyebrow" id="mywork">
