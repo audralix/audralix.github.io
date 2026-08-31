@@ -23,6 +23,7 @@ const camera = new THREE.PerspectiveCamera(
   100,
 );
 camera.position.set(5.6, 4.7, 9.6);
+camera.position.multiplyScalar(1.3);
 scene.add(camera);
 
 const controls = new OrbitControls(camera, renderer.domElement);
@@ -32,6 +33,19 @@ controls.rotateSpeed = 0.7;
 controls.enableZoom = false;
 controls.enablePan = false;
 controls.target.set(0, 0, 0);
+// Move the scene visually to the right
+const shiftAmount = 1.5;
+
+// Camera's horizontal direction
+const cameraRight = new THREE.Vector3(1, 0, 0).applyQuaternion(
+  camera.quaternion,
+);
+
+const shift = cameraRight.multiplyScalar(-shiftAmount);
+
+camera.position.add(shift);
+controls.target.add(shift);
+controls.update();
 controls.update();
 
 /* ---------- Lights + floor ---------- */
