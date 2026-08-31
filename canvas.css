@@ -5,6 +5,11 @@ body {
   height: 100%;
 }
 
+body {
+  position: relative;
+  isolation: isolate;
+}
+
 .canvas-container {
   text-align: center;
 }
@@ -21,40 +26,17 @@ body {
   height: 100vh;
 }
 
-:root {
-  --capabilities-peek: 250px;
-}
-
-/* .hero {
-  position: relative;
-  z-index: 1;
-} */
-/* canvas {
-  display: block;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 0;
-} */
 .header-text,
 .hero-content,
 .frame {
   z-index: 1;
   position: relative;
-  transform: translateY(200px);
 }
 
 .frame {
   z-index: 5;
 }
 
-:root {
-  --bg: #ffffff;
-  --ink: #0b0f14;
-  --floor: #f3f3f3;
-}
 html,
 body {
   height: 100%;
@@ -68,17 +50,39 @@ body {
   /* height: 100vh; */
   overflow: hidden;
 }
+/* Independent canvas: takes up no layout space */
 #hero {
   position: absolute;
-  inset: 0;
+  top: 0;
+  left: 0;
   width: 100%;
-  height: 100%;
+  height: 100vh;
+  z-index: 0;
   display: block;
   cursor: grab;
 }
 #hero:active {
   cursor: grabbing;
 }
+
+/* Text and buttons above the canvas */
+.hero-content {
+  position: relative;
+  z-index: 1;
+}
+
+.work-section {
+  position: relative;
+  z-index: 1;
+  background: var(--color-surface-default, #fff);
+}
+
+/* Cards above the canvas */
+.capabilities-panel {
+  position: relative;
+  z-index: 1;
+}
+
 .ui {
   position: absolute;
   left: 16px;
