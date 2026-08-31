@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Montserrat:wght@100..900&family=Roboto:wght@100..900&family=Roboto+Mono:wght@100..700&display=swap");
 
 /* ===== TOKENS ===== */
 :root {
@@ -2685,37 +2685,6 @@ p {
   }
 }
 
-@media (max-width: 640px) {
-  :root {
-    --capabilities-overlap: 24px;
-  }
-}
-.capabilities-section {
-  position: relative;
-  z-index: 2;
-  margin-top: calc(-1 * var(--capabilities-overlap));
-  margin-bottom: var(--space-8);
-}
-
-/* =========================================================
-   CAPABILITIES PANEL
-   ========================================================= */
-
-.capabilities-panel {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-
-  width: 100%;
-
-  background: var(--color-surface-subtle);
-
-  border: var(--border-width-default) solid var(--color-border-default);
-
-  border-radius: 32px;
-
-  overflow: hidden;
-}
-
 /* =========================================================
    CAPABILITY TILE
    ========================================================= */
@@ -2923,63 +2892,6 @@ p {
   */
   padding-top: var(--space-4);
 }
-
-/* =========================================================
-   TABLET
-   ========================================================= */
-
-@media (max-width: 900px) {
-  .capabilities-panel {
-    grid-template-columns: 1fr;
-
-    transform: translateY(-32px);
-
-    border-radius: var(--radius-lg);
-  }
-
-  .capability-tile + .capability-tile {
-    border-left: 0;
-
-    border-top: var(--border-width-default) solid var(--color-border-default);
-  }
-
-  .capability-tile {
-    padding: var(--space-5);
-  }
-
-  .capability-tile__graphic {
-    max-width: 320px;
-    height: 80px;
-  }
-}
-
-/* =========================================================
-   MOBILE
-   ========================================================= */
-
-@media (max-width: 640px) {
-  .capabilities-section {
-    padding-bottom: var(--space-8);
-  }
-
-  .capabilities-panel {
-    transform: translateY(-24px);
-
-    border-radius: var(--radius-md);
-  }
-
-  .capability-tile {
-    padding: var(--space-4);
-  }
-
-  .capability-tile__graphic {
-    height: 72px;
-  }
-}
-
-/* =========================================================
-   SCREEN READER UTILITY
-   ========================================================= */
 
 .sr-only {
   position: absolute;
