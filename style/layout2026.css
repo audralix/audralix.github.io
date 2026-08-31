@@ -1,0 +1,38 @@
+:root {
+  --hero-max-width: 1110px; /* Screenshot: 580 + 430. */
+  --hero-start: 300px;
+}
+
+.hero-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  width: min(100%, var(--hero-max-width));
+  margin-inline: auto;
+  padding-block-start: var(--hero-start);
+}
+
+/* Reusable vertical stack. Override --stack-gap on individual instances. */
+.stack {
+  display: flex;
+  flex-direction: column;
+  gap: var(--stack-gap, var(--spacing-4));
+}
+
+/* Proposed breakpoint. Desktop retains the screenshot's empty right column.
+   The content uses the full available width below 64rem. */
+@media (min-width: 64rem) {
+  .hero-layout {
+    grid-template-columns: minmax(0, 600fr) minmax(0, 430fr);
+  }
+  .hero-content {
+    grid-column: 1;
+  }
+}
+@media (max-width: 30rem) {
+  .hero-content > .button-row {
+    gap: var(--spacing-4);
+  }
+  .hero-content > .button-row > .button {
+    flex: 1 1 100%;
+  }
+}

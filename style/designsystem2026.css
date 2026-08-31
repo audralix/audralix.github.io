@@ -1,0 +1,437 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Montserrat:wght@100..900&family=Roboto:wght@100..900&family=Roboto+Mono:wght@100..700&display=swap");
+
+/* Exact values from Mode 1.tokens.json. Figma spacing/radius numbers use px. */
+:root {
+  --color-text-icon-brand-display: var(--red-500);
+  --color-text-icon-brand-title: #111111;
+  --color-text-icon-heading-heading: #111111;
+  --color-text-icon-body-body: #323232;
+  --color-text-icon-label-label: #323232;
+  --color-text-icon-icon-default: #323232;
+  --color-text-icon-icon-disabled: #9a9a9a;
+  --color-text-icon-icon-icon-inverse: #ffffff;
+  --color-text-icon-meta-medium: #666666;
+  --color-text-icon-meta-small: #767676;
+
+  --red-50: #e7b9b8;
+  --red-100: #e0a5a3;
+  --red-200: #d27e7a;
+  --red-300: #c45652;
+  --red-400: #b62e29;
+  --red-500: #a80600;
+  --red-600: #8d0500;
+  --red-700: #720400;
+  --red-800: #570300;
+  --red-900: #3c0200;
+  --blue-50: #c3ced4;
+  --blue-100: #b2c0c7;
+  --blue-200: #90a5ae;
+  --blue-300: #6e8996;
+  --blue-400: #4c6d7d;
+  --blue-500: #2a5164;
+  --blue-600: #234454;
+  --blue-700: #1d3744;
+  --blue-800: #162a34;
+  --blue-900: #0f1d24;
+
+  --color-surface-default: #ffffff;
+  --color-surface-subtle: #f6f7f8;
+  --color-surface-card: #f5f7f7;
+  --color-surface-disabled: #f1f1f1;
+  --color-border-default: #e2e2e2;
+  --color-border-darker: #323232;
+  --color-border-disabled: #e5e5e5;
+
+  --border-width-default: 1px;
+
+  --spacing-0: 0px;
+  --spacing-1: 4px;
+  --spacing-2: 8px;
+  --spacing-3: 12px;
+  --spacing-4: 16px;
+  --spacing-5: 24px;
+  --spacing-6: 32px;
+  --spacing-7: 40px;
+  --spacing-8: 48px;
+  --spacing-9: 64px;
+  --spacing-10: 80px;
+  --spacing-11: 96px;
+
+  --radius-none: 0px;
+  --radius-small: 4px;
+  --radius-medium: 8px;
+  --radius-large: 12px;
+  --radius-xlarge: 16px;
+  --radius-XXlarge: 32px;
+  --radius-full: 999px;
+}
+
+:root {
+  /* Font families */
+  --font-brand: "Montserrat", sans-serif;
+  --font-interface: "Inter", sans-serif;
+  --font-body: "Roboto", sans-serif;
+  --font-metadata: "Roboto Mono", monospace;
+
+  /* Proposed weights and letter spacing */
+  --weight-brand: 600;
+  --weight-heading: 600;
+  --weight-body: 400;
+  --weight-label: 500;
+  --weight-meta: 400;
+
+  --text-letter-spacing: 0px;
+
+  /* Brand */
+  --brand-display-size: 64px;
+  --brand-display-line-height: 72px;
+
+  --brand-title-size: 48px;
+  --brand-title-line-height: 56px;
+
+  /* Headings */
+  --heading-h1-size: 48px;
+  --heading-h1-line-height: 56px;
+
+  --heading-h2-size: 36px;
+  --heading-h2-line-height: 44px;
+
+  --heading-h3-size: 28px;
+  --heading-h3-line-height: 36px;
+
+  --heading-h4-size: 20px;
+  --heading-h4-line-height: 28px;
+
+  /* Body */
+  --body-large-size: 18px;
+  --body-large-line-height: 28px;
+
+  --body-medium-size: 16px;
+  --body-medium-line-height: 24px;
+
+  --body-small-size: 14px;
+  --body-small-line-height: 20px;
+
+  /* Labels */
+  --label-large-size: 16px;
+  --label-large-line-height: 24px;
+
+  --label-medium-size: 14px;
+  --label-medium-line-height: 20px;
+
+  --label-small-size: 12px;
+  --label-small-line-height: 16px;
+
+  /* Metadata */
+  --meta-medium-size: 14px;
+  --meta-medium-line-height: 20px;
+
+  --meta-small-size: 12px;
+  --meta-small-line-height: 16px;
+}
+
+/* Shared letter spacing */
+.text-brand-display,
+.text-brand-title,
+.text-h1,
+.text-h2,
+.text-h3,
+.text-h4,
+.text-body-large,
+.text-body-medium,
+.text-body-small,
+.text-label-large,
+.text-label-medium,
+.text-label-small,
+.text-meta-medium,
+.text-meta-small {
+  letter-spacing: var(--text-letter-spacing);
+}
+
+/* Brand */
+.text-brand-display,
+.text-brand-title {
+  font-family: var(--font-brand);
+  font-weight: var(--weight-brand);
+}
+
+.text-brand-display {
+  font-size: var(--brand-display-size);
+  line-height: var(--brand-display-line-height);
+}
+
+.text-brand-title {
+  font-size: var(--brand-title-size);
+  line-height: var(--brand-title-line-height);
+}
+
+/* Headings */
+.text-h1,
+.text-h2,
+.text-h3,
+.text-h4 {
+  font-family: var(--font-interface);
+  font-weight: var(--weight-heading);
+}
+
+.text-h1 {
+  font-size: var(--heading-h1-size);
+  line-height: var(--heading-h1-line-height);
+}
+
+.text-h2 {
+  font-size: var(--heading-h2-size);
+  line-height: var(--heading-h2-line-height);
+}
+
+.text-h3 {
+  font-size: var(--heading-h3-size);
+  line-height: var(--heading-h3-line-height);
+  margin-bottom: var(--spacing-4) !important;
+}
+
+.text-h4 {
+  font-size: var(--heading-h4-size);
+  line-height: var(--heading-h4-line-height);
+}
+
+/* Body */
+.text-body-large,
+.text-body-medium,
+.text-body-small {
+  font-family: var(--font-body);
+  font-weight: var(--weight-body);
+}
+
+.text-body-large {
+  font-size: var(--body-large-size);
+  line-height: var(--body-large-line-height);
+  margin-bottom: var(--spacing-6) !important;
+}
+
+.text-body-medium {
+  font-size: var(--body-medium-size);
+  line-height: var(--body-medium-line-height);
+}
+
+.text-body-small {
+  font-size: var(--body-small-size);
+  line-height: var(--body-small-line-height);
+}
+
+/* Labels */
+.text-label-large,
+.text-label-medium,
+.text-label-small {
+  font-family: var(--font-interface);
+  font-weight: var(--weight-label);
+}
+
+.text-label-large {
+  font-size: var(--label-large-size);
+  line-height: var(--label-large-line-height);
+}
+
+.text-label-medium {
+  font-size: var(--label-medium-size);
+  line-height: var(--label-medium-line-height);
+}
+
+.text-label-small {
+  font-size: var(--label-small-size);
+  line-height: var(--label-small-line-height);
+}
+
+/* Metadata */
+.text-meta-medium,
+.text-meta-small {
+  font-family: var(--font-metadata);
+  font-weight: var(--weight-meta);
+}
+
+.text-meta-medium {
+  font-size: var(--meta-medium-size);
+  line-height: var(--meta-medium-line-height);
+}
+
+.text-meta-small {
+  font-size: var(--meta-small-size);
+  line-height: var(--meta-small-line-height);
+}
+
+/* Load design-tokens.css before this file.
+   Integration: replace the old .container rule; do not retain its margin-top.
+   Audit other sections and give them their own vertical spacing first. */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Shared layout: width and horizontal gutters only. */
+.container {
+  width: min(var(--layout-max-width), calc(100% - 2 * var(--layout-gutter)));
+  margin-inline: auto;
+  margin-top: 0;
+}
+
+/* Hero: owns its own vertical spacing, with no fixed height. */
+.hero {
+  background: var(--color-surface-default);
+  color: var(--color-text-icon-body-body);
+}
+
+.hero-content {
+  min-width: 0;
+  --stack-gap: 0px;
+}
+.hero-content > .tagline,
+.hero-content > .tagline-description,
+.hero-content > .hero-description {
+  margin: 0;
+  overflow-wrap: anywhere;
+}
+
+.tagline {
+  font-size: var(--brand-display-size);
+  margin-bottom: var(--spacing-5) !important;
+}
+
+.tagline__accent {
+  color: var(--color-text-icon-brand-display);
+  font-weight: var(--weight-heading);
+}
+
+:root {
+  --capabilities-max-width: 1010px;
+  --capabilities-offset: 64px;
+  --capabilities-padding: 32px;
+  --capabilities-column-padding: 24px;
+  --capabilities-content-gap: 16px;
+
+  --capabilities-background: #f7f7f7;
+  --capabilities-border: #e2e2e2;
+  --capabilities-text: #323232;
+  --capabilities-accent: #b00000;
+}
+
+.capabilities-panel {
+  box-sizing: border-box;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  width: 100%;
+  margin-inline: auto;
+  margin-block-start: var(--capabilities-offset);
+  margin-block-end: var(--capabilities-offset);
+  padding: var(--capabilities-padding);
+  background: var(--color-surface-subtle);
+  color: var(--capabilities-text);
+  border-radius: var(--radius-xlarge);
+  border: var(--border-width-default) solid var(--color-border-default);
+}
+
+.capability-tile {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  min-width: 0;
+  padding-inline: var(--capabilities-column-padding);
+}
+
+.capability-tile + .capability-tile {
+  border-inline-start: 1px solid var(--capabilities-border);
+}
+
+/* Graphics */
+.capability-tile__graphic {
+  width: 100%;
+  margin-block-end: var(--spacing-5);
+}
+
+.capability-tile__graphic-img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* Remove default text margins */
+.capability-tile__eyebrow,
+.capability-tile__title,
+.capability-tile__description,
+.capability-tile__list {
+  margin: 0;
+}
+
+.capability-tile__eyebrow {
+  font-family: var(--font-metadata);
+  font-size: var(--meta-small-size);
+  line-height: var(--meta-small-line-height);
+  font-weight: var(--weight-meta);
+  text-transform: uppercase;
+  color: var(--capabilities-accent);
+}
+
+.capability-tile__title {
+  margin-block-start: var(--spacing-3);
+
+  font-family: var(--font-interface);
+  font-size: var(--heading-h4-size);
+  line-height: var(--heading-h4-line-height);
+  font-weight: var(--weight-heading);
+}
+
+.capability-tile__description,
+.capability-tile__list {
+  margin-block-start: var(--capabilities-content-gap);
+
+  font-family: var(--font-body);
+  font-size: var(--body-small-size);
+  line-height: var(--body-small-line-height);
+  font-weight: var(--weight-body);
+}
+
+.capability-tile__list {
+  padding-inline-start: 1.25em;
+}
+
+/* Keep links aligned at the bottom */
+.capability-tile__link {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--spacing-3);
+
+  margin-block-start: auto;
+  padding-block-start: var(--spacing-5);
+
+  font-family: var(--font-interface);
+  font-size: var(--label-small-size);
+  line-height: var(--label-small-line-height);
+  font-weight: var(--weight-label);
+  color: var(--capabilities-accent);
+  text-underline-offset: 4px;
+}
+
+.capability-tile__link:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 4px;
+}
+
+/* Stack cards when three columns become too narrow */
+@media (max-width: 800px) {
+  .capabilities-panel {
+    grid-template-columns: 1fr;
+    padding: var(--spacing-5);
+  }
+
+  .capability-tile {
+    padding-inline: 0;
+  }
+
+  .capability-tile + .capability-tile {
+    margin-block-start: var(--spacing-5);
+    padding-block-start: var(--spacing-5);
+
+    border-inline-start: 0;
+    border-block-start: 1px solid var(--capabilities-border);
+  }
+}
