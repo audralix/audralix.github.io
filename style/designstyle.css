@@ -1227,6 +1227,19 @@ p {
   font-weight: 600;
 }
 
+.negative {
+  background: transparent;
+  border-color: #ffffff;
+  color: #ffffff;
+}
+
+.negative:hover {
+  background: transparent;
+  border-color: #ffffff;
+  color: #ffffff;
+  font-weight: 700;
+}
+
 .work-card__arrow {
   transition: transform 220ms ease;
 }
