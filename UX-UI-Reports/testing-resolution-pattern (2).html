@@ -1,0 +1,1236 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Testing Discrepancy Resolution Patterns | Melis Konez | Product Designer </title>
+    <meta
+      name="title"
+      content="FinTech Onboarding Case Study | Melis Konez Product Design"
+    />
+    <meta name="description" content="AI-assisted, persona-based evaluation narrowing three discrepancy-resolution concepts to one improved prototype for the IEFinance loan application.">
+
+    <!-- Open Graph / LinkedIn -->
+   <meta property="og:title" content="AI Ran the Walkthrough. I Ran the Evaluation.">
+   <meta property="og:description" content="Three resolution patterns, three rounds of AI persona testing with ChatGPT and Claude, one improved prototype.">
+   <meta property="og:url" content="https://melisknz.com/UX-UI-Reports/testing-resolution-pattern.html">
+   <meta property="og:image" content="https://melisknz.com/assets/LoanApplicationRedesign/og-ai-testing-report-v2-1200x627.jpg">
+   <meta property="og:image:secure_url" content="https://melisknz.com/assets/LoanApplicationRedesign/og-ai-testing-report-v2-1200x627.jpg">
+   <meta property="og:image:type" content="image/jpeg">
+   <meta property="og:image:width" content="1200">
+   <meta property="og:image:height" content="627">
+   <meta property="og:image:alt" content="AI ran the walkthrough. I ran the evaluation. — AI evaluation report, before and after screens">
+   <meta property="og:type" content="article">
+   <meta property="og:site_name" content="Melis Konez | Product Designer">
+
+   <!-- Twitter / X -->
+   <meta name="twitter:card" content="summary_large_image">
+   <meta name="twitter:title" content="AI Ran the Walkthrough. I Ran the Evaluation.">
+   <meta name="twitter:description" content="Three resolution patterns, three rounds of AI persona testing with ChatGPT and Claude, one improved prototype.">
+   <meta name="twitter:image" content="https://melisknz.com/assets/LoanApplicationRedesign/og-ai-testing-report-v2-1200x627.jpg">
+
+    <!-- CSS-STYLE -->
+
+    <link rel="stylesheet" href="/style/quick-case-study.css" /> 
+    <link rel="stylesheet" href="/style/designsystem2026.css">
+<link rel="stylesheet" href="/style/designstyle.css" /> 
+    
+    <script
+      src="https://kit.fontawesome.com/ed552a7faf.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body class="">
+    <!-- ===== NAVBAR ===== -->
+    <header class="site-header" data-nav>
+      <div class="nav-wrap">
+        <a class="brand" href="/index.html" aria-label="Home">
+          <img style="height: 28px" src="/favicon-32x32.png" alt="" />
+        </a>
+
+        <!-- Mobile toggle -->
+        <button
+          class="nav-toggle"
+          aria-expanded="false"
+          aria-controls="site-menu"
+          aria-label="Open menu"
+        >
+          <span class="nav-toggle__bar"></span>
+          <span class="nav-toggle__bar"></span>
+          <span class="nav-toggle__bar"></span>
+        </button>
+
+        <nav class="nav" id="site-menu" aria-label="Primary">
+          <ul class="nav__list">
+            <!-- add .is-active to the current page -->
+            <li><a class="nav__link is-active" href="/">Home</a></li>
+            <li><a class="nav__link" href="#mywork">Case Studies</a></li>
+            <li><a class="nav__link" href="#about">About</a></li>
+            <!-- Navbar actions -->
+            <li class="nav__actions">
+              <a
+                class="quick-case-study__button"
+                href="/assets/Melis_Konez_Resume.pdf"
+                target="_blank"
+                rel="noopener"
+                aria-label="Open Melis Konez's résumé"
+              >
+                Resume
+              </a>
+
+              <a
+                class="tertiary-button__control"
+                href="https://www.linkedin.com/in/meliskonez"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Open Melis Konez's LinkedIn profile"
+                title="LinkedIn"
+              >
+                <i class="fa-brands fa-linkedin" aria-hidden="true"></i>
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <div class="cover-loop" style="--cover-loop-duration: 12s;">
+
+      <!-- hidden radio group drives manual "click to jump" navigation -->
+      <input type="radio" name="cover-loop-nav" id="cover-loop-nav-1" class="cover-loop__radio">
+      <input type="radio" name="cover-loop-nav" id="cover-loop-nav-2" class="cover-loop__radio">
+      <input type="radio" name="cover-loop-nav" id="cover-loop-nav-3" class="cover-loop__radio">
+
+      <!-- clickable progress line: 3 segments, one per cover -->
+      <div class="cover-loop__progress">
+        <label class="cover-loop__bar cover-loop__bar--1" for="cover-loop-nav-1" aria-label="Show cover 1 of 3">
+          <span class="cover-loop__bar-fill"></span>
+        </label>
+        <label class="cover-loop__bar cover-loop__bar--2" for="cover-loop-nav-2" aria-label="Show cover 2 of 3">
+          <span class="cover-loop__bar-fill"></span>
+        </label>
+        <label class="cover-loop__bar cover-loop__bar--3" for="cover-loop-nav-3" aria-label="Show cover 3 of 3">
+          <span class="cover-loop__bar-fill"></span>
+        </label>
+      </div>
+
+      <div class="cover-loop__stage">
+        <img class="cover-loop__slide cover-loop__slide--1" src="/assets/LoanApplicationRedesign/cover-1-spotlight.png" alt="Case study cover — AI evaluation report, spotlight layout">
+        <img class="cover-loop__slide cover-loop__slide--2" src="/assets/LoanApplicationRedesign/cover-2-angle.png" alt="Case study cover — AI evaluation report, angled hero layout">
+        <img class="cover-loop__slide cover-loop__slide--3" src="/assets/LoanApplicationRedesign/cover-3-split.png" alt="Case study cover — report, before and after, split grid layout">
+      </div>
+
+    </div>
+    <!-- ===== REPORT ===== -->
+    <main class="report-page">
+     
+
+      <article class="grid9-shell  ">
+        <!-- Summary -->
+        <div class=" g9-9">
+          <h3 class="text-h3">Testing discrepancy resolution patterns</h1>
+          <p class="text-body-md">
+            I evaluated how effectively finance partners could notice mismatched data retrieved from CRO and other external sources, understand why it had been flagged, and identify an appropriate next action.
+          </p>
+        </div>
+
+        <!-- Insight -->
+        <div class="callout ">
+          <div class="callout__header">
+            <span class="chip chip--insight">Insight</span>
+            <h3 class="">What was not yet known</h3>
+          </div>
+          <p class="callout_p">
+            I did not have access to a real operational example showing whether
+            partners were authorised to select an address themselves. <br> My initial
+            assumption was that the partner would need to contact the client and
+            ask them to confirm which information was correct.
+          </p>
+        </div>
+
+        <!-- Goal -->
+        <div class="callout">
+          <div class="callout__header">
+            <span class="chip chip--decision">Goal</span>
+          </div>
+          <ol class="callout_list">
+              <li>
+                <i class="fa-solid fa-circle bullet " aria-hidden="true"></i>
+               Help partners understand the data discrepancy.
+              </li>
+              <li>
+                <i class="fa-solid fa-circle bullet " aria-hidden="true"></i>
+                  Enable them to initiate the resolution process easily within the
+              workflow.
+              </li>
+              <li>
+                <i class="fa-solid fa-circle bullet" aria-hidden="true"></i>Guide them to continue the application with confidence.
+              </li>
+            </ol>
+
+        </div>
+      </article>
+
+      <section class="grid9-shell  "> 
+        <h2 class="text-h4">What was tested and how?</h2>
+        <div class="method-list">
+          <div class="method-row grid-9">
+            <div class="method-row__label g9-2">AI-assisted, persona-based evaluation</div>
+
+            <div class="method-row__content g9-7">
+              <h5>Persona used throughout the evaluation</h5>
+              <div class="persona-card">
+                <img
+                  class="persona-card__avatar"
+                  src="/assets/LoanApplicationRedesign/251223_persona-alex-profile.png"
+                  alt="Alex Murphy"
+                />
+
+                <div class="persona-card__info">
+                  <div class="persona-card__name-row">
+                    <div class="detail-list__row">
+                      <dt>Alex Murphy</dt>
+                      <dd>Junior Finance Partner</dd>
+                    </div>
+                  </div>
+
+                  <dl class="detail-list">
+                    <div class="detail-list__row">
+                      <dt>Experience:</dt>
+                      <dd>1–2 years</dd>
+                    </div>
+                    <div class="detail-list__row">
+                      <dt>Knowledge level:</dt>
+                      <dd>
+                        Understands basic loan processing but has limited confidence interpreting
+                        CRO, Revenue and compliance discrepancies independently.
+                      </dd>
+                    </div>
+                  </dl>
+                </div>
+              </div>
+              <p class="text-body-md">Alex has 1–2 years of experience and limited confidence when interpreting discrepancies between CRO records and client-provided information. I selected Alex because a pattern that works for a less-experienced partner should provide sufficient guidance without relying on specialist knowledge.</p>
+              <p class="note">
+                The same persona and application scenario were maintained across all three rounds to
+                make the findings easier to compare.
+              </p>
+              <hr class="divider" />
+            
+            </div>
+          </div>
+
+          <div class="method-row grid-9">
+            <div class="method-row__label g9-2">ROUND 1 — STATIC CONCEPT SCREENING</div>
+            <div class="method-row__content g9-7">
+              <h5>Round 1 — Comparing Three Patterns with One Issue</h5>
+              <p class="text-body-md">Three interaction patterns were initially tested with one registered-address mismatch.</p>
+              <div>
+                  <p class="text-label-small kicker">Research question</p>
+                  <p class="text-body-md">Which interaction pattern communicates a single discrepancy most clearly without unnecessarily interrupting the application?</p>
+              </div>
+            </div>
+          </div>
+          <div class="method-row grid-9">
+            <div class="method-row__label g9-2">METHOD — CHATGPT STATIC-IMAGE EVALUATION</div>
+            <div class="method-row__content g9-7">
+                  <p class="text-label-small kicker">Method — ChatGPT persona-based evaluation</p>
+                  <p class="text-body-md">I uploaded static images of the three interface concepts to ChatGPT, together with Alex’s persona, the application scenario and a consistent set of evaluation questions. ChatGPT examined the visible interface states from Alex’s perspective and evaluated how clearly each version communicated the discrepancy and the required response.</p>
+
+            </div>
+          </div> 
+          <div class="method-row grid-9">
+            <div class="method-row__label g9-2">EVALUATION CRITERIA</div>
+            <div class="method-row__content g9-7">
+                  <p class="text-label-small kicker">ROUND 1: Evaluation criteria</p>
+                  <p class="text-body-md">To compare how effectively each interaction pattern helped finance partners notice a single data discrepancy, understand its context, identify the next action and continue the application with confidence.</p>
+                  <div style="margin-bottom: 16px;">
+                    <p class="text-body-md" style="margin-bottom: 4px;">ChatGPT was asked:</p>
+                    <ol class="method-ordered-list">
+                      <li>Would you notice the issue?</li>
+                      <li>Would you understand which field caused the issue?</li>
+                      <li>Would you know what action to take?</li>
+                      <li>What would confuse you?</li>
+                      <li>How confident would you feel about understanding what to do next?</li>
+                    </ol>
+                  </div>
+                  <div>
+                    <p class="text-body-md" style="margin-bottom: 4px;">Each concept was then scored from 1 to 5 against:</p>
+                    <ul class="method-unordered-list">
+                      <li><span class="bullet">•</span>Discoverability</li>
+                      <li><span class="bullet">•</span>Context clarity</li>
+                      <li><span class="bullet">•</span>Action clarity</li>
+                      <li><span class="bullet">•</span>Workflow continuity</li>
+                      <li><span class="bullet">•</span>Perceived confidence</li>
+                    </ul>
+                  </div>
+            </div>
+          </div>
+          <div class="method-row grid-9">
+            <div class="method-row__label g9-2">PROTOTYPES — THREE CONCEPTS</div>
+            <div class="method-row__content g9-7">
+                <p class="text-label-large  prototype-card-title">PROTOTYPE VERSIONS</p>
+                <div class="prototype-list">
+
+                <!-- Version A -->
+                <div class="prototype-item">
+      
+                  <div class="prototype-item__frame">
+                    <img src="/assets/LoanApplicationRedesign/version-a-1-jpeg.jpg" alt="Version A — business information screen" />
+                    <img src="/assets/LoanApplicationRedesign/version-a-2-jpeg.jpg" alt="Version A — modal resolution screen" />
+                  </div>
+                  <div class="prototype-item__meta">
+                    <span class="prototype-item__version">Version A</span>
+                    <span class="prototype-item__caption">Modal Resolution</span>
+                  </div>
+
+
+                  <div class="prototype-item__overlay">
+                    <div class="prototype-item__overlay-panel">
+                      <div class="prototype-detail">
+                        <p class="prototype-detail__kicker">Prototype versions</p>
+                        <h4 class="prototype-detail__heading">Version A — Modal Resolution</h4>
+                        <div class="prototype-detail__frame">
+                          <img src="/assets/LoanApplicationRedesign/version-a-1-jpeg.jpg" alt="" />
+                          <img src="/assets/LoanApplicationRedesign/version-a-2-jpeg.jpg" alt="" />
+                        </div>
+                        <div class="prototype-detail__rationale">
+                          <h5 class="prototype-detail__rationale-heading">Why I explored this pattern</h5>
+                          <p class="prototype-detail__rationale-text">
+                            I explored a modal because its strong attention capture makes a critical discrepancy
+                            difficult to miss. The focused overlay brings the issue, data comparison and available
+                            actions into immediate view without requiring scrolling. I included it to assess whether
+                            this visibility and focus would outweigh the interruption and loss of surrounding page
+                            context.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Version B -->
+                <div class="prototype-item">
+                  <div class="prototype-item__frame">
+                    <img src="/assets/LoanApplicationRedesign/version-b-1-jpeg.jpg" alt="Version B — business information screen" />
+                    <img src="/assets/LoanApplicationRedesign/version-b-2-jpeg.jpg" alt="Version B — standalone accordion screen" />
+                  </div>
+                  <div class="prototype-item__meta">
+                    <span class="prototype-item__version">Version B</span>
+                    <span class="prototype-item__caption">Standalone Resolution Accordion</span>
+                  </div>
+
+                  <div class="prototype-item__overlay">
+                    <div class="prototype-item__overlay-panel">
+                      <div class="prototype-detail">
+                        <p class="prototype-detail__kicker">Prototype versions</p>
+                        <h4 class="prototype-detail__heading">Version B — Standalone Resolution Accordion</h4>
+                        <div class="prototype-detail__frame">
+                          <img src="/assets/LoanApplicationRedesign/version-b-1-jpeg.jpg" alt="" />
+                          <img src="/assets/LoanApplicationRedesign/version-b-2-jpeg.jpg" alt="" />
+                        </div>
+                        <div class="prototype-detail__rationale">
+                          <h5 class="prototype-detail__rationale-heading">Why I explored this pattern</h5>
+                          <p class="prototype-detail__rationale-text">
+                           I explored a standalone accordion because it keeps the user within the existing page while providing expandable space for discrepancy details, data comparison and resolution actions. It preserves the surrounding business information for reference and could support multiple discrepancies as separate accordion items without interrupting the workflow.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+              <!-- Version C -->
+              <div class="prototype-item">
+                <div class="prototype-item__frame">
+                  <img src="/assets/LoanApplicationRedesign/version-c-1-jpeg.jpg" alt="Version C — business information screen" />
+                  <img src="/assets/LoanApplicationRedesign/version-c-2-jpeg.jpg" alt="Version C — embedded accordion screen" />
+                </div>
+                <div class="prototype-item__meta">
+                  <span class="prototype-item__version">Version C</span>
+                  <span class="prototype-item__caption">Embedded Resolution Accordion</span>
+                </div>
+
+                <div class="prototype-item__overlay">
+                  <div class="prototype-item__overlay-panel">
+                    <div class="prototype-detail">
+                      <p class="prototype-detail__kicker">Prototype versions</p>
+                      <h4 class="prototype-detail__heading">Version C — Embedded Resolution Accordion</h4>
+                      <div class="prototype-detail__frame">
+                        <img src="/assets/LoanApplicationRedesign/version-c-1-jpeg.jpg" alt="" />
+                        <img src="/assets/LoanApplicationRedesign/version-c-2-jpeg.jpg" alt="" />
+                      </div>
+                      <div class="prototype-detail__rationale">
+                        <h5 class="prototype-detail__rationale-heading">Why I explored this pattern</h5>
+                        <p class="prototype-detail__rationale-text">
+                          I explored an embedded accordion to connect the discrepancy directly to the affected record. Expanding the issue in context allows the user to compare the existing and retrieved information and take action without searching elsewhere on the page. The progressive disclosure also keeps resolution details hidden until they are needed.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              
+            
+                </div>
+            </div>
+          </div>
+          <div class="method-row grid-9">
+            <div class="method-row__label g9-2">KEY FINDINGS</div>
+            <div class="method-row__content g9-7">
+              <p class="text-label-small kicker">ROUND 1: findings</p>
+              <p class="text-body-md">Version A made the discrepancy noticeable, but the modal interrupted the application flow and separated the resolution task from the affected information.</p>
+            </div>
+          </div>
+          <!-- DESIGN DECISION  -->
+          <div class="method-row grid-9">
+            <div class="method-row__label g9-2">DESIGN DECISION — REMOVE VERSION A</div>
+            <div class="method-row__content g9-7">
+              
+              <div class="callout">
+                <div class="callout__header">
+                  <span class="chip chip--evidence">Round 1 Decision </span>
+                </div>
+                <p class="callout_p">
+                  Version A was eliminated from further evaluation. 
+                  Versions B and C progressed to Round 2.
+               </p>
+              </div>  
+               <hr class="divider" />            
+            </div>
+           
+          </div>
+          <!--   ROUND 2 -->
+          <div class="method-row grid-9">
+            <div class="method-row__label g9-2">ROUND 2 — MULTI-ISSUE STRESS TEST</div>
+            <div class="method-row__content g9-7">
+              <h5>ROUND 2 — Stress-testing B and C with multiple issues</h5>
+              <p class="text-body-md">Three interaction patterns were initially tested with one registered-address mismatch.</p>
+              <div>
+                  <p class="text-label-small kicker">Research question</p>
+                  <p class="text-body-md">How effectively do Versions B and C help a junior finance partner identify, understand and manage multiple discrepancies within the same application step ?</p>
+              </div>
+            </div>
+          </div>
+          <div class="method-row grid-9">
+            <div class="method-row__label g9-2">METHOD — CLAUDE INTERACTIVE WALKTHROUGH</div>
+            <div class="method-row__content g9-7">
+                  <p class="text-label-small kicker">Method: Claude persona-based walkthrough of interactive prototypes</p>
+                  <p class="text-body-md">I opened the interactive prototypes in the browser and used the Claude browser extension to evaluate each version. Claude was provided with Alex’s persona, the multi-issue application scenario and a consistent set of tasks and evaluation questions.
+                    <br>
+                    Claude adopted the defined persona, navigated each prototype and evaluated the interaction while progressing through the discrepancy-resolution flow. The same instructions and scenario were used for both versions to support a consistent comparison.
+                    <br>
+                    This was an AI-simulated evaluative walkthrough rather than testing with human participants.
+                  </p>
+
+            </div>
+          </div> 
+          <div class="method-row grid-9">
+            <div class="method-row__label g9-2">TEST CONDITION — TWO PROTOTYPES, THREE DISCREPANCIES</div>
+            <div class="method-row__content g9-7">
+                  <p class="text-label-small kicker">MULTI-ISSUE SCENARIO</p>
+                    <ul class="method-unordered-list">
+                      <li><span class="bullet">•</span>Registered-address change</li>
+                      <li><span class="bullet">•</span>Director-information mismatch</li>
+                      <li><span class="bullet">•</span>Missing tax information</li>
+                    </ul>
+
+            </div>
+          </div> 
+          <div class="method-row grid-9">
+            <div class="method-row__label g9-2">EVALUATION CRITERIA</div>
+            <div class="method-row__content g9-7">
+                  <p class="text-label-small kicker">ROUND 2: Evaluation criteria</p>
+                  <div style="margin-bottom: 16px;">
+                    <p class="text-body-md" style="margin-bottom: 4px;">Claude evaluated whether Alex could:</p>
+                    <ol class="method-ordered-list">
+                      <li>Notice that multiple discrepancies required attention.</li>
+                      <li>Identify all affected fields or records.</li>
+                      <li> Understand what was different in each case.</li>
+                      <li>Determine the appropriate action for each issue</li>
+                      <li> Navigate between unresolved issues.</li>
+                      <li> Recognise which issues had been completed.</li>
+                      <li> Continue the wider application workflow with confidence.</li>
+                    </ol>
+                  </div>
+                  <div>
+                    <p class="text-body-md" style="margin-bottom: 4px;">The prototypes were evaluated against:</p>
+                    <ul class="method-unordered-list">
+                      <li><span class="bullet">•</span> Discoverability of multiple issues</li>
+                      <li><span class="bullet">•</span> Connection between each issue and its affected field</li>
+                      <li><span class="bullet">•</span> Information clarity</li>
+                      <li><span class="bullet">•</span> Action clarity</li>
+                      <li><span class="bullet">•</span> Issue navigation</li>
+                      <li><span class="bullet">•</span> Visual manageability</li>
+                      <li><span class="bullet">•</span> Progress visibility</li>
+                      <li><span class="bullet">•</span> Perceived confidence</li>
+                    </ul>
+                  </div>
+                  <div class="note note--flag">
+                    <p class="note__label">Important distinction</p>
+                    <p class="note__text">Round 1 evaluated <strong>basic usability and comprehension</strong>.</p>
+                    <p class="note__text">Round 2 evaluated <strong>scalability and issue management</strong>.</p>
+                  </div>
+            </div>
+          </div>
+          <!-- PROTOTYPES — VERSIONS B AND C -->
+          <div class="method-row grid-9">
+            <div class="method-row__label g9-2">PROTOTYPES — VERSIONS B AND C</div>
+            <div class="method-row__content g9-7">
+                <p class="text-label-large  prototype-card-title">ROUND 2: Two AI walkthroughs, evaluated by me</p>
+                <div class="prototype-container">
+                  <!-- Row 1: AI Operates -->
+                  <div class="prototype-row">
+                    <p class="prototype-row__label">AI Operates</p>
+                    <div class="prototype-container__version-row">
+                      <span class="prototype-container__version-tag">Version B</span>
+                      <span class="prototype-container__version-label">Standalone Resolution Accordion</span>
+                    </div>
+                    <div class="prototype-row__card">
+                      <div class="prototype-row__body prototype-row__body--flush">
+                        <a class="prototype-video" href="/assets/LoanApplicationRedesign/240926_version-B-Comp1.mp4" target="_blank" rel="noopener">
+                          <span class="prototype-video__play" aria-hidden="true">
+                            <svg viewBox="0 0 16 16"><path d="M3 2l11 6-11 6V2z"/></svg>
+                          </span>
+                          <p class="prototype-video__caption">Ver. B &middot; AI Walkthrough &middot; Issues</p>
+                          <div class="prototype-video__progress"><span></span></div>
+                        </a>
+                      </div>
+                      <p class="prototype-row__footer">
+                        <strong>Persona:</strong> Alex Murphy &middot;
+                        <strong>Task:</strong> resolve the flagged discrepancies in the Business Information step &middot;
+                        <strong>Method:</strong> Claude ran an AI-simulated walkthrough of Version B; I reviewed and annotated its report.
+                      </p>
+                    </div>
+                  </div>
+                  <!-- Row 2: AI Report + My Evaluation -->
+                  <div class="report-panel">
+                    <div class="prototype-row__card">
+                      <div class="prototype-row__body">
+                        <div class="report-teaser__card-head">
+                          <h4 class="report-teaser__card-title">AI Report — Version B</h4>
+                        </div>
+                      <div class="report-teaser__preview">
+                        <img
+                          src="/assets/LoanApplicationRedesign/Report-Version B-multissue_00.jpg"
+                          alt="Preview of the AI evaluation report"
+                          class="report-teaser__preview-image"
+                        >
+                      </div>
+                      </div>
+                      <p class="prototype-row__footer">
+                        <strong>Pages:</strong> 3 &middot; <strong>Format:</strong> AI-generated evaluation report
+                      </p>
+                    </div>
+
+                    <input type="checkbox" id="report-b-open" class="report-viewer__toggle">
+                    <label for="report-b-open" class="report-teaser__zoom" aria-label="View full report">
+                      <svg viewBox="0 0 24 24"><path d="M15.5 14h-.79l-.28-.27A6.47 6.47 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/></svg>
+                    </label>
+
+                    <input type="radio" name="report-b-pager" id="report-b-page1" class="report-viewer__radio" checked>
+                    <input type="radio" name="report-b-pager" id="report-b-page2" class="report-viewer__radio">
+                    <input type="radio" name="report-b-pager" id="report-b-page3" class="report-viewer__radio">
+                    <!-- report-b-page4 removed — you only have 3 pages, this radio had no matching content div -->
+
+                    <div class="report-viewer">
+                      <label for="report-b-open" class="report-viewer__backdrop" aria-hidden="true"></label>
+                      <div class="report-viewer__panel">
+                        <p class="report-viewer__col-label">AI Report and My Evaluation</p>
+
+                        <div class="report-viewer__page report-viewer__page--1">
+                          <div class="report-viewer__stage">
+                            <img class="report-viewer__page-image" src="/assets/LoanApplicationRedesign/Report-Version B-multissue_00.jpg" alt="AI report — page 1 of 3">
+                          </div>
+                          <div class="report-viewer__pager">
+                            <label class="report-viewer__pager-btn" for="report-b-page3" aria-label="Previous page">&lsaquo;</label> <!-- was page4, now wraps to page3 -->
+                            <span class="report-viewer__pager-count">1 / 3</span>
+                            <label class="report-viewer__pager-btn" for="report-b-page2" aria-label="Next page">&rsaquo;</label>
+                          </div>
+                        </div>
+
+                        <div class="report-viewer__page report-viewer__page--2">
+                          <div class="report-viewer__stage">
+                            <img class="report-viewer__page-image" src="/assets/LoanApplicationRedesign/Report-Version B-multissue_01.jpg" alt="AI report — page 2 of 3">
+                          </div>
+                          <div class="report-viewer__pager">
+                            <label class="report-viewer__pager-btn" for="report-b-page1" aria-label="Previous page">&lsaquo;</label>
+                            <span class="report-viewer__pager-count">2 / 3</span>
+                            <label class="report-viewer__pager-btn" for="report-b-page3" aria-label="Next page">&rsaquo;</label>
+                          </div>
+                        </div>
+
+                        <div class="report-viewer__page report-viewer__page--3">
+                          <div class="report-viewer__stage">
+                            <img class="report-viewer__page-image" src="/assets/LoanApplicationRedesign/Report-Version B-multissue_02.jpg" alt="AI report — page 3 of 3">
+                          </div>
+                          <div class="report-viewer__pager">
+                            <label class="report-viewer__pager-btn" for="report-b-page2" aria-label="Previous page">&lsaquo;</label>
+                            <span class="report-viewer__pager-count">3 / 3</span>
+                            <label class="report-viewer__pager-btn" for="report-b-page1" aria-label="Next page">&rsaquo;</label> <!-- was page4, now wraps to page1 -->
+                    </div>
+                    </div>
+
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- VERSION C -->
+                <div class="prototype-container version-c">
+                  <!-- Row 1: AI Operates -->
+                  <div class="prototype-row">
+                    <p class="prototype-row__label">AI Operates</p>
+                    <div class="prototype-container__version-row">
+                      <span class="prototype-container__version-tag">Version C</span>
+                      <span class="prototype-container__version-label">Embedded Resolution Accordion</span>
+                    </div>
+                    <div class="prototype-row__card">
+                      <div class="prototype-row__body prototype-row__body--flush">
+                        <a class="prototype-video prototype-video--c" href="/assets/LoanApplicationRedesign/240926_version-C-Comp1.mp4" target="_blank">                          <span class="prototype-video__play" aria-hidden="true">
+                            <svg viewBox="0 0 16 16"><path d="M3 2l11 6-11 6V2z"/></svg>
+                          </span>
+                          <p class="prototype-video__caption">Ver. B &middot; AI Walkthrough &middot; Issues</p>
+                          <div class="prototype-video__progress"><span></span></div>
+                        </a>
+                      </div>
+                      <p class="prototype-row__footer">
+                        <strong>Persona:</strong> Alex Murphy &middot;
+                        <strong>Task:</strong> resolve the flagged discrepancies in the Business Information step &middot;
+                        <strong>Method:</strong> Claude ran an AI-simulated walkthrough of Version B; I reviewed and annotated its report.
+                      </p>
+                    </div>
+                  </div>
+                  <!-- Row 2: AI Report + My Evaluation -->
+<div class="prototype-row">
+  <p class="prototype-row__label">AI Report + My Evaluation</p>
+  <div class="report-panel">
+
+    <div class="prototype-row__card">
+      <div class="prototype-row__body">
+        <div class="report-teaser__card-head">
+          <h4 class="report-teaser__card-title">AI Report — Version C</h4>
+        </div>
+        <div class="report-teaser__preview">
+          <img
+            src="/assets/LoanApplicationRedesign/Report-Version C-multissue_00.jpg"
+            alt="Preview of the AI evaluation report"
+            class="report-teaser__preview-image"
+          >
+        </div>
+      </div>
+      <p class="prototype-row__footer">
+        <strong>Pages:</strong> 4 &middot; <strong>Format:</strong> AI-generated evaluation report
+      </p>
+    </div>
+
+    <input type="checkbox" id="report-c-open" class="report-viewer__toggle">
+    <label for="report-c-open" class="report-teaser__zoom" aria-label="View full report">
+      <svg viewBox="0 0 24 24"><path d="M15.5 14h-.79l-.28-.27A6.47 6.47 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/></svg>
+    </label>
+
+    <input type="radio" name="report-c-pager" id="report-c-page1" class="report-viewer__radio" checked>
+    <input type="radio" name="report-c-pager" id="report-c-page2" class="report-viewer__radio">
+    <input type="radio" name="report-c-pager" id="report-c-page3" class="report-viewer__radio">
+    <input type="radio" name="report-c-pager" id="report-c-page4" class="report-viewer__radio">
+
+    <div class="report-viewer">
+      <label for="report-c-open" class="report-viewer__backdrop" aria-hidden="true"></label>
+      <div class="report-viewer__panel">
+        <p class="report-viewer__col-label">AI Report and My Evaluation</p>
+
+        <div class="report-viewer__page report-viewer__page--1">
+          <div class="report-viewer__stage">
+            <img class="report-viewer__page-image" src="/assets/LoanApplicationRedesign/Report-Version C-multissue_00.jpg" alt="AI report — page 1 of 4">
+          </div>
+          <div class="report-viewer__pager">
+            <label class="report-viewer__pager-btn" for="report-c-page4" aria-label="Previous page">&lsaquo;</label>
+            <span class="report-viewer__pager-count">1 / 4</span>
+            <label class="report-viewer__pager-btn" for="report-c-page2" aria-label="Next page">&rsaquo;</label>
+          </div>
+        </div>
+
+        <div class="report-viewer__page report-viewer__page--2">
+          <div class="report-viewer__stage">
+            <img class="report-viewer__page-image" src="/assets/LoanApplicationRedesign/Report-Version C-multissue_01.jpg" alt="AI report — page 2 of 4">
+          </div>
+          <div class="report-viewer__pager">
+            <label class="report-viewer__pager-btn" for="report-c-page1" aria-label="Previous page">&lsaquo;</label>
+            <span class="report-viewer__pager-count">2 / 4</span>
+            <label class="report-viewer__pager-btn" for="report-c-page3" aria-label="Next page">&rsaquo;</label>
+          </div>
+        </div>
+
+        <div class="report-viewer__page report-viewer__page--3">
+          <div class="report-viewer__stage">
+            <img class="report-viewer__page-image" src="/assets/LoanApplicationRedesign/Report-Version C-multissue_02.jpg" alt="AI report — page 3 of 4">
+          </div>
+          <div class="report-viewer__pager">
+            <label class="report-viewer__pager-btn" for="report-c-page2" aria-label="Previous page">&lsaquo;</label>
+            <span class="report-viewer__pager-count">3 / 4</span>
+            <label class="report-viewer__pager-btn" for="report-c-page4" aria-label="Next page">&rsaquo;</label>
+          </div>
+        </div>
+
+<div class="report-viewer__page report-viewer__page--4">
+  <div class="report-viewer__stage">
+    <img class="report-viewer__page-image" src="/assets/LoanApplicationRedesign/Report-Version C-multissue_03.jpg" alt="AI report — page 4 of 4">
+  </div>
+  <div class="report-viewer__pager">
+    <label class="report-viewer__pager-btn" for="report-c-page3" aria-label="Previous page">&lsaquo;</label>
+    <span class="report-viewer__pager-count">4 / 4</span>
+    <label class="report-viewer__pager-btn" for="report-c-page1" aria-label="Next page">&rsaquo;</label>
+  </div>
+</div>
+
+      </div>
+    </div>
+  </div>
+</div>
+                </div>
+            </div>
+          </div>
+          <!-- COMPARATIVE TABLE -->
+          <div class="method-row grid-9">
+            <div class="method-row__label g9-2">COMPARATIVE RESULTS</div>
+            <div class="method-row__content g9-7">
+                <p class="text-label-small kicker">ROUND 2: COMparıson</p>
+                <div class="comparison-table__scroll">
+                  <table class="comparison-table__table">
+                    <thead>
+                      <tr>
+                        <th>Criterion</th>
+                        <th>Version B</th>
+                        <th>Version C</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr><td>Multi-issue discoverability</td><td>3/5</td><td class="is-winner">5/5</td></tr>
+                      <tr><td>Field connection</td><td>4/5</td><td class="is-winner">5/5</td></tr>
+                      <tr><td>Context clarity</td><td>3/5</td><td>3/5</td></tr>
+                      <tr><td>Action clarity</td><td>2/5</td><td>2/5</td></tr>
+                      <tr><td>Issue navigation</td><td>3/5</td><td>3/5</td></tr>
+                      <tr><td>Progress visibility</td><td>2/5</td><td>1/5</td></tr>
+                      <tr><td>Interaction effort</td><td>3/5</td><td class="is-winner">4/5</td></tr>
+                      <tr><td>Visual manageability</td><td>3/5</td><td class="is-winner">4/5</td></tr>
+                      <tr><td>Workflow continuity</td><td>2/5</td><td>1/5</td></tr>
+                      <tr><td>Perceived confidence</td><td>2/5</td><td>2/5</td></tr>
+                    </tbody>
+                  </table>
+                </div>
+            </div>
+          </div>
+          <!-- KEY FINDING -->
+          <div class="method-row grid-9">
+            <div class="method-row__label g9-2">KEY FINDINGS</div>
+            <div class="method-row__content g9-7">
+              <p class="text-label-small kicker">ROUND 2: fındıngs</p>
+              <p class="text-body-md">Both patterns communicated that multiple discrepancies were present, 
+                but they supported resolution differently.</p>
+              <div style="margin-bottom: 16px;">
+                <p class="text-body-md" style="margin-bottom: 4px;">Version B — Standalone Resolution Accordion</p>
+                  <ul class="method-unordered-list">
+                    <li><span class="bullet">•</span>  Provided more space for explanations and resolution guidance.</li>
+                    <li><span class="bullet">•</span>  Allowed issue details to remain available without replacing the application page.</li>
+                    <li><span class="bullet">•</span> Required movement between the side panel and the affected records.</li>
+                    <li><span class="bullet">•</span>  Sometimes weakened the visible connection between an issue and its source field.</li>
+                  </ul>
+              </div>
+              <div style="margin-bottom: 16px;">
+                <p class="text-body-md" style="margin-bottom: 4px;">Version C —Embedded Resolution Accordion</p>
+                  <ul class="method-unordered-list">
+                    <li><span class="bullet">•</span>  Connected each issue more directly to its affected record.</li>
+                    <li><span class="bullet">•</span>  Supported issue-by-issue resolution within the application context.</li>
+                    <li><span class="bullet">•</span>  Reduced movement between separate interface areas.</li>
+                    <li><span class="bullet">•</span>   Became visually denser when several discrepancies appeared simultaneously.</li>
+                  </ul>
+              </div>
+              <div style="margin-bottom: 16px;">
+                <p class="text-body-md" style="margin-bottom: 4px;">The interactive walkthrough also revealed issues that could not have been assessed reliably from static images, including:</p>
+                  <ul class="method-unordered-list">
+                    <li><span class="bullet">•</span>  Movement between discrepancies</li>
+                    <li><span class="bullet">•</span>  Visibility of unresolved issues</li>
+                    <li><span class="bullet">•</span>  Feedback following an action</li>
+                    <li><span class="bullet">•</span>  Continuity when returning to the wider application</li>
+                    <li><span class="bullet">•</span>  The effort required to complete the resolution sequence</li>
+                  </ul>
+              </div>
+            </div>
+
+          </div>
+          <div class="method-row grid-9">
+            <div class="method-row__label g9-2">DESIGN DECISION — IMPROVE VERSION B</div>
+            <div class="method-row__content g9-7">
+              
+              <div class="callout">
+                <div class="callout__header">
+                  <span class="chip chip--evidence">Round 2 Decision  </span>
+                </div>
+                <p class="callout_p" style="margin-bottom: 4px;">
+                  The results did not support adopting either version without modification. I used the Round 2 findings to improve the prototypes, focusing on:
+               </p>
+              <ol class="callout_list">
+                <li>
+                  <i class="fa-solid fa-circle bullet " aria-hidden="true"></i>
+               Strengthening the connection between issues and affected records
+                </li>
+                <li>
+                  <i class="fa-solid fa-circle bullet " aria-hidden="true"></i>
+                    Clarifying the next action for each discrepancy
+                </li>
+                <li>
+                  <i class="fa-solid fa-circle bullet" aria-hidden="true"></i> Improving feedback after an issue was addressed
+                </li>
+                <li>
+                  <i class="fa-solid fa-circle bullet" aria-hidden="true"></i>  Making unresolved issues easier to track
+                </li>
+                <li>
+                  <i class="fa-solid fa-circle bullet" aria-hidden="true"></i>  Reducing visual competition between multiple alerts
+                </li>
+              </ol>
+              </div>  
+               <hr class="divider" />            
+            </div>
+           
+          </div>
+          <!--   ROUND 3 -->
+          <div class="method-row grid-9">
+            <div class="method-row__label g9-2">ROUND 3 — IMPROVED PROTOTYPE EVALUATION</div>
+            <div class="method-row__content g9-7">
+              <h5>Round 3 — Evaluating the improved interactive prototype</h5>
+              <div>
+                  <p class="text-label-small kicker">Research question</p>
+                  <p class="text-body-md">Did the improved version address the interaction problems identified in Round 2 while helping the simulated persona identify, understand and resolve multiple discrepancies within the wider application workflow ?</p>
+              </div>
+            </div>
+          </div>
+          <div class="method-row grid-9">
+            <div class="method-row__label g9-2">METHOD — CLAUDE INTERACTIVE WALKTHROUGH</div>
+            <div class="method-row__content g9-7">
+                  <p class="text-label-small kicker">Method: Claude persona-based walkthrough of interactive prototypes</p>
+                  <p class="text-body-md" style="margin-bottom: 8px;">I repeated the persona-based walkthrough method used in 
+                    Round 2. I opened the improved Version B prototype in the browser and used the 
+                    Claude browser extension to navigate and evaluate the discrepancy-resolution 
+                    journey.
+                  </p>
+                  <ol class="callout_list" style="margin-bottom: 8px;">
+                    <p class="callout_p">
+                      Claude was provided with:
+                    </p>
+                    <li>
+                      <i class="fa-solid fa-circle bullet " aria-hidden="true"></i>
+                    Help partners understand the data discrepancy.
+                    </li>
+                    <li>
+                      <i class="fa-solid fa-circle bullet " aria-hidden="true"></i>
+                        Enable them to initiate the resolution process easily within the
+                    workflow.
+                    </li>
+                    <li>
+                      <i class="fa-solid fa-circle bullet" aria-hidden="true"></i>Guide them to continue the application with confidence.
+                    </li>
+                  </ol>
+                  <p class="text-body-md" style="margin-bottom: 8px;">Claude adopted Alex’s persona, navigated the prototypes and evaluated the experience while attempting to identify and resolve each discrepancy. 
+                  </p>
+                  <p class="text-body-md">Using the same method, persona and scenario allowed me to examine whether the changes made after Round 2 improved the experience under comparable conditions.
+                  </p>
+                  <div class="note note--flag note--flag-alert">
+                    <p class="note__text">Using the same method, persona and scenario allowed me to examine whether the changes made after Round 2 improved the experience under comparable conditions.</p>
+                  </div>
+
+            </div>
+          </div>
+       
+          <div class="method-row grid-9">
+            <div class="method-row__label g9-2">PROTOTYPE — IMPROVED VERSION B</div>
+            <div class="method-row__content g9-7">
+                <p class="text-label-large  prototype-card-title">Round 3 — Improved Version B: Discrepancy-resolution workflow</p>
+                <p class="text-body-md">Only one prototype was evaluated during this round: 
+                  the improved Version B.</p>
+                <figure class="report-figure">
+                  <div class="report-figure__frame">
+                    <img
+                      class="report-figure__image"
+                      src="/assets/LoanApplicationRedesign/Round-3-Improved-Version-B.png"
+                      alt="Improved Version B — discrepancy-resolution workflow, showing the review summary, highlighted fields and guided issue resolution"
+                    />
+                  </div>
+
+                  <figcaption class="report-figure__caption">
+                    Figure 3. Improved Version B, showing one recorded selection and two issues still requiring action.
+                  </figcaption>
+
+                  <div class="report-figure__overlay">
+                    <img class="report-figure__overlay-image report-figure__overlay-image--filled" src="/assets/LoanApplicationRedesign/Round-3-Improved-Version-B.png" alt="" />
+                  </div>
+                </figure>
+                <ol class="numbered-list">
+                  <li class="numbered-list__item">
+                    <span class="numbered-list__marker" aria-hidden="true"></span>
+                    <p class="numbered-list__text"><strong>Issue overview:</strong> The summary lists discrepancies, shows their status and links to each resolution section.</p>
+                  </li>
+                  <li class="numbered-list__item">
+                    <span class="numbered-list__marker" aria-hidden="true"></span>
+                    <p class="numbered-list__text"><strong>Issues in context:</strong> Highlighted fields and issue-number tags connect affected data to the summary and resolution sections.</p>
+                  </li>
+                  <li class="numbered-list__item">
+                    <span class="numbered-list__marker" aria-hidden="true"></span>
+                    <p class="numbered-list__text"><strong>Guided issue resolution:</strong> Expandable accordions explain discrepancies, compare source records and provide actions with confirmation feedback.</p>
+                  </li>
+                  <li class="numbered-list__item">
+                    <span class="numbered-list__marker" aria-hidden="true"></span>
+                    <p class="numbered-list__text"><strong>Ready to continue:</strong> Next remains disabled until the partner has taken the required action for all three issues.</p>
+                  </li>
+                </ol>
+
+
+            </div>
+          </div>
+          <!-- COMPARATIVE TABLE -->
+          <div class="method-row grid-9">
+            <div class="method-row__label g9-2">EVALUATION RESULTS</div>
+            <div class="method-row__content g9-7">
+                <p class="text-label-small kicker">ROUND 2: COMparıson</p>
+                <div class="eval-summary-table__scroll">
+                  <table class="eval-summary-table">
+                    <thead>
+                      <tr>
+                        <th>Evaluation area</th>
+                        <th>Criterion</th>
+                        <th>Score</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td class="eval-summary-table__area" rowspan="3">Issue comprehension</td>
+                        <td>Multi-issue discoverability</td>
+                        <td class="eval-summary-table__score">4/5</td>
+                      </tr>
+                      <tr>
+                        <td>Field connection</td>
+                        <td class="eval-summary-table__score">4/5</td>
+                      </tr>
+                      <tr>
+                        <td>Context clarity</td>
+                        <td class="eval-summary-table__score">5/5</td>
+                      </tr>
+
+                      <tr class="eval-summary-table__group-start">
+                        <td class="eval-summary-table__area" rowspan="3">Resolution experience</td>
+                        <td>Action clarity</td>
+                        <td class="eval-summary-table__score">3/5</td>
+                      </tr>
+                      <tr>
+                        <td>Issue navigation</td>
+                        <td class="eval-summary-table__score">4/5</td>
+                      </tr>
+                      <tr>
+                        <td>Progress visibility</td>
+                        <td class="eval-summary-table__score">5/5</td>
+                      </tr>
+
+                      <tr class="eval-summary-table__group-start">
+                        <td class="eval-summary-table__area" rowspan="3">Interface experience</td>
+                        <td>Interaction effort</td>
+                        <td class="eval-summary-table__score">4/5</td>
+                      </tr>
+                      <tr>
+                        <td>Visual manageability</td>
+                        <td class="eval-summary-table__score">4/5</td>
+                      </tr>
+                      <tr>
+                        <td>Perceived confidence</td>
+                        <td class="eval-summary-table__score">3/5</td>
+                      </tr>
+
+                      <tr class="eval-summary-table__group-start">
+                        <td class="eval-summary-table__area" rowspan="1">End-to-end experience</td>
+                        <td>Workflow continuity</td>
+                        <td class="eval-summary-table__score eval-summary-table__score--unassessed">Not assessed*</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+
+                <p class="note" style="margin-top: var(--spacing-3);">
+                  *Workflow continuity could not be fully assessed because the prototype ended at this
+                  application step. The Next button was displayed but was not connected to the
+                  subsequent workflow.
+                </p>
+            </div>
+          </div>
+
+          <!-- KEY FINDING -->
+          <div class="method-row grid-9">
+            <div class="method-row__label g9-2">KEY INTERACTION FINDING</div>
+            <div class="method-row__content g9-7">
+              <p class="text-label-small kicker">Indicated strengths</p>
+              <div style="margin-bottom: 16px;">
+                  <ol class="callout_list" style="margin-bottom: 8px;">
+                    <li>
+                      <i class="fa-solid fa-circle bullet " aria-hidden="true"></i>
+                    The Review Summary clearly communicated that three issues required attention.
+                    </li>
+                    <li>
+                      <i class="fa-solid fa-circle bullet " aria-hidden="true"></i>
+                       Issue numbers connected the summary, affected fields and corresponding resolution sections.
+                    </li>
+                    <li>
+                      <i class="fa-solid fa-circle bullet" aria-hidden="true"></i>Comparison tables clearly distinguished application data from CRO and Revenue records.
+                    </li>
+                    <li>
+                      <i class="fa-solid fa-circle bullet" aria-hidden="true"></i>The primary resolution actions produced understandable confirmation states.
+                    </li>
+                    <li>
+                      <i class="fa-solid fa-circle bullet" aria-hidden="true"></i>Status labels changed from Action required to more specific states, including Selection recorded, Pending confirmation and Pending information.
+                    </li>
+                    <li>
+                      <i class="fa-solid fa-circle bullet" aria-hidden="true"></i>Progress visibility made it possible to recognise which issues still required attention.
+                    </li>
+                    <li>
+                      <i class="fa-solid fa-circle bullet" aria-hidden="true"></i>The Next button became available after an action had been initiated for every issue.
+                    </li>
+                  </ol>
+              </div>
+
+
+            </div>
+
+          </div>
+          <!-- KEY FINDING -->
+          <div class="method-row grid-9">
+            <div class="method-row__label g9-2">KEY INTERACTION FINDING</div>
+            <div class="method-row__content g9-7">
+              <p class="text-label-small kicker">Key finding</p>
+              <p class="text-body-md" style="margin-bottom: 16px;">The improved hybrid pattern provided strong multi-issue discoverability, field connection and progress visibility. Claude identified all three discrepancies, connected them to the affected records and moved between their resolution sections without losing the wider screen context.</p>
+              <p class="text-body-md" style="margin-bottom: 16px;">The issue numbering, status changes and progress indicators supported continuity across the three discrepancy-resolution tasks. Action clarity remained less consistent because some issue types required more explicit guidance about the appropriate response.</p>
+              <p class="text-body-md">Claude attempted to use controls that were outside the functional scope of the prototype. These interactions were unrelated to the within-screen workflow being evaluated and were excluded from the findings.</p>
+            </div>
+          </div>
+          <div class="method-row grid-9">
+            <div class="method-row__label g9-2">Method limitation</div>
+            <div class="method-row__content g9-7">
+              <p class="text-label-small kicker">Method limitation</p>
+              <p class="text-body-md" style="margin-bottom: 16px;">The interactive prototype was designed to evaluate the discrepancy-resolution workflow within one screen. 
+                It did not include every secondary control or navigation to subsequent application steps.</p>
+              <p class="text-body-md" style="margin-bottom: 16px;">Claude occasionally attempted interactions beyond this defined scope. Any resulting lack of response was caused by 
+                prototype fidelity and was not treated as evidence about the within-screen workflow or the proposed design.</p>
+            </div>
+          </div>
+
+          <!-- next row… -->
+      </section>
+      <article class="grid9-shell  ">
+        <!-- Summary -->
+        <div class=" g9-9">
+          <h2 class="text-h4">Conclusion and next steps</h2>
+          <p class="text-body-md">
+           Across three rounds, AI-assisted evaluation helped narrow three concepts to one improved interactive prototype. 
+           The final walkthrough indicated strong issue discoverability, field connection and progress visibility, while action clarity still required improvement.
+          </p>
+          <p class="text-body-md">
+           These findings are directional rather than evidence of real user behaviour. The next step is to test the prototype with finance partners and use their feedback to guide the final iteration.
+          </p>
+        </div>
+        <hr class="divider" />  
+        <ul class="chip-list">
+  <li class="chip chip--tags">AI-Assisted Evaluation · Prototype Evaluation · Interaction Design · FinTech UX</li>
+  <li class="chip chip--tags">Persona-Based Walkthrough · Discrepancy Resolution · Iterative Design · FinTech UX</li>
+  <li class="chip chip--tags">FinTech UX · IBM Carbon · AI-Assisted UX Evaluation · ChatGPT · Claude · Interactive Prototyping · Accessibility Considerations</li>
+</ul>
+
+      </article>
+
+    
+
+
+
+
+    </main>
+    <footer class="site-footer">
+      <div class="grid-9 footer-grid">
+        <!-- Left: closing message -->
+        <div class="span-5 footer-content">
+          <p class="footer-eyebrow">LET’S WORK TOGETHER</p>
+
+          <h2 class="footer-heading">
+            Have a project or opportunity<br />
+            you’d like to discuss?
+          </h2>
+
+          <a
+            class="footer-email"
+            href="mailto:meliskonez@gmail.com"
+            aria-label="Email Melis Konez"
+          >
+            <span>Get in touch</span>
+
+            <svg
+              class="footer-email-icon"
+              aria-hidden="true"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M5 19 19 5M9 5h10v10"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.8"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </a>
+        </div>
+
+        <!-- Right: professional links -->
+        <nav class="span-4 footer-actions" aria-label="Professional links">
+          <p class="footer-eyebrow">FIND ME ONLINE</p>
+
+          <ul class="footer-links">
+            <li>
+              <a href="mailto:meliskonez@gmail.com">
+                <span class="footer-link-number">01</span>
+
+                <span class="footer-link-label">
+                  <i class="fa-solid fa-envelope" aria-hidden="true"></i>
+                  Email
+                </span>
+
+                <svg
+                  class="footer-link-arrow"
+                  aria-hidden="true"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M5 19 19 5M9 5h10v10"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.8"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </a>
+            </li>
+
+            <li>
+              <a
+                href="https://www.linkedin.com/in/meliskonez/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Visit Melis Konez on LinkedIn"
+              >
+                <span class="footer-link-number">02</span>
+
+                <span class="footer-link-label">
+                  <i class="fa-brands fa-linkedin-in" aria-hidden="true"></i>
+                  LinkedIn
+                </span>
+
+                <svg
+                  class="footer-link-arrow"
+                  aria-hidden="true"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M5 19 19 5M9 5h10v10"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.8"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </a>
+            </li>
+
+            <li>
+              <a
+                href="https://www.behance.net/meliskonez"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Visit Melis Konez on Behance"
+              >
+                <span class="footer-link-number">03</span>
+
+                <span class="footer-link-label">
+                  <i class="fa-brands fa-behance" aria-hidden="true"></i>
+                  Behance
+                </span>
+
+                <svg
+                  class="footer-link-arrow"
+                  aria-hidden="true"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M5 19 19 5M9 5h10v10"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.8"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </a>
+            </li>
+
+            <li>
+              <a
+                href="https://github.com/audralix/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Visit Melis Konez on GitHub"
+              >
+                <span class="footer-link-number">04</span>
+
+                <span class="footer-link-label">
+                  <i class="fa-brands fa-github" aria-hidden="true"></i>
+                  GitHub
+                </span>
+
+                <svg
+                  class="footer-link-arrow"
+                  aria-hidden="true"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M5 19 19 5M9 5h10v10"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.8"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </nav>
+
+        <!-- Bottom row -->
+        <div class="span-9 footer-bottom">
+          <p>
+            © <span id="current-year">2026</span> · Designed &amp; developed by
+            <strong>Melis Konez</strong>
+          </p>
+
+          <p class="footer-location">Dublin, Ireland</p>
+
+          <a class="footer-top-link" href="#home">
+            <span>Back to top</span>
+
+            <svg aria-hidden="true" viewBox="0 0 24 24">
+              <path
+                d="M12 19V5M6 11l6-6 6 6"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.8"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
