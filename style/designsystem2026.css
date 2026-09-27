@@ -341,6 +341,15 @@ h5,
 }
 
 /* Body */
+
+html {
+  scroll-behavior: smooth;
+}
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
 .text-body-large,
 .text-body-medium,
 .text-body-small {
@@ -1080,6 +1089,15 @@ br {
   font-weight: var(--weight-heading);
 }
 
+/* Key row: the criterion the decision card refers to */
+.comparison-table__table tbody tr.is-key td {
+  background: var(--chip-insight-bg);
+}
+.comparison-table__table tbody tr.is-key td:first-child {
+  box-shadow: inset 3px 0 0 var(--red-500);
+  font-weight: var(--weight-label);
+}
+
 @media (max-width: 640px) {
   .comparison-table__table thead th,
   .comparison-table__table tbody td {
@@ -1300,6 +1318,7 @@ br {
   list-style: none;
   display: flex;
   flex-direction: column;
+  align-items: flex-start; /* each pill hugs its text */
   gap: var(--spacing-3);
 }
 
@@ -1307,7 +1326,7 @@ br {
    grouped keyword tags (as opposed to the small uppercase status
    badges the other .chip--* variants render). */
 .chip--tags {
-  max-width: 100%;
+  /*  max-width: 100%; */
   box-sizing: border-box;
   padding: var(--spacing-2) var(--spacing-5);
   border-radius: var(--radius-full);
@@ -2113,4 +2132,384 @@ br {
   .cover-loop__slide--1 {
     opacity: 1;
   }
+}
+
+/* CALLOUT LIST — FLOW VARIANT ==============================
+   Steps that lead into each other, joined by a down arrow. */
+
+/* Each step: fixed dot column + text column,
+   so the dot, arrow and wrapped lines always line up */
+.callout_list--flow li {
+  position: relative;
+  display: grid;
+  grid-template-columns: 6px minmax(0, 1fr);
+  column-gap: var(--spacing-2);
+  align-items: start;
+}
+
+/* The dot: fixed 6px box, centred on the first 24px text line */
+.callout_list--flow .bullet {
+  display: block;
+  width: 6px;
+  height: 6px;
+  padding: 0;
+  margin-top: 9px; /* (24px line - 6px dot) / 2 */
+  font-size: 6px;
+  line-height: 1;
+  color: var(--red-500);
+}
+
+/* Room for the arrow: 8px gap + 20px arrow + 8px gap */
+.callout_list--flow li + li {
+  margin-top: 36px;
+}
+
+/* Arrow in that gap, centred on the dot column */
+.callout_list--flow li + li::before {
+  content: "\2193"; /* ↓ */
+  position: absolute;
+  left: 0;
+  bottom: 100%;
+  margin-bottom: var(--spacing-2);
+  display: flex;
+  justify-content: center;
+  width: 6px;
+  font-family: var(--font-interface);
+  font-size: 20px;
+  line-height: 1;
+  color: var(--red-500);
+}
+
+/* Key phrase inside a callout: brand red + semibold */
+.callout strong {
+  font-weight: var(--weight-label); /* 600 */
+  color: var(--red-500);
+}
+
+/* ============ MEASURING THE OUTCOME ============ */
+
+/* Section heading: "Final: Measuring the Outcome" */
+.outcome-section__title {
+  margin: 0 0 var(--spacing-4);
+  font-family: var(--font-interface);
+  font-size: var(--heading-h4-size);
+  line-height: var(--heading-h4-line-height);
+  font-weight: var(--weight-heading);
+  color: var(--color-heading);
+}
+
+/* Card title next to the chip */
+.callout__title {
+  font-family: var(--font-body);
+  font-size: var(--label-large-size);
+  line-height: var(--label-large-line-height);
+  font-weight: var(--weight-heading);
+  color: var(--color-heading);
+}
+
+/* Outcome card variant: blue emphasis and dots instead of red */
+.callout--outcome .callout_p {
+  margin-bottom: var(--spacing-3);
+}
+.callout--outcome .callout_list li {
+  display: grid;
+  grid-template-columns: 6px minmax(0, 1fr);
+  column-gap: var(--spacing-3);
+  align-items: start;
+}
+.callout--outcome .callout_list li + li {
+  margin-top: var(--spacing-2);
+}
+.callout--outcome .bullet {
+  display: block;
+  width: 6px;
+  height: 6px;
+  padding: 0;
+  margin-top: 9px; /* centres the dot on the 24px first line */
+  font-size: 6px;
+  line-height: 1;
+  color: var(--blue-500);
+}
+.callout--outcome strong {
+  font-weight: var(--weight-label);
+  color: var(--blue-500);
+}
+
+/* Three goal columns */
+.outcome-stats {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  margin-top: var(--spacing-8);
+}
+.outcome-stat {
+  padding-inline: var(--spacing-5);
+  border-left: var(--border-width-default) solid var(--color-border-default);
+}
+.outcome-stat:first-child {
+  padding-left: 0;
+  border-left: 0;
+}
+
+/* "— GOAL 1 / UNDERSTAND THE DISCREPANCY" */
+.outcome-stat__label {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--spacing-2);
+  margin: 0 0 var(--spacing-5);
+  font-family: var(--font-metadata);
+  font-size: var(--meta-small-size);
+  line-height: var(--meta-small-line-height);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-text-icon-meta-medium);
+}
+.outcome-stat__label::before {
+  content: "";
+  flex: none;
+  width: 16px;
+  height: 1px;
+  margin-top: 8px;
+  background: var(--color-text-icon-meta-medium);
+}
+
+/* Criterion name above the numbers */
+.outcome-stat__metric {
+  margin: 0 0 var(--spacing-2);
+  font-family: var(--font-body);
+  font-size: var(--body-medium-size);
+  line-height: var(--body-medium-line-height);
+  color: var(--blue-700);
+}
+
+/* Before → after numbers */
+.outcome-stat__figures {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: var(--spacing-2);
+  max-width: 260px;
+}
+.outcome-stat__figure {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--spacing-1);
+}
+.outcome-stat__value {
+  font-family: var(--font-brand);
+  font-size: clamp(3rem, 2.4rem + 2vw, 4rem); /* 48px → 64px */
+  line-height: 1;
+  font-weight: 700;
+  color: var(--blue-700);
+}
+.outcome-stat__value--before {
+  color: var(--color-icon-disabled);
+}
+.outcome-stat__out-of {
+  font-size: 0.4em;
+  font-weight: var(--weight-heading);
+}
+.outcome-stat__sub {
+  font-family: var(--font-body);
+  font-size: var(--label-medium-size);
+  line-height: var(--label-medium-line-height);
+  color: var(--color-meta-small);
+}
+.outcome-stat__sub--accent {
+  color: var(--blue-700);
+}
+
+/* "+2 POINTS" with the arrow underneath */
+.outcome-stat__delta {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: var(--spacing-2);
+  font-family: var(--font-metadata);
+  font-size: var(--meta-medium-size);
+  line-height: var(--meta-medium-line-height);
+  text-transform: uppercase;
+  color: var(--red-500);
+  white-space: nowrap;
+}
+.outcome-stat__arrow {
+  font-family: var(--font-interface);
+  font-size: 18px;
+  line-height: 1.2;
+}
+
+/* Supporting sentence */
+.outcome-stat__text {
+  margin: var(--spacing-4) 0 0;
+  font-family: var(--font-body);
+  font-size: var(--body-small-size);
+  line-height: var(--body-small-line-height);
+  color: var(--color-body);
+}
+
+/* Visually hidden text for screen readers */
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* Stack the columns on small screens */
+@media (max-width: 768px) {
+  .outcome-stats {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-6);
+  }
+  .outcome-stat {
+    padding-inline: 0;
+    padding-top: var(--spacing-5);
+    border-left: 0;
+    border-top: var(--border-width-default) solid var(--color-border-default);
+  }
+  .outcome-stat:first-child {
+    padding-top: 0;
+    border-top: 0;
+  }
+}
+
+/* ============ VERSION OUTCOME STRIP (Round 1 decision) ============ */
+
+.version-outcomes {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: var(--spacing-4);
+  margin: 0 0 var(--spacing-5);
+  padding: 0;
+  list-style: none;
+}
+
+.version-outcome {
+  margin: 0;
+}
+
+.version-outcome__frame {
+  position: relative;
+  overflow: hidden;
+  aspect-ratio: 16 / 10;
+  border: var(--border-width-default) solid var(--color-border-default);
+  border-radius: var(--radius-medium);
+  background: var(--color-surface-default);
+}
+
+.version-outcome__frame img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top left;
+}
+
+.version-outcome__caption {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--spacing-2);
+  margin-top: var(--spacing-2);
+  font-family: var(--font-body);
+  font-size: var(--label-medium-size);
+  line-height: var(--label-medium-line-height);
+  font-weight: var(--weight-label);
+  color: var(--color-heading);
+}
+
+/* Status tag under each thumbnail */
+.version-outcome__tag {
+  flex: none;
+  padding: 2px var(--spacing-2);
+  border-radius: var(--radius-small);
+  font-family: var(--font-metadata);
+  font-size: var(--meta-small-size);
+  line-height: var(--meta-small-line-height);
+  font-weight: var(--weight-meta);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+.version-outcome__tag--progressed {
+  background: var(--chip-evidence-bg);
+  color: var(--chip-evidence-fg);
+  border: var(--border-width-default) solid var(--chip-evidence-bd);
+}
+.version-outcome__tag--eliminated {
+  background: var(--color-surface-default);
+  color: var(--red-500);
+  border: var(--border-width-default) solid var(--red-500);
+}
+
+/* Eliminated version: faded, desaturated and struck through */
+.version-outcome--eliminated .version-outcome__frame img {
+  filter: grayscale(1);
+  opacity: 0.45;
+}
+.version-outcome--eliminated .version-outcome__frame::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to top right,
+    transparent calc(50% - 1px),
+    var(--red-500) calc(50% - 1px),
+    var(--red-500) calc(50% + 1px),
+    transparent calc(50% + 1px)
+  );
+}
+.version-outcome--eliminated .version-outcome__name {
+  color: var(--color-text-icon-meta-medium);
+  text-decoration: line-through;
+  text-decoration-color: var(--red-500);
+}
+
+/* Optional: show the full-colour screen on hover or keyboard focus */
+@media (hover: hover) {
+  .version-outcome--eliminated .version-outcome__frame img {
+    transition:
+      filter 0.2s ease,
+      opacity 0.2s ease;
+  }
+  .version-outcome--eliminated:hover .version-outcome__frame img,
+  .version-outcome--eliminated:focus-within .version-outcome__frame img {
+    filter: none;
+    opacity: 1;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .version-outcome--eliminated .version-outcome__frame img {
+    transition: none;
+  }
+}
+
+@media (max-width: 640px) {
+  .version-outcomes {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Link to the live prototype, under Figure 3 */
+.prototype-cta {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: var(--spacing-3) var(--spacing-4);
+  margin: var(--spacing-5) 0 var(--spacing-6);
+}
+.prototype-cta .deep-dive-card__button {
+  gap: var(--spacing-2);
+}
+.prototype-cta__note {
+  margin: 0;
+  flex: 1 1 240px;
+  font-family: var(--font-body);
+  font-size: var(--body-small-size);
+  line-height: var(--body-small-line-height);
+  color: var(--color-text-icon-meta-medium);
 }
