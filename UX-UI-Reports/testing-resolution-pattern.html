@@ -42,7 +42,7 @@
       crossorigin="anonymous"
     ></script>
   </head>
-  <body class="">
+  <body class="" id="top">
     <!-- ===== NAVBAR ===== -->
     <header class="site-header" data-nav>
       <div class="nav-wrap">
@@ -383,23 +383,63 @@
               <p class="text-body-md">Version A made the discrepancy noticeable, but the modal interrupted the application flow and separated the resolution task from the affected information.</p>
             </div>
           </div>
-          <!-- DESIGN DECISION  -->
+
+          <!-- DESIGN DECISION -->
           <div class="method-row grid-9">
             <div class="method-row__label g9-2">DESIGN DECISION — REMOVE VERSION A</div>
             <div class="method-row__content g9-7">
-              
+
               <div class="callout">
                 <div class="callout__header">
-                  <span class="chip chip--evidence">Round 1 Decision </span>
+                  <span class="chip chip--decision">Round 1 Decision</span>
                 </div>
-                <p class="callout_p">
-                  Version A was eliminated from further evaluation. 
-                  Versions B and C progressed to Round 2.
-               </p>
-              </div>  
-               <hr class="divider" />            
+
+                <!-- Version outcome strip -->
+                <ul class="version-outcomes" role="list">
+                  <li class="version-outcome version-outcome--eliminated">
+                    <div class="version-outcome__frame">
+                      <img src="/assets/LoanApplicationRedesign/version-a-2-jpeg.jpg" alt="Version A: modal resolution screen" />
+                    </div>
+                    <p class="version-outcome__caption">
+                      <span class="version-outcome__name">A · Modal</span>
+                      <span class="version-outcome__tag version-outcome__tag--eliminated">Eliminated</span>
+                    </p>
+                  </li>
+                  <li class="version-outcome">
+                    <div class="version-outcome__frame">
+                      <img src="/assets/LoanApplicationRedesign/version-b-2-jpeg.jpg" alt="Version B: standalone resolution accordion screen" />
+                    </div>
+                    <p class="version-outcome__caption">
+                      <span class="version-outcome__name">B · Standalone accordion</span>
+                      <span class="version-outcome__tag version-outcome__tag--progressed">Progressed</span>
+                    </p>
+                  </li>
+                  <li class="version-outcome">
+                    <div class="version-outcome__frame">
+                      <img src="/assets/LoanApplicationRedesign/version-c-2-jpeg.jpg" alt="Version C: embedded resolution accordion screen" />
+                    </div>
+                    <p class="version-outcome__caption">
+                      <span class="version-outcome__name">C · Embedded accordion</span>
+                      <span class="version-outcome__tag version-outcome__tag--progressed">Progressed</span>
+                    </p>
+                  </li>
+                </ul>
+
+                <!-- Evidence → decision -->
+                <ol class="callout_list callout_list--flow" role="list">
+                  <li>
+                    <i class="fa-solid fa-circle bullet" aria-hidden="true"></i>
+                    <span class="callout_list__text">The modal made the discrepancy noticeable, but it <strong>interrupted the application</strong> and separated the resolution task from the affected information.</span>
+                  </li>
+                  <li>
+                    <i class="fa-solid fa-circle bullet" aria-hidden="true"></i>
+                    <span class="callout_list__text">I <strong>removed Version A</strong> and took Versions B and C forward to a multi-issue stress test in Round 2.</span>
+                  </li>
+                </ol>
+              </div>
+
+              <hr class="divider" />
             </div>
-           
           </div>
           <!--   ROUND 2 -->
           <div class="method-row grid-9">
@@ -590,7 +630,7 @@
                         <a class="prototype-video prototype-video--c" href="/assets/LoanApplicationRedesign/240926_version-C-Comp1.mp4" target="_blank">                          <span class="prototype-video__play" aria-hidden="true">
                             <svg viewBox="0 0 16 16"><path d="M3 2l11 6-11 6V2z"/></svg>
                           </span>
-                          <p class="prototype-video__caption">Ver. B &middot; AI Walkthrough &middot; Issues</p>
+                          <p class="prototype-video__caption">Ver. C &middot; AI Walkthrough &middot; Issues</p>
                           <div class="prototype-video__progress"><span></span></div>
                         </a>
                       </div>
@@ -691,10 +731,11 @@
             </div>
           </div>
           <!-- COMPARATIVE TABLE -->
+          <!-- COMPARATIVE TABLE -->
           <div class="method-row grid-9">
             <div class="method-row__label g9-2">COMPARATIVE RESULTS</div>
             <div class="method-row__content g9-7">
-                <p class="text-label-small kicker">ROUND 2: COMparıson</p>
+                <p class="text-label-small kicker">Round 2: Comparison</p>
                 <div class="comparison-table__scroll">
                   <table class="comparison-table__table">
                     <thead>
@@ -708,12 +749,12 @@
                       <tr><td>Multi-issue discoverability</td><td>3/5</td><td class="is-winner">5/5</td></tr>
                       <tr><td>Field connection</td><td>4/5</td><td class="is-winner">5/5</td></tr>
                       <tr><td>Context clarity</td><td>3/5</td><td>3/5</td></tr>
-                      <tr><td>Action clarity</td><td>2/5</td><td>2/5</td></tr>
-                      <tr><td>Issue navigation</td><td>3/5</td><td>3/5</td></tr>
-                      <tr><td>Progress visibility</td><td>2/5</td><td>1/5</td></tr>
+                      <tr ><td>Action clarity</td><td>2/5</td><td>2/5</td></tr>
+                      <tr ><td>Issue navigation</td><td>3/5</td><td>3/5</td></tr>
+                      <tr><td>Progress visibility</td><td class="is-winner">2/5</td><td>1/5</td></tr>
                       <tr><td>Interaction effort</td><td>3/5</td><td class="is-winner">4/5</td></tr>
                       <tr><td>Visual manageability</td><td>3/5</td><td class="is-winner">4/5</td></tr>
-                      <tr><td>Workflow continuity</td><td>2/5</td><td>1/5</td></tr>
+                      <tr><td>Workflow continuity</td><td class="is-winner">2/5</td><td>1/5</td></tr>
                       <tr><td>Perceived confidence</td><td>2/5</td><td>2/5</td></tr>
                     </tbody>
                   </table>
@@ -762,33 +803,24 @@
             <div class="method-row__label g9-2">DESIGN DECISION — IMPROVE VERSION B</div>
             <div class="method-row__content g9-7">
               
-              <div class="callout">
-                <div class="callout__header">
-                  <span class="chip chip--evidence">Round 2 Decision  </span>
-                </div>
-                <p class="callout_p" style="margin-bottom: 4px;">
-                  The results did not support adopting either version without modification. I used the Round 2 findings to improve the prototypes, focusing on:
-               </p>
-              <ol class="callout_list">
-                <li>
-                  <i class="fa-solid fa-circle bullet " aria-hidden="true"></i>
-               Strengthening the connection between issues and affected records
-                </li>
-                <li>
-                  <i class="fa-solid fa-circle bullet " aria-hidden="true"></i>
-                    Clarifying the next action for each discrepancy
-                </li>
-                <li>
-                  <i class="fa-solid fa-circle bullet" aria-hidden="true"></i> Improving feedback after an issue was addressed
-                </li>
-                <li>
-                  <i class="fa-solid fa-circle bullet" aria-hidden="true"></i>  Making unresolved issues easier to track
-                </li>
-                <li>
-                  <i class="fa-solid fa-circle bullet" aria-hidden="true"></i>  Reducing visual competition between multiple alerts
-                </li>
-              </ol>
-              </div>  
+          <div class="callout">
+            <div class="callout__header">
+              <span class="chip chip--decision">Round 2 Decision — Improve Version B</span>
+            </div>
+
+<ol class="callout_list callout_list--flow" role="list">
+  <li>
+    <i class="fa-solid fa-circle bullet" aria-hidden="true"></i>
+    <span class="callout_list__text">
+Version C was stronger at showing the issues, but Version B was <strong>stronger at managing them through to completion</strong>, scoring higher on progress visibility and workflow continuity (2/5 vs 1/5).    </span>
+  </li>
+  <li>
+    <i class="fa-solid fa-circle bullet" aria-hidden="true"></i>
+    <span class="callout_list__text">
+I chose to improve <strong>Version B</strong>, using its standalone accordion to <strong>add clearer guidance and status tracking</strong>, and brought in Version C's connection to affected fields.    </span>
+  </li>
+</ol>
+          </div>  
                <hr class="divider" />            
             </div>
            
@@ -864,6 +896,18 @@
                     <img class="report-figure__overlay-image report-figure__overlay-image--filled" src="/assets/LoanApplicationRedesign/Round-3-Improved-Version-B.png" alt="" />
                   </div>
                 </figure>
+                <div class="prototype-cta">
+                  <a class="deep-dive-card__button deep-dive-card__button--primary"
+                    href="https://www.figma.com/make/APi6CjsvYt1jAFM4RZBRA4/AI-Assisted-Persona-Based-Prototype-Evaluation?fullscreen=1&t=6QrFMTJ21DdllPDM-1&code-node-id=0-6"
+                    target="_blank" rel="noopener noreferrer">
+                    Try the improved prototype
+                    <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
+                    <span class="visually-hidden">(opens Figma in a new tab)</span>
+                  </a>
+                  <p class="prototype-cta__note">
+                    Interactive Figma prototype of the Business Information step. The Next button is not connected to later steps.
+                  </p>
+                </div>
                 <ol class="numbered-list">
                   <li class="numbered-list__item">
                     <span class="numbered-list__marker" aria-hidden="true"></span>
@@ -890,7 +934,7 @@
           <div class="method-row grid-9">
             <div class="method-row__label g9-2">EVALUATION RESULTS</div>
             <div class="method-row__content g9-7">
-                <p class="text-label-small kicker">ROUND 2: COMparıson</p>
+                <p class="text-label-small kicker">ROUND 3: COMparison</p>
                 <div class="eval-summary-table__scroll">
                   <table class="eval-summary-table">
                     <thead>
@@ -904,7 +948,7 @@
                       <tr>
                         <td class="eval-summary-table__area" rowspan="3">Issue comprehension</td>
                         <td>Multi-issue discoverability</td>
-                        <td class="eval-summary-table__score">4/5</td>
+                        <td class="eval-summary-table__score">5/5</td>
                       </tr>
                       <tr>
                         <td>Field connection</td>
@@ -1017,9 +1061,111 @@
                 prototype fidelity and was not treated as evidence about the within-screen workflow or the proposed design.</p>
             </div>
           </div>
-
+        </div>
           <!-- next row… -->
+        <hr class="divider" />  
       </section>
+      <article class="grid9-shell  ">
+        <!-- Summary -->
+        <div class=" g9-9">
+          <h2 class="text-h4">Final: Measuring the Outcome</h2>
+          <!-- Verdict card -->
+          <div class="callout callout--outcome">
+            <div class="callout__header">
+              <span class="chip chip--evidence">Evidence</span>
+              <span class="callout__title">Goals versus results</span>
+            </div>
+            <p class="callout_p">
+              I mapped the final Round 3 scores back to the three goals set at the start. The final pattern is the improved Version B, combining B's standalone accordion with Version C's in-context field connection.
+            </p>
+            <ul class="callout_list">
+              <li>
+                <i class="fa-solid fa-circle bullet" aria-hidden="true"></i>
+                <span><strong>Understand the discrepancy — met.</strong> All three issues were visible upfront and each was explained against its source record.</span>
+              </li>
+              <li>
+                <i class="fa-solid fa-circle bullet" aria-hidden="true"></i>
+                <span><strong>Initiate resolution easily — partly met.</strong> Each issue needed only one action, but partners still need guidance on which option to choose.</span>
+              </li>
+              <li>
+                <i class="fa-solid fa-circle bullet" aria-hidden="true"></i>
+                <span><strong>Continue with confidence — partly met.</strong> Progress was easy to track, but conflicting request messages lowered confidence (3/5).</span>
+              </li>
+            </ul>
+          </div>
+          <!-- Goal columns -->
+          <div class="outcome-stats">
+
+            <!-- Goal 1 -->
+            <div class="outcome-stat">
+              <p class="outcome-stat__label"><span>Goal 1<br>Understand the discrepancy</span></p>
+              <p class="outcome-stat__metric">Multi-issue discoverability</p>
+              <div class="outcome-stat__figures">
+                <span class="visually-hidden">Improved from 3 out of 5 in Round 2 to 5 out of 5 in Round 3.</span>
+                <div class="outcome-stat__figure" aria-hidden="true">
+                  <span class="outcome-stat__value outcome-stat__value--before">3<span class="outcome-stat__out-of">/5</span></span>
+                  <span class="outcome-stat__sub">Round 2</span>
+                </div>
+                <div class="outcome-stat__delta" aria-hidden="true">
+                  <span>+2 points</span>
+                  <span class="outcome-stat__arrow">→</span>
+                </div>
+                <div class="outcome-stat__figure" aria-hidden="true">
+                  <span class="outcome-stat__value">5<span class="outcome-stat__out-of">/5</span></span>
+                  <span class="outcome-stat__sub outcome-stat__sub--accent">Round 3</span>
+                </div>
+              </div>
+              <p class="outcome-stat__text">The Review Summary listed all three issues on first view, and each resolution panel compared the application data with its CRO or Revenue record.</p>
+            </div>
+
+            <!-- Goal 2 -->
+            <div class="outcome-stat">
+              <p class="outcome-stat__label"><span>Goal 2<br>Initiate resolution easily</span></p>
+              <p class="outcome-stat__metric">Issue navigation</p>
+              <div class="outcome-stat__figures">
+                <span class="visually-hidden">Improved from 3 out of 5 in Round 2 to 4 out of 5 in Round 3.</span>
+                <div class="outcome-stat__figure" aria-hidden="true">
+                  <span class="outcome-stat__value outcome-stat__value--before">3<span class="outcome-stat__out-of">/5</span></span>
+                  <span class="outcome-stat__sub">Round 2</span>
+                </div>
+                <div class="outcome-stat__delta" aria-hidden="true">
+                  <span>+1 point</span>
+                  <span class="outcome-stat__arrow">→</span>
+                </div>
+                <div class="outcome-stat__figure" aria-hidden="true">
+                  <span class="outcome-stat__value">4<span class="outcome-stat__out-of">/5</span></span>
+                  <span class="outcome-stat__sub outcome-stat__sub--accent">Round 3</span>
+                </div>
+              </div>
+              <p class="outcome-stat__text">Each issue in the Review Summary linked straight to its resolution panel, so the partner could move between issues without searching the page.</p>
+            </div>
+
+            <!-- Goal 3 -->
+            <div class="outcome-stat">
+              <p class="outcome-stat__label"><span>Goal 3<br>Continue with confidence</span></p>
+              <p class="outcome-stat__metric">Progress visibility</p>
+              <div class="outcome-stat__figures">
+                <span class="visually-hidden">Improved from 2 out of 5 in Round 2 to 4 out of 5 in Round 3.</span>
+                <div class="outcome-stat__figure" aria-hidden="true">
+                  <span class="outcome-stat__value outcome-stat__value--before">2<span class="outcome-stat__out-of">/5</span></span>
+                  <span class="outcome-stat__sub">Round 2</span>
+                </div>
+                <div class="outcome-stat__delta" aria-hidden="true">
+                  <span>+2 points</span>
+                  <span class="outcome-stat__arrow">→</span>
+                </div>
+                <div class="outcome-stat__figure" aria-hidden="true">
+                  <span class="outcome-stat__value">4<span class="outcome-stat__out-of">/5</span></span>
+                  <span class="outcome-stat__sub outcome-stat__sub--accent">Round 3</span>
+                </div>
+              </div>
+              <p class="outcome-stat__text">Version B's status tags in each resolution tile, together with a gated Next button added after Round 2, showed which issues were still open.</p>
+            </div>
+
+          </div>
+        </div>
+        <hr class="divider" />  
+      </article>
       <article class="grid9-shell  ">
         <!-- Summary -->
         <div class=" g9-9">
@@ -1034,10 +1180,10 @@
         </div>
         <hr class="divider" />  
         <ul class="chip-list">
-  <li class="chip chip--tags">AI-Assisted Evaluation · Prototype Evaluation · Interaction Design · FinTech UX</li>
-  <li class="chip chip--tags">Persona-Based Walkthrough · Discrepancy Resolution · Iterative Design · FinTech UX</li>
-  <li class="chip chip--tags">FinTech UX · IBM Carbon · AI-Assisted UX Evaluation · ChatGPT · Claude · Interactive Prototyping · Accessibility Considerations</li>
-</ul>
+          <li class="chip chip--tags">AI-Assisted Evaluation · Prototype Evaluation · Interaction Design · FinTech UX</li>
+          <li class="chip chip--tags">Persona-Based Walkthrough · Discrepancy Resolution · Iterative Design · FinTech UX</li>
+          <li class="chip chip--tags">FinTech UX · IBM Carbon · AI-Assisted UX Evaluation · ChatGPT · Claude · Interactive Prototyping · Accessibility Considerations</li>
+        </ul>
 
       </article>
 
@@ -1217,7 +1363,7 @@
 
           <p class="footer-location">Dublin, Ireland</p>
 
-          <a class="footer-top-link" href="#home">
+          <a class="footer-top-link" href="#top">
             <span>Back to top</span>
 
             <svg aria-hidden="true" viewBox="0 0 24 24">
